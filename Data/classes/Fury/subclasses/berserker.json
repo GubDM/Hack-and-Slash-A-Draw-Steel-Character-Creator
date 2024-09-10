@@ -1,0 +1,35 @@
+{
+	"name" : "Berserker",
+	"script" : "*,char_subclass,Berserker|*,exploration_skills,Lift|*,misc_features,primordial_strength|*,misc_features,berserker_growing_rage|*,triggers,relentless_toss",
+	"choices" : {},
+	"features" : {
+		"primordial_strength" : {
+			"name" : "Primordial Strength",
+			"script" : "",
+			"effect" : "When you damage an object with a weapon attack, it takes an additional 5 damage. Additionally, whenever you push another creature, you can make it a vertical push."
+		},
+		"berserker_growing_rage" : {
+			"name" : "Growing Rage",
+			"script" : "",
+			"effect" : "You gain certain benefits in combat based on the amount of rage you have. The benefits from your growing rage last until the end of your turn, even if a benefit would become unavailable to you because of the amount of rage you spend during your turn.{N}",
+			"other" : "[Rage 2]:{N}* You gain an edge on Might tests and resistance rolls.{N}* You gain a bonus to weapon damage equal to your Might score if you are at least 2 squares from where you started your turn when you attack.{N}* Once per turn while in crow form, when you move away from an enemy, that enemy takes damage equal to your Agility score.{N}{N}[Rage 4]:{N}* You gain a bonus to weapon damage equal to twice your Might score, instead of once your Might score, if you are at least two squares from where you started your turn when you attack.{N}{N}[Rage 6]:{N}* You have a double edge on Might tests and resistance rolls."
+		},
+		"relentless_toss" : {
+			"name" : "Relentless Toss",
+			"script" : "",
+			"flavor" : "The Primordial Chaos allows you to redirect kinetic energy for a monstrous smash!",
+			"keywords" : "magic,melee",
+			"distance" : "self|reach,1",
+			"target" : "Self or 1 creature",
+			"trigger" : "The target is force moved.",
+			"free" : "False",
+			"effect" : "You can select a new target of the same size or smaller within distance to be force moved instead.{N}Additionally, you can increase the forced move distance by a number of squares equal to your Might score. You can use your Primordial Strength benefit to make this forced movement vertical.",
+			"powerroll" : "False",
+			"powerroll_char" : "",
+			"powerroll_tier1" : "",
+			"powerroll_tier2" : "",
+			"powerroll_tier3" : "",
+			"other" : "Spend 1 Rage: You can increase the forced move distance by a number of squares equal to twice your Might score instead."
+		}
+	}
+}

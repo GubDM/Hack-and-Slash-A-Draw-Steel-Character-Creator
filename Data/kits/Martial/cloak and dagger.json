@@ -1,0 +1,70 @@
+{
+	"name" : "Cloak and Dagger",
+	"script" : "*,kits,Cloak and Dagger|kit_bonus,stamina,cloak_dagger_bonus_stamina|kit_bonus,speed,cloak_dagger_bonus_speed|kit_bonus,melee_bonus,cloak_dagger_bonus_melee|kit_bonus,ranged_bonus,cloak_dagger_bonus_ranged|kit_bonus,weapon_distance,cloak_dagger_weapon_distance|kit_bonus,mobility,cloak_dagger_mobility|*,kit_equipment,cloak_dagger_equipment|*,signatures,cloak_dagger_fade",
+	"choices" : {},
+	"features" : {
+		"cloak_dagger_bonus_stamina" : {
+			"name" : "Cloak and Dagger Kit: Stamina Bonus",
+			"script" : "+,stamina,3",
+			"effect" : "Stamina +3"			
+		},
+		"cloak_dagger_bonus_speed" : {
+			"name" : "Cloak and Dagger Kit: Speed Bonus",
+			"script" : "+,speed,2",
+			"effect" : "Speed +2"			
+		},
+		"cloak_dagger_bonus_melee" : {
+			"name" : "Cloak and Dagger Kit: Melee Weapon Damage Bonus",
+			"script" : "+,melee_bonus,1:1:1",
+			"effect" : "Melee Damage Bonus +1/+1/+1"			
+		},
+		"cloak_dagger_bonus_ranged" : {
+			"name" : "Cloak and Dagger Kit: Ranged Weapon Damage Bonus",
+			"script" : "+,ranged_bonus,1:1:1",
+			"effect" : "Ranged Damage Bonus +1/+1/+1"			
+		},
+		"cloak_dagger_weapon_distance" : {
+			"name" : "Cloak and Dagger Kit: Weapon Distance Bonus",
+			"script" : "+,weapon_distance,5",
+			"effect" : "Weapon Distance +5"			
+		},
+		"cloak_dagger_mobility" : {
+			"name" : "Cloak and Dagger Kit: Mobility",
+			"script" : "*,triggers,cloak_dagger_mobility",
+			"flavor" : "",
+			"keywords" : "",
+			"distance" : "",
+			"target" : "",
+			"free" : "True",
+			"trigger" : "Enemy ends their turn adjacent to you.",
+			"effect" : "Shift up to 2 squares as free triggered action.",
+			"powerroll" : "False",
+			"powerroll_char" : "",
+			"powerroll_tier1" : "",
+			"powerroll_tier2" : "",
+			"powerroll_tier3" : "",
+			"other" : ""
+		},
+		"cloak_dagger_equipment" : {
+			"name" : "Cloak and Dagger Kit Equipment",
+			"script" : "*,kit_wear,light armor|*,kit_wield,one or two light weapons",
+			"effect" : ""
+		},
+		"cloak_dagger_fade" : {
+			"name" : "Fade",
+			"script" : "",
+			"flavor" : "A stab, and a few quick, careful steps back.",
+			"keywords" : "attack,melee,ranged,weapon",
+			"distance" : "reach,1|ranged,5",
+			"target" : "1 creature",
+			"free" : "False",
+			"effect" : "",
+			"powerroll" : "True",
+			"powerroll_char" : "Might or Agility",
+			"powerroll_tier1" : "damage:,3|effect:you shift 1 square",
+			"powerroll_tier2" : "damage:,8|effect:you shift up to 2 squares",
+			"powerroll_tier3" : "damage:,12|effect:you shift up to 3 squares",
+			"other" : ""
+		}
+	}
+}

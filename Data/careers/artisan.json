@@ -1,0 +1,64 @@
+{
+	"name" : "Artisan",
+	"script" : "=,career,Artisan|+,num_languages,1|+,projectpoints,100|*,misc_features,artisan_title",
+	"choices" : {
+		"Artisan Skills" : {
+			"description" : "As an artisan, you gained two skills from the crafting skill group.",
+			"choose" : {
+				"budget" : "2",
+				"options_skills" : "groups:crafting"
+			}
+		},
+		"Artisan Inciting Incident" : {
+			"description" : "Why did you give up your career as an artisan and become an adventurer?",
+			"choose" : {
+				"budget" : "1",
+				"options" : [
+					{
+						"name" : "Continue the Work",
+						"cost" : "1",
+						"description" : "A great hero was a fan of the things you created, and gave you a generous commission to create your best work for them. While working on this commission, you and the hero became close friends. The day you finished the work was the same day they disappeared. To honor their legacy, you took up the mantle of a hero with the intent of finishing your friend's work.",
+						"script" : "*,misc_features,artisan_continue_the_work",
+						"followups" : []
+					},
+					{
+						"name" : "Inspired",
+						"cost" : "1",
+						"description" : "As you traveled the road selling your wares, troll bandits attacked you. One of the bandits claimed an item belonging to someone precious to you—or perhaps claimed that person's life—but the rest were driven off or slain by a group of heroes. Seeing the quick work these heroes made of the bandits inspired you to follow in their footsteps.",
+						"script" : "*,misc_features,artisan_inspired",
+						"followups" : []
+					},
+					{
+						"name" : "Robbery",
+						"cost" : "1",
+						"description" : "A criminal gang stole your goods and harmed a number of people who worked for you. You became a hero to prevent such indignities from being visited upon others, to seek revenge for the assault, or to find the thieves and get your stuff back.",
+						"script" : "*,misc_features,artisan_robbery",
+						"followups" : []
+					}
+				]
+			}
+		}
+	},
+	"features" : {
+		"artisan_title" : {
+			"name" : "Title - Expert Artisan",
+			"script" : "",
+			"effect" : "Whenever you make a test as part of a research or crafting project that uses a skill you have from the crafting skill group, you can roll the test twice and use either roll."
+		},
+		"artisan_continue_the_work" : {
+			"name" : "Inciting Incident: Continue the Work",
+			"script" : "",
+			"effect" : "A great hero was a fan of the things you created, and gave you a generous commission to create your best work for them. While working on this commission, you and the hero became close friends. The day you finished the work was the same day they disappeared. To honor their legacy, you took up the mantle of a hero with the intent of finishing your friend's work."
+		},
+		"artisan_inspired" : {
+			"name" : "Inciting Incident: Inspired",
+			"script" : "",
+			"effect" : "As you traveled the road selling your wares, troll bandits attacked you. One of the bandits claimed an item belonging to someone precious to you—or perhaps claimed that person's life—but the rest were driven off or slain by a group of heroes. Seeing the quick work these heroes made of the bandits inspired you to follow in their footsteps."
+		},
+		"artisan_incident_3" : {
+			"name" : "Inciting Incident: Robbery",
+			"script" : "",
+			"effect" : "A criminal gang stole your goods and harmed a number of people who worked for you. You became a hero to prevent such indignities from being visited upon others, to seek revenge for the assault, or to find the thieves and get your stuff back."
+		}
+	}
+}

@@ -1,0 +1,98 @@
+{
+	"name" : "Dwarf",
+	"script" : "=,ancestry,Dwarf|*,misc_features,grounded|*,misc_features,spark_off_your_skin",
+	"choices" : {
+		"Runic Carving" : {
+			"description" : "You can carve a magic rune onto your skin. The rune you carve determines the benefit you receive. You can change or remove this rune with 10 minutes of work while not engaged in combat.",
+			"choose" : {
+				"budget" : "1",
+				"options" : [
+					{
+						"name" : "Runic Carving: Detection",
+						"cost" : "1",
+						"description" : "Pick a specific type of creature, such as \"goblins\" or \"humans\" or an object, such as \"magic swords\" or \"potions.\" Your rune glows softly when you are within 20 squares of a chosen creature or object, regardless of line of effect. You can change the type of creature as a maneuver.",
+						"script" : "*,maneuvers,runic_carving_detection",
+						"followups" : []
+					},
+					{
+						"name" : "Runic Carving: Light",
+						"cost" : "1",
+						"description" : "Your skin sheds light for 10 squares. You can turn this on and off as a maneuver.",
+						"script" : "*,maneuvers,runic_carving_light",
+						"followups" : []
+					},
+					{
+						"name" : "Runic Carving: Voice",
+						"cost" : "1",
+						"description" : "As a maneuver, you can communicate telepathically with another willing creature you have met before whose name you name, who can speak and understand a language you know, and is within 1 mile of you. You and the creature can respond to one another as if having a normal conversation. You can change the person you communicate with by changing the rune.",
+						"script" : "*,maneuvers,runic_carving_voice",
+						"followups" : []
+					}
+				]
+			}
+		}
+	},
+	"features" : {
+		"grounded" : {
+			"name" : "Grounded",
+			"script" : "+,stability,1",
+			"effect" : "Your heavy stone body and connection to the earth makes it difficult for others to move you. Your stability increases by 1."
+		},
+		"spark_off_your_skin" : {
+			"name" : "Spark Off Your Skin",
+			"script" : "+,stamina,6",
+			"effect" : "Your stone skin affords you potent protection. Your Stamina increases by 6 at 1st level, then increases by an additional 1 each time you gain a new level."
+		},
+		"runic_carving_detection" : {
+			"name" : "Runic Carving: Detection",
+			"script" : "",
+			"flavor" : "",
+			"keywords" : "",
+			"distance" : "",
+			"target" : "",
+			"free" : "False",
+			"trigger" : "",
+			"effect" : "Pick a specific type of creature, such as \"goblins\" or \"humans\" or an object, such as \"magic swords\" or \"potions.\" Your rune glows softly when you are within 20 squares of a chosen creature or object, regardless of line of effect.",
+			"powerroll" : "False",
+			"powerroll_char" : "",
+			"powerroll_tier1" : "",
+			"powerroll_tier2" : "",
+			"powerroll_tier3" : "",
+			"other" : ""
+		},
+		"runic_carving_light" : {
+			"name" : "Runic Carving: Light",
+			"script" : "",
+			"flavor" : "",
+			"keywords" : "",
+			"distance" : "",
+			"target" : "",
+			"free" : "False",
+			"trigger" : "",
+			"effect" : "Turn on or turn off light that your skin sheds for 10 squares.",
+			"powerroll" : "False",
+			"powerroll_char" : "",
+			"powerroll_tier1" : "",
+			"powerroll_tier2" : "",
+			"powerroll_tier3" : "",
+			"other" : ""
+		},
+		"runic_carving_voice" : {
+			"name" : "Runic Carving: Voice",
+			"script" : "",
+			"flavor" : "",
+			"keywords" : "",
+			"distance" : "",
+			"target" : "",
+			"free" : "False",
+			"trigger" : "",
+			"effect" : "You communicate telepathically with another willing creature you have met before whose name you name, who can speak and understand a language you know, and is within 1 mile of you. You and the creature can respond to one another as if having a normal conversation. You can change the person you communicate with by changing the rune.",
+			"powerroll" : "False",
+			"powerroll_char" : "",
+			"powerroll_tier1" : "",
+			"powerroll_tier2" : "",
+			"powerroll_tier3" : "",
+			"other" : ""
+		}
+	}
+}

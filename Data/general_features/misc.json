@@ -1,0 +1,36 @@
+{
+	"convert action to maneuver or move" : {
+		"name" : "Convert Action to Maneuver or Move",
+		"script" : "",
+		"flavor" : "",
+		"keywords" : "",
+		"distance" : "",
+		"target" : "",
+		"free" : "False",
+		"trigger" : "",
+		"effect" : "",
+		"powerroll" : "False",
+		"powerroll_char" : "",
+		"powerroll_tier1" : "",
+		"powerroll_tier2" : "",
+		"powerroll_tier3" : "",
+		"other" : ""
+	},
+	"convert move to shift" : {
+		"name" : "Move: Shift",
+		"script" : "",
+		"flavor" : "",
+		"keywords" : "",
+		"distance" : "",
+		"target" : "",
+		"free" : "False",
+		"trigger" : "",
+		"effect" : "",
+		"powerroll" : "False",
+		"powerroll_char" : "",
+		"powerroll_tier1" : "",
+		"powerroll_tier2" : "",
+		"powerroll_tier3" : "",
+		"other" : ""
+	}
+}

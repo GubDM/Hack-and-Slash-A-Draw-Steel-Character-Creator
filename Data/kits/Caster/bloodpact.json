@@ -1,0 +1,60 @@
+{
+	"name" : "Bloodpact",
+	"script" : "*,kits,Bloodpact|kit_bonus,stamina,bloodpact_bonus_stamina|kit_bonus,magic_bonus,bloodpact_magic_damage|kit_bonus,magic_distance,bloodpact_magic_distance|*,kit_equipment,bloodpact_equipment|*,signatures,bloodpact_drain|*,triggers,blood_ward",
+	"choices" : {},
+	"features" : {
+		"bloodpact_bonus_stamina" : {
+			"name" : "Bloodpact Kit: Stamina Bonus",
+			"script" : "+,stamina,6",
+			"effect" : "Stamina +6"			
+		},
+		"bloodpact_magic_damage" : {
+			"name" : "Bloodpact Kit: Magic Damage Bonus",
+			"script" : "+,magic_bonus,2:2:2",
+			"effect" : "Magic Damage Bonus +2/+2/+2"			
+		},
+		"bloodpact_magic_distance" : {
+			"name" : "Bloodpact Kit: Magic Distance Bonus",
+			"script" : "+,magic_distance,5",
+			"effect" : "Magic Distance +5"			
+		},
+		"bloodpact_equipment" : {
+			"name" : "Bloodpact Kit Equipment",
+			"script" : "*,kit_wear,no armor|*,kit_wield,an implement of crystal such as a staff or a wand",
+			"effect" : ""
+		},
+		"bloodpact_drain" : {
+			"name" : "Drain",
+			"script" : "",
+			"flavor" : "You drain the energy from your target and revitalize your senses.",
+			"keywords" : "attack,magic,melee",
+			"distance" : "reach,1",
+			"target" : "1 creature",
+			"free" : "False",
+			"effect" : "",
+			"powerroll" : "True",
+			"powerroll_char" : "Reason, Intuition, or Presence",
+			"powerroll_tier1" : "damage:corruption,3",
+			"powerroll_tier2" : "damage:corruption,8",
+			"powerroll_tier3" : "damage:corruption,12|effect:you can spend 1 Recovery to regain Stamina",
+			"other" : ""
+		},
+		"blood_ward" : {
+			"name" : "Kit Ward: Blood Ward",
+			"script" : "",
+			"flavor" : "A large projection of your heart magnifies the sound of your heartbeat.",
+			"keywords" : "",
+			"distance" : "",
+			"target" : "",
+			"trigger" : "An ability lets you spend a Recovery.",
+			"free" : "False",
+			"effect" : "Forgo regaining Stamina to instead increase your speed by 2 and have your abilities deal 2 extra corruption damage until the end of the encounter instead.",
+			"powerroll" : "False",
+			"powerroll_char" : "",
+			"powerroll_tier1" : "",
+			"powerroll_tier2" : "",
+			"powerroll_tier3" : "",
+			"other" : ""
+		}
+	}
+}

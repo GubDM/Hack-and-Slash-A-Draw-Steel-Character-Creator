@@ -1,0 +1,43 @@
+{
+	"name" : "Mountain",
+	"script" : "*,kits,Mountain|kit_bonus,stamina,mountain_bonus_stamina|kit_bonus,stability,mountain_bonus_stability|kit_bonus,melee_bonus,mountain_bonus_melee|*,kit_equipment,mountain_equipment|*,signatures,pain_for_pain",
+	"choices" : {},
+	"features" : {
+		"mountain_bonus_stamina" : {
+			"name" : "Mountain Kit: Stamina Bonus",
+			"script" : "+,stamina,9",
+			"effect" : "Stamina +9"			
+		},
+		"mountain_bonus_stability" : {
+			"name" : "Mountain Kit: Stability Bonus",
+			"script" : "+,stability,2",
+			"effect" : "Stability +2"			
+		},
+		"mountain_bonus_melee" : {
+			"name" : "Mountain Kit: Melee Weapon Damage Bonus",
+			"script" : "+,melee_bonus,0:0:4",
+			"effect" : "Melee Damage Bonus +0/+0/+4"			
+		},
+		"mountain_equipment" : {
+			"name" : "Mountain Kit Equipment",
+			"script" : "*,kit_wear,heavy armor|*,kit_wield,a heavy weapon",
+			"effect" : ""
+		},
+		"pain_for_pain" : {
+			"name" : "Pain for Pain",
+			"script" : "",
+			"flavor" : "An enemy who tagged you will pay for that.",
+			"keywords" : "attack,melee,weapon",
+			"distance" : "reach,1",
+			"target" : "1 creature",
+			"free" : "False",
+			"effect" : "If the target dealt damage to you since the end of your last turn, this attack gains an edge.",
+			"powerroll" : "True",
+			"powerroll_char" : "Might or Agility",
+			"powerroll_tier1" : "damage:,3",
+			"powerroll_tier2" : "damage:,8",
+			"powerroll_tier3" : "damage:,12",
+			"other" : ""
+		}
+	}
+}

@@ -1,0 +1,35 @@
+{
+	"name" : "Organization",
+	"script" : "",
+	"choices" : {
+		"Organization" : {
+			"description" : "Your culture's organization aspect determines the functioning and leadership of your community.",
+			"choose" : {
+				"budget" : "1",
+				"options" : [
+					{
+						"name" : "Anarchic",
+						"cost" : "1",
+						"description" : "In an anarchic culture, there are no rules and no one person leads the others. This might sound like complete chaos—people taking what they want when they want it—and some cultures that practice anarchy are. Other anarchic cultures are peaceful places where people mostly work for themselves, their friends, or their family, but rely on the whole group when times get tough.",
+						"script" : "=,organization,Anarchic|+,num_skill_picks,0:1:0:1:0",
+						"followups" : []
+					},
+					{
+						"name" : "Bureaucratic",
+						"cost" : "1",
+						"description" : "Bureaucratic cultures are steeped in official leadership and formally recorded laws. Members of such a culture are often ranked in power according to those laws, with a small group of people holding the power to rule according to birthright, popular vote, or some other official and measurable standard.",
+						"script" : "=,organization,Bureaucratic|+,num_skill_picks,0:0:0:1:1",
+						"followups" : []
+					},
+					{
+						"name" : "Communal",
+						"cost" : "1",
+						"description" : "A communal culture has no formal book of laws or rules for governing. Instead, the community works together to pick leaders and make important decisions. Often in these cultures, each person has a relatively equal say in how the culture operates, and everyone contributes to help the culture survive and thrive",
+						"script" : "=,organization,Communal|+,num_skill_picks,0:0:1:0:1",
+						"followups" : []
+					}
+				]
+			}
+		}
+	}
+}

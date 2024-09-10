@@ -1,0 +1,144 @@
+{
+	"name" : "Characteristics",
+	"script" : "",
+	"choices" : {
+		"Characteristic Array" : {
+			"description" : "You start with 2 {CHAR1} and 2 {CHAR2}. Your other characteristics scores will be assigned from one of the following arrays.",
+			"choose" : {
+				"budget" : "1",
+				"options" : [
+					{
+						"name" : "[2, -1, -1]",
+						"cost" : "1",
+						"description" : "",
+						"script" : "",
+						"followups" : ["Assign Values One Big"]
+					},
+					{
+						"name" : "[1,  1, -1]",
+						"cost" : "1",
+						"description" : "",
+						"script" : "",
+						"followups" : ["Assign Values Two Small"]
+					},
+					{
+						"name" : "[1,  0,  0]",
+						"cost" : "1",
+						"description" : "",
+						"script" : "",
+						"followups" : ["Assign Values One Small"]
+					}
+				]
+			}
+		},
+		"Assign Values One Big" : {
+			"description" : "The array you chose is [2, -1, -1]. Your other characteristics will map to this array, e.g. 3,1,2 => {CHARAB5}:2,{CHARAB3}:-1,{CHARAB4}:-1",
+			"choose" : {
+				"budget" : "3",
+				"options" : [
+					{
+						"name" : "{CHAR3}",
+						"cost" : "1",
+						"description" : "",
+						"script" : "+,charvalue@2,optindex:2:-1:-1|=,charcs_chosen,True",
+						"followups" : ["Confirm Characteristics"]
+					},
+					{
+						"name" : "{CHAR4}",
+						"cost" : "1",
+						"description" : "",
+						"script" : "+,charvalue@3,optindex:2:-1:-1|=,charcs_chosen,True",
+						"followups" : []
+					},
+					{
+						"name" : "{CHAR5}",
+						"cost" : "1",
+						"description" : "",
+						"script" : "+,charvalue@4,optindex:2:-1:-1|=,charcs_chosen,True",
+						"followups" : []
+					}
+				]
+			}
+		},
+		"Assign Values Two Small" : {
+			"description" : "The array you chose is [1,  1, -1]. Your other characteristics will map to this array, e.g. 3,1,2 => {CHARAB5}:1,{CHARAB3}:1,{CHARAB4}:-1",
+			"choose" : {
+				"budget" : "3",
+				"options" : [
+					{
+						"name" : "{CHAR3}",
+						"cost" : "1",
+						"description" : "",
+						"script" : "+,charvalue@2,optindex:1:1:-1|=,charcs_chosen,True",
+						"followups" : ["Confirm Characteristics"]
+					},
+					{
+						"name" : "{CHAR4}",
+						"cost" : "1",
+						"description" : "",
+						"script" : "+,charvalue@3,optindex:1:1:-1|=,charcs_chosen,True",
+						"followups" : []
+					},
+					{
+						"name" : "{CHAR5}",
+						"cost" : "1",
+						"description" : "",
+						"script" : "+,charvalue@4,optindex:1:1:-1|=,charcs_chosen,True",
+						"followups" : []
+					}
+				]
+			}
+		},
+		"Assign Values One Small" : {
+			"description" : "The array you chose is [1,  0,  0]. Your other characteristics will map to this array, e.g. 3,1,2 => {CHARAB5}:1,{CHARAB3}:0,{CHARAB4}:0",
+			"choose" : {
+				"budget" : "3",
+				"options" : [
+					{
+						"name" : "{CHAR3}",
+						"cost" : "1",
+						"description" : "",
+						"script" : "+,charvalue@2,optindex:1:0:0|=,charcs_chosen,True",
+						"followups" : ["Confirm Characteristics"]
+					},
+					{
+						"name" : "{CHAR4}",
+						"cost" : "1",
+						"description" : "",
+						"script" : "+,charvalue@3,optindex:1:0:0|=,charcs_chosen,True",
+						"followups" : []
+					},
+					{
+						"name" : "{CHAR5}",
+						"cost" : "1",
+						"description" : "",
+						"script" : "+,charvalue@4,optindex:1:0:0|=,charcs_chosen,True",
+						"followups" : []
+					}
+				]
+			}
+		},
+		"Confirm Characteristics" : {
+			"description" : "Your characteristics are: [MGT:{MGTVAL} AGL:{AGLVAL} REA:{REAVAL} INU:{INUVAL} PRS:{PRSVAL}].",
+			"choose" : {
+				"budget" : "1",
+				"options" : [
+					{
+						"name" : "Continue",
+						"cost" : "1",
+						"description" : "",
+						"script" : "",
+						"followups" : []
+					},
+					{
+						"name" : "Allocate characteristics differently",
+						"cost" : "1",
+						"description" : "",
+						"script" : "=,charcs_chosen,False|=,charpositon,0:0:0:0:0|=,charvalue,2:2:0:0:0",
+						"followups" : ["Characteristic Array"]
+					}
+				]
+			}
+		}
+	}
+}

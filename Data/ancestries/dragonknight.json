@@ -1,0 +1,161 @@
+{
+	"name" : "Dragon Knight",
+	"script" : "=,ancestry,Dragon Knight|*,misc_features,wyrmplate",
+	"choices" : {
+		"Wyrmplate" : {
+			"description" : "Your hardened scales grant you immunity 5 to one of the following damage types: cold, corruption, fire, lightning, or poison. You can change your damage immunity type while out of combat (no action required).",
+			"choose" : {
+				"budget" : "1",
+				"options" : [
+					{
+						"name" : "Cold Immunity",
+						"cost" : "1",
+						"description" : "You are granted cold immunity 5.",
+						"script" : "*,immunities,cold:5|choose,wyrmplate,wyrmplate_cold",
+						"followups" : []
+					},
+					{
+						"name" : "Corruption Immunity",
+						"cost" : "1",
+						"description" : "You are granted corruption immunity 5.",
+						"script" : "*,immunities,corruption:5|choose,wyrmplate,wyrmplate_corruption",
+						"followups" : []
+					},
+					{
+						"name" : "Fire Immunity",
+						"cost" : "1",
+						"description" : "You are granted fire immunity 5.",
+						"script" : "*,immunities,fire:5|choose,wyrmplate,wyrmplate_fire",
+						"followups" : []
+					},
+					{
+						"name" : "Lightning Immunity",
+						"cost" : "1",
+						"description" : "You are granted lightning immunity 5.",
+						"script" : "*,immunities,lightning:5|choose,wyrmplate,wyrmplate_lightning",
+						"followups" : []
+					},
+					{
+						"name" : "Poison Immunity",
+						"cost" : "1",
+						"description" : "You are granted poison immunity 5.",
+						"script" : "*,immunities,poison:5|choose,wyrmplate,wyrmplate_poison",
+						"followups" : []
+					}
+				]
+			}
+		},
+		"Knighthood" : {
+			"description" : "The legacy of the Dragon Phalanx lives in you.",
+			"choose" : {
+				"budget" : "1",
+				"options" : [
+					{
+						"name" : "Draconian Rush",
+						"cost" : "1",
+						"description" : "As a maneuver, you can fly in a straight line up to your speed. Until you reach level 6, you must end your turn on a solid surface or fall, then fall prone.",
+						"script" : "*,maneuvers,knighthood_draconian_rush",
+						"followups" : []
+					},
+					{
+						"name" : "Draconian Guard",
+						"cost" : "1",
+						"description" : "When you or a creature adjacent to you is attacked, you can use a triggered action to swing your wings around and guard against the blow, reducing any damage from the attack by an amount equal to your level + your Victories.",
+						"script" : "*,triggers,knighthood_draconian_guard",
+						"followups" : []
+					},
+					{
+						"name" : "Draconian Pride",
+						"cost" : "1",
+						"description" : "As an action, you let loose a mighty roar to repel your foes and shake their spirits",
+						"script" : "*,actions,knighthood_draconian_pride",
+						"followups" : []
+					}
+				]
+			}
+		}
+	},
+	"features" : {
+		"wyrmplate" : {
+			"name" : "Wyrmplate",
+			"script" : "",
+			"effect" : "Your hardened scales grant you immunity 5 to one of the following damage types: cold, corruption, fire, lightning, or poison. You can change your damage immunity type while out of combat (no action required)."
+		},
+		"wyrmplate_cold" : {
+			"name" : "Wyrmplate: Cold Immunity",
+			"script" : "",
+			"effect" : "Your hardened scales grant you cold immunity 5."
+		},
+		"wyrmplate_corruption" : {
+			"name" : "Wyrmplate: Corruption Immunity",
+			"script" : "",
+			"effect" : "Your hardened scales grant you corruption immunity 5."
+		},
+		"wyrmplate_fire" : {
+			"name" : "Wyrmplate: Fire Immunity",
+			"script" : "",
+			"effect" : "Your hardened scales grant you fire immunity 5."
+		},
+		"wyrmplate_lightning" : {
+			"name" : "Wyrmplate: Lightning Immunity",
+			"script" : "",
+			"effect" : "Your hardened scales grant you lightning immunity 5."
+		},
+		"wyrmplate_poison" : {
+			"name" : "Wyrmplate: Poison Immunity",
+			"script" : "",
+			"effect" : "Your hardened scales grant you poison immunity 5."
+		},
+		"knighthood_draconian_rush" : {
+			"name" : "Knighthood: Draconian Rush",
+			"script" : "",
+			"flavor" : "",
+			"keywords" : "",
+			"distance" : "",
+			"target" : "",
+			"free" : "False",
+			"trigger" : "",
+			"effect" : "Swing your wings around and guard against the blow, reducing any damage from the attack by an amount equal to your level + your Victories.",
+			"powerroll" : "False",
+			"powerroll_char" : "",
+			"powerroll_tier1" : "",
+			"powerroll_tier2" : "",
+			"powerroll_tier3" : "",
+			"other" : ""
+		},
+		"knighthood_draconian_guard" : {
+			"name" : "Knighthood: Draconian Guard",
+			"script" : "",
+			"flavor" : "",
+			"keywords" : "",
+			"distance" : "",
+			"target" : "",
+			"free" : "False",
+			"trigger" : "You or a creature adjacent to you is attacked.",
+			"effect" : "You can fly in a straight line up to your speed. Until you reach level 6, you must end your turn on a solid surface or fall, then fall prone.",
+			"powerroll" : "False",
+			"powerroll_char" : "",
+			"powerroll_tier1" : "",
+			"powerroll_tier2" : "",
+			"powerroll_tier3" : "",
+			"other" : ""
+		},
+		"knighthood_draconian_pride" : {
+			"name" : "Knighthood: Draconian Pride",
+			"script" : "",
+			"flavor" : "You let loose a mighty roar to repel your foes and shake their spirits",
+			"keywords" : "area|magic",
+			"distance" : "burst,2",
+			"target" : "all enemies",
+			"free" : "False",
+			"trigger" : "",
+			"effect" : "You have a bane on the power roll for this ability when you use it in consecutive rounds of the same encounter.",
+			"powerroll" : "True",
+			"powerroll_char" : "Might or Presence",
+			"powerroll_tier1" : "damage:,2|push 1",
+			"powerroll_tier2" : "damage:,4|push 3",
+			"powerroll_tier3" : "damage:,7|push 5; frightened (EoT)",
+			"other" : ""
+		}
+	}
+}

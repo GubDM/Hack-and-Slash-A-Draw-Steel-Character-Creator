@@ -1,0 +1,40 @@
+{
+	"name" : "Fire Mage",
+	"script" : "*,char_subclass,Fire|*,actions,fire_mage_melt|*,triggers,explosive_assistance|&=,FIRECOST3,2|&=,FIRECOST5,4",
+	"choices" : {},
+	"features" : {
+		"fire_mage_melt" : {
+			"name" : "Melt (2 Essence)",
+			"script" : "",
+			"flavor" : "With the merest touch, you cause an object to turn into slag or ash.",
+			"keywords" : "fire,magic,melee",
+			"distance" : "reach,1",
+			"target" : "1 mundane object",
+			"free" : "False",
+			"effect" : "You heat the target and cause it to combust and melt. If the object is larger than 1 square, then only the square of the object that you touch is destroyed.",
+			"powerroll" : "False",
+			"powerroll_char" : "",
+			"powerroll_tier1" : "",
+			"powerroll_tier2" : "",
+			"powerroll_tier3" : "",
+			"other" : "Spend No Essence: You can use this ability without spending essence. If you do, you must spend 1 uninterrupted minute using the ability while touching the target before its effect occurs."
+		},
+		"explosive_assistance" : {
+			"name" : "Explosive Assistance",
+			"script" : "",
+			"flavor" : "You add a little magic to an ally’s aggression at just the right time.",
+			"keywords" : "fire,magic,ranged",
+			"distance" : "ranged,5",
+			"target" : "Self or 1 ally",
+			"trigger" : "The target force moves a creature or object.",
+			"free" : "False",
+			"effect" : "The distance of the forced movement is increased by a number of squares equal to your Reason score.",
+			"powerroll" : "False",
+			"powerroll_char" : "",
+			"powerroll_tier1" : "",
+			"powerroll_tier2" : "",
+			"powerroll_tier3" : "",
+			"other" : "Spend 1 Essence: The distance of the forced movement is increased by a number of squares equal to twice your Reason score instead."
+		}
+	}
+}

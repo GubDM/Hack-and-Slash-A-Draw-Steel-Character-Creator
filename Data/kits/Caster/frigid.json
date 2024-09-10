@@ -1,0 +1,65 @@
+{
+	"name" : "Frigid",
+	"script" : "*,kits,Frigid|kit_bonus,stamina,frigid_bonus_stamina|kit_bonus,magic_distance,frigid_magic_distance|kit_bonus,magic_area,frigid_magic_area|*,kit_equipment,frigid_equipment|*,signatures,frozen_explosion|*,misc_features,ice_armor_resist|*,triggers,ice_armor_trigger",
+	"choices" : {},
+	"features" : {
+		"frigid_bonus_stamina" : {
+			"name" : "Frigid Kit: Stamina Bonus",
+			"script" : "+,stamina,3",
+			"effect" : "Stamina +3"			
+		},
+		"frigid_magic_distance" : {
+			"name" : "Frigid Kit: Magic Distance Bonus",
+			"script" : "+,magic_distance,7",
+			"effect" : "Magic Distance +7"			
+		},
+		"frigid_magic_area" : {
+			"name" : "Frigid Kit: Magic Area Bonus",
+			"script" : "+,magic_area,1",
+			"effect" : "Magic Area +1"			
+		},
+		"frigid_equipment" : {
+			"name" : "Frigid Kit Equipment",
+			"script" : "*,kit_wear,no armor|*,kit_wield,an implement of crystal such as a staff or a wand",
+			"effect" : ""
+		},
+		"frozen_explosion" : {
+			"name" : "Frozen Explosion",
+			"script" : "",
+			"flavor" : "You unleash a blast of frigid air to freeze and hinder your foes.",
+			"keywords" : "area,magic,ranged",
+			"distance" : "cube,2:5",
+			"target" : "All enemies",
+			"free" : "False",
+			"effect" : "",
+			"powerroll" : "True",
+			"powerroll_char" : "Reason, Intuition, or Presence",
+			"powerroll_tier1" : "damage:cold,2",
+			"powerroll_tier2" : "damage:cold,3|effect:slowed (EoT)",
+			"powerroll_tier3" : "damage:cold,4|effect:slowed (EoE)",
+			"other" : ""
+		},
+		"ice_armor_resist" : {
+			"name" : "Frigid Kit Ward: Ice Armor",
+			"script" : "*,immunities,fire:2|*,immunities,cold:2",
+			"effect" : "Your ward covers your body in ice. You have cold immunity and fire immunity equal to your highest characteristic score."
+		},
+		"ice_armor_trigger" : {
+			"name" : "Frigid Kit Ward: Ice Armor",
+			"script" : "",
+			"flavor" : "Your ward covers your body in ice.",
+			"keywords" : "",
+			"distance" : "",
+			"target" : "",
+			"trigger" : "A creature damages you with a melee ability.",
+			"free" : "False",
+			"effect" : "The creature takes cold damage equal to your highest characteristic score.",
+			"powerroll" : "False",
+			"powerroll_char" : "",
+			"powerroll_tier1" : "",
+			"powerroll_tier2" : "",
+			"powerroll_tier3" : "",
+			"other" : ""
+		}
+	}
+}

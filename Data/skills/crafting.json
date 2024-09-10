@@ -1,0 +1,79 @@
+{
+	"name" : "Crafting Skills",
+	"script" : "",
+	"choices" : {
+		"Crafting Skills" : {
+			"description" : "Skills from the crafting skill group are used in the creation and appraisal of goods and for jury-rigging contraptions.",
+			"choose" : {
+				"budget" : "query,num_skill_picks,0",
+				"ignore" : "crafting_skills",
+				"options" : [
+					{
+						"name" : "Alchemy",
+						"group" : "crafting_skills",
+						"cost" : "1",
+						"description" : "Make bombs and potions",
+						"script" : "*,crafting_skills,Alchemy",
+						"followups" : []
+					},
+					{
+						"name" : "Architecture",
+						"group" : "crafting_skills",
+						"cost" : "1",
+						"description" : "Create buildings and vehicles",
+						"script" : "*,crafting_skills,Architecture",
+						"followups" : []
+					},
+					{
+						"name" : "Blacksmithing",
+						"group" : "crafting_skills",
+						"cost" : "1",
+						"description" : "Forge metal armor and weapons",
+						"script" : "*,crafting_skills,Blacksmithing",
+						"followups" : []
+					},
+					{
+						"name" : "Fletching",
+						"group" : "crafting_skills",
+						"cost" : "1",
+						"description" : "Make ranged weapons and ammunition",
+						"script" : "*,crafting_skills,Fletching",
+						"followups" : []
+					},
+					{
+						"name" : "Forgery",
+						"group" : "crafting_skills",
+						"cost" : "1",
+						"description" : "Create false badges, documents, and other items",
+						"script" : "*,crafting_skills,Forgery",
+						"followups" : []
+					},
+					{
+						"name" : "Jewelry",
+						"group" : "crafting_skills",
+						"cost" : "1",
+						"description" : "Create bracelets, crowns, rings, and other jewelry",
+						"script" : "*,crafting_skills,Jewelry",
+						"followups" : []
+					},
+					{
+						"name" : "Mechanics",
+						"group" : "crafting_skills",
+						"cost" : "1",
+						"description" : "Build machines and clockwork items",
+						"script" : "*,crafting_skills,Mechanics",
+						"followups" : []
+					},
+					{
+						"name" : "Tailoring",
+						"group" : "crafting_skills",
+						"cost" : "1",
+						"description" : "Craft cloth and leather clothing",
+						"script" : "*,crafting_skills,Tailoring",
+						"followups" : []
+					}
+				]
+			}
+		}
+	}
+}

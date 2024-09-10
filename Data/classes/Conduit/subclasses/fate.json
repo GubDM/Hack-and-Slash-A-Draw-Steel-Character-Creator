@@ -1,0 +1,35 @@
+{
+	"name" : "Fate Domain",
+	"script" : "*,char_subclass,Fate|choose,prayer,prayer_fate|&*,DOMAINFEATURECHOICE,fate_trance",
+	"choices" : {},
+	"features" : {
+		"prayer_fate" : {
+			"name" : "Fate Domain Effect",
+			"script" : "choose,prayer,prayer_fate",
+			"effect" : "Choose another creature you have line of effect to. That creature automatically gets a tier 1 or tier 3 result (your choice) on their next power roll."
+		},
+		"fate_trance" : {
+			"name" : "Fate Trance",
+			"script" : "+,num_skill_picks,0:0:0:0:1",
+			"option" : {
+				"name" : "Fate Trance",
+				"cost" : "1",
+				"description" : "You get a glimpse of any significant events that will happen in the area around you in the next 24 hours.",
+				"script" : "*,misc_features,fate_trance",
+				"followups" : []
+			},
+			"flavor" : "",
+			"keywords" : "",
+			"distance" : "",
+			"target" : "",
+			"free" : "False",
+			"effect" : "If you spend 10 minutes in an uninterrupted meditative state without moving, you get a glimpse of any significant events that will happen in the area around you in the next 24 hours unless you or your allies intercede in those events. As described by the Director, these glimpses of the future might be clear and concise, or might be vague and hard to understand.",
+			"powerroll" : "False",
+			"powerroll_char" : "",
+			"powerroll_tier1" : "",
+			"powerroll_tier2" : "",
+			"powerroll_tier3" : "",
+			"other" : ""
+		}
+	}
+}

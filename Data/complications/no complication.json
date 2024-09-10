@@ -1,0 +1,7 @@
+{
+	"name" : "No Complication",
+	"script" : "=,complication,-",
+	"description" : "Your character has no complication.",
+	"choices" : {},
+	"features" : {}
+}

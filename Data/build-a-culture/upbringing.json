@@ -1,0 +1,194 @@
+{
+	"name" : "Upbringing",
+	"script" : "",
+	"choices" : {
+		"Upbringing" : {
+			"description" : "Your culture's upbringing describes how you were individually raised within your culture.",
+			"choose" : {
+				"budget" : "1",
+				"options" : [
+					{
+						"name" : "Academic",
+						"cost" : "1",
+						"description" : "Heroes with an academic upbringing were raised by people who collect, study, and share books and other records. Some academics focus on one area of study, such as a college for wizards dedicated to the study of magic, or a church that teaches the word of one deity.",
+						"script" : "=,upbringing,Academic|+,num_skill_picks,0:0:0:0:1",
+						"followups" : []
+					},
+					{
+						"name" : "Creative",
+						"cost" : "1",
+						"description" : "Heroes with a creative upbringing were raised among folk who create art or other works valuable enough to trade. A creative culture might produce fine art such as dance, music, or sculpture, or more practical wares such as wagons, weapons, tools, or buildings",
+						"script" : "=,upbringing,Creative",
+						"followups" : [
+							"Creative Skills"
+						]
+					},
+					{
+						"name" : "Illegal",
+						"cost" : "1",
+						"description" : "Heroes with an illegal upbringing had caregivers who performed activities that other folk—whether within or outside their culture—considered unlawful. A band of pirates, a guild of assassins, or an organization of spies all commit unlawful acts for money.",
+						"script" : "=,upbringing,Illegal|+,num_skill_picks,0:0:0:1:0",
+						"followups" : []
+					},
+					{
+						"name" : "Labor",
+						"cost" : "1",
+						"description" : "People who labor for a living survive through cultivation, typically raising crops or livestock on a farm; by harvesting natural resources, whether by hunting, trapping, logging, or mining; or through manual labor tied to settlement and trade, such as construction, carting, loading cargo, and so forth",
+						"script" : "=,upbringing,Labor",
+						"followups" : ["Labor Skills"]
+					},
+					{
+						"name" : "Martial",
+						"cost" : "1",
+						"description" : "Heroes who have a martial upbringing are raised by warriors. These might be the soldiers of an established army, a band of mercenaries, a guild of monster-slaying adventurers, or any other folk whose lives revolve around combat.",
+						"script" : "=,upbringing,Martial",
+						"followups" : ["Martial Skills"]
+					},
+					{
+						"name" : "Noble",
+						"cost" : "1",
+						"description" : "Heroes with a noble upbringing were raised by leaders who rule over others and play the games of politics to maintain power. Many families are nobles by birthright, but some cultures have noble titles that are earned through deeds or popularity.",
+						"script" : "=,upbringing,Noble|+,num_skill_picks,0:0:1:0:0",
+						"followups" : []
+					}
+				]
+			}
+		},
+		"Creative Skills" : {
+			"description" : "People in creative cultures learn the value of quality crafting and attention to detail.",
+			"choose" : {
+				"budget" : "1",
+				"options" : [
+					{
+						"name" : "Music",
+						"cost" : "1",
+						"description" : "Perform music vocally or with an instrument",
+						"script" : "*,interpersonal_skills,Music",
+						"followups" : []
+					},
+					{
+						"name" : "Perform",
+						"cost" : "1",
+						"description" : "Engage in dance, oratory, acting, or some other physical performance",
+						"script" : "*,interpersonal_skills,Perform",
+						"followups" : []
+					},
+					{
+						"name" : "1 from Crafting Skill Group (choose later)",
+						"cost" : "1",
+						"description" : "",
+						"script" : "+,num_skill_picks,1:0:0:0:0",
+						"followups" : []
+					}
+				]
+			}
+		},
+		"Labor Skills" : {
+			"description" : "People with a labor upbringing know the value of hard work.",
+			"choose" : {
+				"budget" : "1",
+				"options" : [
+					{
+						"name" : "Blacksmithing",
+						"cost" : "1",
+						"description" : "Forge metal armor and weapons",
+						"script" : "*,crafting_skills,Blacksmithing",
+						"followups" : []
+					},
+					{
+						"name" : "Handle Animals",
+						"cost" : "1",
+						"description" : "Interact with animal wildlife that isn't sapient",
+						"script" : "*,interpersonal_skills,Handle Animals",
+						"followups" : []
+					},
+					{
+						"name" : "1 from Exploration Skill Group (choose later)",
+						"cost" : "1",
+						"description" : "",
+						"script" : "+,num_skill_picks,0:1:0:0:0",
+						"followups" : []
+					}
+				]
+			}
+		},
+		"Martial Skills" : {
+			"description" : "Heroes with a martial upbringing are always ready for a fight - and they know how to finish that fight.",
+			"choose" : {
+				"budget" : "1",
+				"options" : [
+					{
+						"name" : "Alertness",
+						"cost" : "1",
+						"description" : "Intuitively sense the details of your surroundings",
+						"script" : "*,intrigue_skills,Alertness",
+						"followups" : []
+					},
+					{
+						"name" : "Blacksmithing",
+						"cost" : "1",
+						"description" : "Forge metal armor and weapons",
+						"script" : "*,crafting_skills,Blacksmithing",
+						"followups" : []
+					},
+					{
+						"name" : "Climb",
+						"cost" : "1",
+						"description" : "Move up vertical surfaces",
+						"script" : "*,exploration_skills,Climb",
+						"followups" : []
+					},
+					{
+						"name" : "Endurance",
+						"cost" : "1",
+						"description" : "Remain engaged in strenuous activity over a long period of time",
+						"script" : "*,exploration_skills,Endurance",
+						"followups" : []
+					},
+					{
+						"name" : "Fletching",
+						"cost" : "1",
+						"description" : "Make ranged weapons and ammunition",
+						"script" : "*,crafting_skills,Fletching",
+						"followups" : []
+					},
+					{
+						"name" : "Intimidate",
+						"cost" : "1",
+						"description" : "Awe or scare a creature",
+						"script" : "*,interpersonal_skills,Intimidate",
+						"followups" : []
+					},
+					{
+						"name" : "Jump",
+						"cost" : "1",
+						"description" : "Leap vertical and horizontal distances",
+						"script" : "*,exploration_skills,Jump",
+						"followups" : []
+					},
+					{
+						"name" : "Monsters",
+						"cost" : "1",
+						"description" : "Knowing monster ecology, strengths, and weaknesses",
+						"script" : "*,lore_skills,Monsters",
+						"followups" : []
+					},
+					{
+						"name" : "Ride",
+						"cost" : "1",
+						"description" : "Ride and control a mount who isn't sapient, such as a horse",
+						"script" : "*,exploration_skills,Ride",
+						"followups" : []
+					},
+					{
+						"name" : "Track",
+						"cost" : "1",
+						"description" : "Follow a trail that another creature has left behind",
+						"script" : "*,intrigue_skills,Track",
+						"followups" : []
+					}
+				]
+			}
+		}
+	}
+}

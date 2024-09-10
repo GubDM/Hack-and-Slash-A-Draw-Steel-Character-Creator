@@ -1,0 +1,186 @@
+{
+	"name" : "Languages of the Timescape",
+	"script" : "",
+	"choices" : {
+		"Languages" : {
+			"choose" : {
+				"options" : [
+					{
+						"name" : "Caelian (recommended)",
+						"cost" : "1",
+						"description" : "Common tongue of Orden",
+						"script" : "*,languages,Caelian"
+					},
+					{
+						"name" : "Uvalic",
+						"cost" : "1",
+						"description" : "human language of the Gol",
+						"script" : "*,languages,Uvalic"
+					},
+					{
+						"name" : "Higaran",
+						"cost" : "1",
+						"description" : "human language of Higara",
+						"script" : "*,languages,Higaran"
+					},
+					{
+						"name" : "Oaxuatl",
+						"cost" : "1",
+						"description" : "human language of Ix",
+						"script" : "*,languages,Oaxuatl"
+					},
+					{
+						"name" : "Khemharic",
+						"cost" : "1",
+						"description" : "human language of Khemhara",
+						"script" : "*,languages,Khemharic"
+					},
+					{
+						"name" : "Khoursirian",
+						"cost" : "1",
+						"description" : "human language of Khoursir",
+						"script" : "*,languages,Khoursirian"
+					},
+					{
+						"name" : "Phaedran",
+						"cost" : "1",
+						"description" : "human language of Phaedros",
+						"script" : "*,languages,Phaedran"
+					},
+					{
+						"name" : "Riojan",
+						"cost" : "1",
+						"description" : "human language of Rioja",
+						"script" : "*,languages,Riojan"
+					},
+					{
+						"name" : "Vaniric",
+						"cost" : "1",
+						"description" : "human language of Vanigar",
+						"script" : "*,languages,Vaniric"
+					},
+					{
+						"name" : "Vaslorian",
+						"cost" : "1",
+						"description" : "human language of Vasloria",
+						"script" : "*,languages,Vaslorian"
+					},
+					{
+						"name" : "Filliaric",
+						"cost" : "1",
+						"description" : "language of Angulotls",
+						"script" : "*,languages,Filliaric"
+					},
+					{
+						"name" : "Proto-Ctholl",
+						"cost" : "1",
+						"description" : "language of Demons",
+						"script" : "*,languages,Proto-Ctholl"
+					},
+					{
+						"name" : "Anjal",
+						"cost" : "1",
+						"description" : "language of Gnolls, Devils and contract law",
+						"script" : "*,languages,Anjal"
+					},
+					{
+						"name" : "Zaliac",
+						"cost" : "1",
+						"description" : "language of Dwarves and engineering",
+						"script" : "*,languages,Zaliac"
+					},
+					{
+						"name" : "Xakalliac",
+						"cost" : "1",
+						"description" : "language of Dragons",
+						"script" : "*,languages,Xakalliac"
+					},
+					{
+						"name" : "The First Language",
+						"cost" : "1",
+						"description" : "language of elder Dragons and magic",
+						"script" : "*,languages,The First Language"
+					},
+					{
+						"name" : "Yllyric",
+						"cost" : "1",
+						"description" : "language of Wode Elves and druids",
+						"script" : "*,languages,Yllyric"
+					},
+					{
+						"name" : "Hyrallic",
+						"cost" : "1",
+						"description" : "language of High Elves and interspecies diplomacy",
+						"script" : "*,languages,Hyrallic"
+					},
+					{
+						"name" : "Khelt",
+						"cost" : "1",
+						"description" : "language of fae creatures",
+						"script" : "*,languages,Khelt"
+					},
+					{
+						"name" : "Kuric",
+						"cost" : "1",
+						"description" : "language of Giants and Ogres",
+						"script" : "*,languages,Kuric"
+					},
+					{
+						"name" : "Variac",
+						"cost" : "1",
+						"description" : "Common tongue of the World Below; the language of Gnomes, Trolls, and Voiceless Talkers.",
+						"script" : "*,languages,Variac"
+					},
+					{
+						"name" : "Szetch",
+						"cost" : "1",
+						"description" : "language of Goblins",
+						"script" : "*,languages,Szetch"
+					},
+					{
+						"name" : "Kethaic",
+						"cost" : "1",
+						"description" : "language of Kobolds, patois of Caelian and Xakalliac",
+						"script" : "*,languages,Kethaic"
+					},
+					{
+						"name" : "Khamish",
+						"cost" : "1",
+						"description" : "language of Lizardfolk",
+						"script" : "*,languages,Khamish"
+					},
+					{
+						"name" : "Urollialic",
+						"cost" : "1",
+						"description" : "language of Olothec",
+						"script" : "*,languages,Urollialic"
+					},
+					{
+						"name" : "Kalliak",
+						"cost" : "1",
+						"description" : "language of Orcs",
+						"script" : "*,languages,Kalliak"
+					},
+					{
+						"name" : "Za'hariax",
+						"cost" : "1",
+						"description" : "language of Overminds",
+						"script" : "*,languages,Za'hariax"
+					},
+					{
+						"name" : "Voll",
+						"cost" : "1",
+						"description" : "language of Time Raiders",
+						"script" : "*,languages,Voll"
+					},
+					{
+						"name" : "Mindspeech",
+						"cost" : "1",
+						"description" : "a symbolic language shared among native telepaths",
+						"script" : "*,languages,Mindspeech"
+					}
+				]
+			}
+		}
+	}
+}

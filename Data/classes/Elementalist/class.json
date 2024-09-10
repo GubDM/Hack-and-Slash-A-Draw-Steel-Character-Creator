@@ -1,0 +1,386 @@
+{
+	"name" : "Elementalist",
+	"script" : "=,char_class,Elementalist|&=,CHAR1,Reason|&=,CHAR2,Intuition|+,stamina,15|+,recoveries,6|=,hr_feature,essence|*,free_strikes,hurl_element|*,misc_features,persistent_magic|*,maneuvers,practical_magic|*,lore_skills,Magic|&=,EARTHCOST3,3|&=,FIRECOST3,3|&=,GREENCOST3,3|&=,VOIDCOST3,3|&=,EARTHCOST5,5|&=,FIRECOST5,5|&=,GREENCOST5,5|&=,VOIDCOST5,5",
+	"subclass_name" : "Elemental Specialization",
+	"subclass_budget" : "1",
+	"subclass_prompt" : "Choose one of the following elements to be your elementalist's specialty.",
+	"choices" : {
+		"Elementalist Skills" : {
+			"description" : "As an elementalist, you gain the Magic skill and three other skills from the crafting or lore skill groups.",
+			"choose" : {
+				"budget" : "3",
+				"options_skills" : "groups:crafting,lore"
+			}
+		},
+		"Elementalist Signature Ability" : {
+			"description" : "Signature abilities can be used at will.",
+			"choose" : {
+				"budget" : "1",
+				"options" : [
+					{
+						"name" : "Debris",
+						"cost" : "1",
+						"description" : "A sudden storm of detritus assaults your foes and leaves them struggling to move.",
+						"script" : "*,signatures,debris",
+						"followups" : []
+					},
+					{
+						"name" : "Fire Lance",
+						"cost" : "1",
+						"description" : "A jet of fire erupts with elemental fury where it strikes.",
+						"script" : "*,signatures,fire_lance",
+						"followups" : []
+					},
+					{
+						"name" : "Growing Pains",
+						"cost" : "1",
+						"description" : "Whipping vines erupt from a foe's body to grasp at another close by.",
+						"script" : "*,signatures,growing_pains",
+						"followups" : []
+					},
+					{
+						"name" : "Void Ray",
+						"cost" : "1",
+						"description" : "A beam of energy corrupts and hinders whatever it touches.",
+						"script" : "*,signatures,void_ray",
+						"followups" : []
+					}
+				]
+			}
+		},
+		"Elementalist 3-Essence Heroic Abilities " : {
+			"description" : "",
+			"choose" : {
+				"budget" : "1",
+				"options" : [
+					{
+						"name" : "Burn! ({FIRECOST3} Essence)",
+						"cost" : "1",
+						"description" : "Fire engulfs a target of your choice and burns at your command.",
+						"script" : "*,heroic3actions,elementalist_burn",
+						"followups" : []
+					},
+					{
+						"name" : "Invigorating Growth ({GREENCOST3} Essence)",
+						"cost" : "1",
+						"description" : "Mushrooms erupt from a foe, sapping their vitality to spread strengthening spores.",
+						"script" : "*,heroic3actions,invigorating_growth",
+						"followups" : []
+					},
+					{
+						"name" : "Punch the Earth ({EARTHCOST3} Essence)",
+						"cost" : "1",
+						"description" : "You slam the ground, which buckles out from you in every direction.",
+						"script" : "*,heroic3actions,punch_the_earth",
+						"followups" : []
+					},
+					{
+						"name" : "Stare Into the Abyss ({VOIDCOST3} Essence)",
+						"cost" : "1",
+						"description" : "You open a rift into the void to harry your enemies.",
+						"script" : "*,heroic3actions,stare_into_the_abyss",
+						"followups" : []
+					}
+				]
+			}
+		},
+		"Elementalist 5-Essence Heroic Abilities " : {
+			"description" : "",
+			"choose" : {
+				"budget" : "1",
+				"options" : [
+					{
+						"name" : "Conflagration ({FIRECOST5} Essence)",
+						"cost" : "1",
+						"description" : "A storm of fire descends upon your enemies.",
+						"script" : "*,heroic5actions,conflagration",
+						"followups" : []
+					},
+					{
+						"name" : "Incorporealness ({VOIDCOST5} Essence)",
+						"cost" : "1",
+						"description" : "The material substance of a creature shreds away at your command.",
+						"script" : "*,heroic5maneuvers,incorporealness",
+						"followups" : []
+					},
+					{
+						"name" : "Nourishing Rain ({GREENCOST5} Essence)",
+						"cost" : "1",
+						"description" : "You call down a rain that burns your enemies and restores your allies.",
+						"script" : "*,heroic5actions,nourishing_rain",
+						"followups" : []
+					},
+					{
+						"name" : "Open the Earth ({EARTHCOST5} Essence)",
+						"cost" : "1",
+						"description" : "The surface of the world around you opens up at your command.",
+						"script" : "*,heroic5maneuvers,open_the_earth",
+						"followups" : []
+					}
+				]
+			}
+		}
+	},
+	"features" : {
+		"essence" : {
+			"name" : "Essence",
+			"script" : "",
+			"effect" : "You channel the substance of creation in the form of a Heroic Resource called essence. In times of great stress, you can focus your control on this substance, gathering and burning it to cast and maintain spells.{N}Outside of combat and other dangerous situations tracked in turns and rounds, you have essence equal to your Victories. If you lose some or all of this essence outside of combat, it takes you 1 minute to regain it. You can also dedicate that essence to maintaining persistent abilities (see Persistent Magic below).{N}When combat begins, you keep any essence you had outside of combat. At the start of each of your turns during combat, you gain 2 essence. When combat ends, you once more have essence equal to your Victories."
+		},
+		"hurl_element" : {
+			"name" : "Free Strike: Hurl Element",
+			"script" : "",
+			"flavor" : "You hurl a ball of elemental energy at a nearby foe.",
+			"keywords" : "attack,magic,ranged",
+			"distance" : "ranged,5",
+			"target" : "1 creature or object",
+			"free" : "False",
+			"trigger" : "",
+			"effect" : "When you make this attack, choose the damage type from one of the following options: acid, cold, corruption, fire, lightning, poison, or sonic.",
+			"powerroll" : "True",
+			"powerroll_char" : "Reason",
+			"powerroll_tier1" : "damage:(type varies),2",
+			"powerroll_tier2" : "damage:(type varies),6",
+			"powerroll_tier3" : "damage:(type varies),9",
+			"other" : ""
+		},
+		"persistent_magic" : {
+			"name" : "Persistent Magic",
+			"script" : "",
+			"flavor" : "",
+			"keywords" : "",
+			"distance" : "",
+			"target" : "",
+			"free" : "False",
+			"trigger" : "",
+			"effect" : "Some of your heroic abilities have the Persistent keyword. Whenever you use a persistent ability, you decide whether you want to maintain it. If you maintain a persistent ability in combat, you reduce the amount of essence you earn at the start of your turn by an amount equal to the ability's persistent value, which enables the ability's persistent effect. All your active persistent abilities end when combat ends.{N}You can maintain a persistent ability outside of combat as long as you have Victories equal to or greater than its persistent value. If you maintain a persistent ability outside of combat, the maximum essence you can use on other abilities is reduced by the ability's persistent value. For instance, if you have 4 Victories and maintain the Stone Ward ability (a persistent ability with a cost of 1 essence), you can only use abilities costing 3 essence or less outside of combat.{N}You can't maintain any abilities that would make you earn a negative amount of essence at the start of your turn or have a negative amount of essence outside of combat. You can stop maintaining an ability at any time (no actionrequired).{N}If you maintain the same ability on several targets and the effect includes a power roll, you make that roll once and apply the same effect to all targets. A creature can't be affected by multiple instances of a persistent ability.{N}Whenever you take damage while you have an active persistent ability, you must make the above power roll.",
+			"powerroll" : "True",
+			"powerroll_char" : "Reason",
+			"powerroll_tier1" : "You lose all active persistent abilities.",
+			"powerroll_tier2" : "If you have only one persistent ability active, it remains active. Otherwise, you lose one active persistent ability of your choice.",
+			"powerroll_tier3" : "All your active persistent abilities remain active",
+			"other" : ""
+		},
+		"practical_magic" : {
+			"name" : "Practical Magic",
+			"script" : "",
+			"flavor" : "Your mastery of elemental power lets you customize your magic.",
+			"keywords" : "magic",
+			"distance" : "self",
+			"target" : "self",
+			"free" : "False",
+			"trigger" : "",
+			"effect" : "",
+			"powerroll" : "False",
+			"powerroll_char" : "",
+			"powerroll_tier1" : "",
+			"powerroll_tier2" : "",
+			"powerroll_tier3" : "",
+			"other" : "Choose one of the following effects:{N}* You use the Knockback maneuver, but you make a Reason test instead of a Might test. For this use of the maneuver, you can target a creature at a distance equal to the distance of your Hurl Element ability.{N}* You choose a creature within the distance of your Hurl Element ability and deal damage to that creature equal to your Reason score. The damage type can be acid, cold, corruption, fire, lightning, poison, or sonic.{N}* You teleport a number of squares equal to your Reason score."
+		},
+		"debris" : {
+			"name" : "Debris",
+			"script" : "",
+			"flavor" : "A sudden storm of detritus assaults your foes and leaves them struggling to move.",
+			"keywords" : "area,earth,magic,ranged",
+			"distance" : "cube,3:5",
+			"target" : "All enemies",
+			"free" : "False",
+			"trigger" : "",
+			"effect" : "The ground beneath the area becomes difficult terrain for your enemies.",
+			"powerroll" : "True",
+			"powerroll_char" : "Reason",
+			"powerroll_tier1" : "damage:,2",
+			"powerroll_tier2" : "damage:,3",
+			"powerroll_tier3" : "damage:,4",
+			"other" : ""
+		},
+		"fire_lance" : {
+			"name" : "Fire Lance",
+			"script" : "",
+			"flavor" : "A jet of fire erupts with elemental fury where it strikes.",
+			"keywords" : "attack,fire,magic,ranged",
+			"distance" : "ranged,5",
+			"target" : "1 creature or object",
+			"free" : "False",
+			"trigger" : "",
+			"effect" : "",
+			"powerroll" : "True",
+			"powerroll_char" : "Reason",
+			"powerroll_tier1" : "damage:fire,2|push 2",
+			"powerroll_tier2" : "damage:fire,6|push 2",
+			"powerroll_tier3" : "damage:fire,9|push 2",
+			"other" : ""
+		},
+		"growing_pains" : {
+			"name" : "Growing Pains",
+			"script" : "",
+			"flavor" : "Whipping vines erupt from a foe's body to grasp at another close by.",
+			"keywords" : "attack,green,magic,ranged",
+			"distance" : "ranged,5",
+			"target" : "1 creature",
+			"free" : "False",
+			"trigger" : "",
+			"effect" : "A creature within 5 squares of the target is pulled 2 squares toward the target.",
+			"powerroll" : "True",
+			"powerroll_char" : "Reason",
+			"powerroll_tier1" : "damage:,2",
+			"powerroll_tier2" : "damage:,6",
+			"powerroll_tier3" : "damage:,9",
+			"other" : ""
+		},
+		"void_ray" : {
+			"name" : "Void Ray",
+			"script" : "",
+			"flavor" : "A beam of energy corrupts and hinders whatever it touches.",
+			"keywords" : "attack,void,magic,ranged",
+			"distance" : "ranged,5",
+			"target" : "1 creature or object",
+			"free" : "False",
+			"trigger" : "",
+			"effect" : "",
+			"powerroll" : "True",
+			"powerroll_char" : "Reason",
+			"powerroll_tier1" : "damage:corruption,2",
+			"powerroll_tier2" : "damage:corruption,6|slowed (EoT)",
+			"powerroll_tier3" : "damage:corruption,9|slowed (EoT)",
+			"other" : ""
+		},
+		"elementalist_burn" : {
+			"name" : "Burn! ({FIRECOST3} Essence)",
+			"script" : "",
+			"flavor" : "Fire engulfs a target of your choice and burns at your command.",
+			"keywords" : "attack,fire,magic,ranged,persistent",
+			"distance" : "ranged,5",
+			"target" : "1 creature or object",
+			"free" : "False",
+			"trigger" : "",
+			"effect" : "",
+			"powerroll" : "True",
+			"powerroll_char" : "Reason",
+			"powerroll_tier1" : "damage:fire,6",
+			"powerroll_tier2" : "damage:fire,8",
+			"powerroll_tier3" : "damage:fire,13",
+			"other" : "Persistent 1: If the target is within distance at the start of your turn, make a power roll for this ability again."
+		},
+		"invigorating_growth" : {
+			"name" : "Invigorating Growth ({GREENCOST3} Essence)",
+			"script" : "",
+			"flavor" : "Mushrooms erupt from a foe, sapping their vitality to spread strengthening spores.",
+			"keywords" : "attack,green,magic,ranged",
+			"distance" : "ranged,5",
+			"target" : "1 creature or object",
+			"free" : "False",
+			"trigger" : "",
+			"effect" : "The mushrooms can be removed by the target or by an adjacent creature as an action. While the mushrooms are on the target, each of your allies adjacent to the target gains an edge on attacks against them.",
+			"powerroll" : "True",
+			"powerroll_char" : "Reason",
+			"powerroll_tier1" : "damage:poison,6",
+			"powerroll_tier2" : "damage:poison,9",
+			"powerroll_tier3" : "damage:poison,14",
+			"other" : ""
+		},
+		"punch_the_earth" : {
+			"name" : "Punch the Earth ({EARTHCOST3} Essence)",
+			"script" : "",
+			"flavor" : "You slam the ground, which buckles out from you in every direction.",
+			"keywords" : "area,earth,magic",
+			"distance" : "burst,3",
+			"target" : "All enemies",
+			"free" : "False",
+			"trigger" : "",
+			"effect" : "You must be touching the ground or floor to use this ability. The surface beneath the area becomes difficult terrain for your enemies.",
+			"powerroll" : "True",
+			"powerroll_char" : "Reason",
+			"powerroll_tier1" : "damage:,4",
+			"powerroll_tier2" : "damage:,5",
+			"powerroll_tier3" : "damage:,8|prone",
+			"other" : ""
+		},
+		"stare_into_the_abyss" : {
+			"name" : "Stare Into the Abyss ({VOIDCOST3} Essence)",
+			"script" : "",
+			"flavor" : "You open a rift into the void to harry your enemies.",
+			"keywords" : "area,void,magic,ranged,persistent",
+			"distance" : "cube,4:5",
+			"target" : "All enemies",
+			"free" : "False",
+			"trigger" : "",
+			"effect" : "",
+			"powerroll" : "True",
+			"powerroll_char" : "Reason",
+			"powerroll_tier1" : "damage:psychic,2",
+			"powerroll_tier2" : "damage:psychic,4",
+			"powerroll_tier3" : "damage:psychic,6",
+			"other" : "Persistent 1: At the start of your turn, you can use this ability again as a maneuver without spending essence."
+		},
+		"conflagration" : {
+			"name" : "Conflagration ({FIRECOST5} Essence)",
+			"script" : "",
+			"flavor" : "A storm of fire descends upon your enemies.",
+			"keywords" : "area,fire,magic,ranged,persistent",
+			"distance" : "cube,4:5",
+			"target" : "All enemies",
+			"free" : "False",
+			"trigger" : "",
+			"effect" : "",
+			"powerroll" : "True",
+			"powerroll_char" : "Reason",
+			"powerroll_tier1" : "damage:fire,5",
+			"powerroll_tier2" : "damage:fire,7",
+			"powerroll_tier3" : "damage:fire,10",
+			"other" : ""
+		},
+		"incorporealness" : {
+			"name" : "Incorporealness ({VOIDCOST5} Essence)",
+			"script" : "",
+			"flavor" : "The material substance of a creature shreds away at your command.",
+			"keywords" : "melee,void,magic,persistent",
+			"distance" : "self|reach,1",
+			"target" : "self or 1 ally",
+			"free" : "False",
+			"trigger" : "",
+			"effect" : "Until the start of your next turn, the target has damage immunity 5 and can move through 1 square of solid matter once per turn. If the target ends their turn inside solid matter, they are shunted out into the space where they entered it and this effect ends.",
+			"powerroll" : "False",
+			"powerroll_char" : "",
+			"powerroll_tier1" : "",
+			"powerroll_tier2" : "",
+			"powerroll_tier3" : "",
+			"other" : "Persistent 1: The effect lasts until the start of your next turn."
+		},
+		"nourishing_rain" : {
+			"name" : "Nourishing Rain ({GREENCOST5} Essence)",
+			"script" : "",
+			"flavor" : "You call down a rain that burns your enemies and restores your allies.",
+			"keywords" : "area,green,magic",
+			"distance" : "burst,5",
+			"target" : "All enemies",
+			"free" : "False",
+			"trigger" : "",
+			"effect" : "You and each ally in the area suffering any effect that has a duration of EoT or is ended by a resistance rollhas all such effects end.",
+			"powerroll" : "True",
+			"powerroll_char" : "Reason",
+			"powerroll_tier1" : "damage:acid,3",
+			"powerroll_tier2" : "damage:acid,5",
+			"powerroll_tier3" : "damage:acid,7",
+			"other" : ""
+		},
+		"open_the_earth" : {
+			"name" : "Open the Earth ({EARTHCOST5} Essence)",
+			"script" : "",
+			"flavor" : "The surface of the world around you opens up at your command.",
+			"keywords" : "earth,magic,ranged,persistent",
+			"distance" : "ranged,5",
+			"target" : "Special",
+			"free" : "False",
+			"trigger" : "",
+			"effect" : "You open four holes with 1-square openings that are 6 squares deep, and which can be placed on any mundane surface within distance. You can place these holes next to each other to create fewer holes with wider openings. For each creature standing above a hole when it opens and small enough to fall in, make a power roll.",
+			"powerroll" : "True",
+			"powerroll_char" : "Reason",
+			"powerroll_tier1" : "|The target can shift up to 1 square from the edge of the hole to the nearest unoccupied space of their choice.",
+			"powerroll_tier2" : "|The target falls into the hole",
+			"powerroll_tier3" : "|The target falls into the hole and can't reduce the height of the fall.",
+			"other" : "Persistent 1: At the start of your turn, you open another hole."
+		}
+	}
+}

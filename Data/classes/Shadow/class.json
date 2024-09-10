@@ -1,0 +1,352 @@
+{
+	"name" : "Shadow",
+	"script" : "=,char_class,Shadow|&=,CHAR1,Agility|&=,CHAR2,Presence|+,stamina,18|+,recoveries,10|=,hr_feature,insight|*,triggers,hesitation_is_weakness",
+	"subclass_name" : "Shadow College",
+	"subclass_budget" : "1",
+	"subclass_prompt" : "Choose the college your shadow graduated from.",
+	"choices" : {
+		"Shadow Skills" : {
+			"description" : "As a shadow, you gain Hide and Sneak, plus choose any five skills from Criminal Underworld or the skills of the exploration, interpersonal, or intrigue skill groups.",
+			"choose" : {
+				"budget" : "5",
+				"options_skills" : "groups:exploration,interpersonal,intrigue|skill:Criminal Underworld"
+			}
+		},
+		"Shadow Signature Ability" : {
+			"description" : "Signature abilities can be used at will.",
+			"choose" : {
+				"budget" : "1",
+				"options" : [
+					{
+						"name" : "Distracting Pain",
+						"cost" : "1",
+						"description" : "Your precise strikes let your allies take advantage of a target's agony.",
+						"script" : "*,signatures,distracting_pain",
+						"followups" : []
+					},
+					{
+						"name" : "I Work Better Alone",
+						"cost" : "1",
+						"description" : "Facing an enemy alone lets you exploit their overconfidence.",
+						"script" : "*,signatures,i_work_better_alone",
+						"followups" : []
+					},
+					{
+						"name" : "Shot and Step",
+						"cost" : "1",
+						"description" : "Being fast on your feet makes your ranged attacks especially deadly.",
+						"script" : "*,signatures,shot_and_step",
+						"followups" : []
+					},
+					{
+						"name" : "Sucker Slice",
+						"cost" : "1",
+						"description" : "Keeping an enemy's focus on you lets your ally hit hard.",
+						"script" : "*,signatures,sucker_slice",
+						"followups" : []
+					}
+				]
+			}
+		},
+		"Shadow 3-Insight Heroic Abilities " : {
+			"description" : "",
+			"choose" : {
+				"budget" : "1",
+				"options" : [
+					{
+						"name" : "Blade Dance (3 Insight)",
+						"cost" : "1",
+						"description" : "As you move across the battlefield, every foe within reach feels your wrath.",
+						"script" : "*,heroic3actions,blade_dance",
+						"followups" : []
+					},
+					{
+						"name" : "Quick Pursuit (3 Insight)",
+						"cost" : "1",
+						"description" : "A foe forced away from you might assume they're out of danger, but they'll soon learn otherwise.",
+						"script" : "*,heroic3actions,quick_pursuit",
+						"followups" : []
+					},
+					{
+						"name" : "Two Throats at Once (3 Insight)",
+						"cost" : "1",
+						"description" : "Striking two foes at once is second nature to you.",
+						"script" : "*,heroic3actions,two_throats_at_once",
+						"followups" : []
+					},
+					{
+						"name" : "Wounding Strike (3 Insight)",
+						"cost" : "1",
+						"description" : "You leave your foe bleeding out after a devastating attack.",
+						"script" : "*,heroic3actions,wounding_strike",
+						"followups" : []
+					}
+				]
+			}
+		},
+		"Shadow 5-Insight Heroic Abilities " : {
+			"description" : "",
+			"choose" : {
+				"budget" : "1",
+				"options" : [
+					{
+						"name" : "Assassinate (5 Insight)",
+						"cost" : "1",
+						"description" : "You seize the perfect moment and strike with fatal precision!",
+						"script" : "*,heroic5maneuvers,assassinate",
+						"followups" : []
+					},
+					{
+						"name" : "Get In, Get Out (5 Insight)",
+						"cost" : "1",
+						"description" : "Move unexpectedly, strike fast, and be gone!",
+						"script" : "*,heroic5actions,get_in_get_out",
+						"followups" : []
+					},
+					{
+						"name" : "Impairing Shot (5 Insight)",
+						"cost" : "1",
+						"description" : "Your attack leaves a foe in the perfect position for your allies to finish them.",
+						"script" : "*,heroic5actions,impairing_shot",
+						"followups" : []
+					},
+					{
+						"name" : "Quickness (5 Insight)",
+						"cost" : "1",
+						"description" : "You put on a burst of magical speed to get the job done.",
+						"script" : "*,heroic5actions,quickness",
+						"followups" : []
+					}
+				]
+			}
+		}
+	},
+	"features" : {
+		"insight" : {
+			"name" : "Insight",
+			"script" : "",
+			"effect" : "By observing your enemy, you learn how to use their weaknesses against them. You have a Heroic Resource called insight.{N}Outside of combat and other dangerous situations tracked in turns and rounds, you have insight equal to your Victories. If you lose some or all of this insight outside of combat, it takes you 1 minute to regain it.{N}When a combat encounter begins, you keep any insight you had outside of combat. At the start of each of your turns during combat, you gain 2 insight. You gain 1 insight whenever you get a tier 3 result with an attack. When combat ends, you once again have insight equal to your Victories."
+		},
+		"hesitation_is_weakness" : {
+			"name" : "Hesitation is Weakness (1 Insight)",
+			"script" : "",
+			"flavor" : "",
+			"keywords" : "",
+			"distance" : "self",
+			"target" : "self",
+			"free" : "True",
+			"trigger" : "Another hero ends their turn.",
+			"effect" : "You take your turn immediately.",
+			"powerroll" : "False",
+			"powerroll_char" : "",
+			"powerroll_tier1" : "",
+			"powerroll_tier2" : "",
+			"powerroll_tier3" : "",
+			"other" : ""
+		},
+		"distracting_pain" : {
+			"name" : "Distracting Pain",
+			"script" : "",
+			"flavor" : "Your precise strikes let your allies take advantage of a target's agony.",
+			"keywords" : "attack,melee,ranged,weapon",
+			"distance" : "reach,1|ranged,3",
+			"target" : "1 creature",
+			"free" : "False",
+			"trigger" : "",
+			"effect" : "",
+			"powerroll" : "True",
+			"powerroll_char" : "Agility",
+			"powerroll_tier1" : "damage:,3",
+			"powerroll_tier2" : "damage:,8|the next attack against the target gains an edge",
+			"powerroll_tier3" : "damage:,12|the target falls prone",
+			"other" : ""
+		},
+		"i_work_better_alone" : {
+			"name" : "I Work Better Alone",
+			"script" : "",
+			"flavor" : "Facing an enemy alone lets you exploit their overconfidence.",
+			"keywords" : "area,melee,ranged,weapon",
+			"distance" : "reach,1|ranged,3",
+			"target" : "1 creature",
+			"free" : "False",
+			"trigger" : "",
+			"effect" : "If the target has no allies adjacent to them, you gain an edge on the attack.",
+			"powerroll" : "True",
+			"powerroll_char" : "Agility",
+			"powerroll_tier1" : "damage:,3",
+			"powerroll_tier2" : "damage:,8",
+			"powerroll_tier3" : "damage:,12",
+			"other" : ""
+		},
+		"shot_and_step" : {
+			"name" : "Shot and Step",
+			"script" : "",
+			"flavor" : "Being fast on your feet makes your ranged attacks especially deadly.",
+			"keywords" : "attack,ranged,weapon",
+			"distance" : "ranged,5",
+			"target" : "1 creature or object",
+			"free" : "False",
+			"trigger" : "",
+			"effect" : "You can shift 1 square before or after the attack.",
+			"powerroll" : "True",
+			"powerroll_char" : "Agility",
+			"powerroll_tier1" : "damage:,3",
+			"powerroll_tier2" : "damage:,7",
+			"powerroll_tier3" : "damage:,10",
+			"other" : ""
+		},
+		"sucker_slice" : {
+			"name" : "Wither",
+			"script" : "",
+			"flavor" : "Keeping an enemy's focus on you lets your ally hit hard.",
+			"keywords" : "attack,melee,weapon",
+			"distance" : "reach,1",
+			"target" : "1 creature",
+			"free" : "False",
+			"trigger" : "",
+			"effect" : "If you are flanking the target when you make this attack, one ally who is flanking with you has a double edge on melee attacks against the target until the end of the ally's next turn, even if they are no longer flanking the target.",
+			"powerroll" : "True",
+			"powerroll_char" : "Agility",
+			"powerroll_tier1" : "damage:,3",
+			"powerroll_tier2" : "damage:,8",
+			"powerroll_tier3" : "damage:,12",
+			"other" : ""
+		},
+		"blade_dance" : {
+			"name" : "Blade Dance (3 Insight)",
+			"script" : "",
+			"flavor" : "As you move across the battlefield, every foe within reach feels your wrath.",
+			"keywords" : "magic,ranged",
+			"distance" : "Self",
+			"target" : "Self",
+			"free" : "False",
+			"trigger" : "",
+			"effect" : "You move up to your speed, and that movement doesn't provoke opportunity attacks. You make one power roll that targets each enemy who becomes adjacent to youduring the move.",
+			"powerroll" : "True",
+			"powerroll_char" : "Agility",
+			"powerroll_tier1" : "damage:,3",
+			"powerroll_tier2" : "damage:,4",
+			"powerroll_tier3" : "damage:,7",
+			"other" : ""
+		},
+		"quick_pursuit" : {
+			"name" : "Quick Pursuit (3 Insight)",
+			"script" : "",
+			"flavor" : "A foe forced away from you might assume they're out of danger, but they'll soon learn otherwise.",
+			"keywords" : "attack,melee,weapon",
+			"distance" : "reach,1",
+			"target" : "1 creature",
+			"free" : "False",
+			"trigger" : "",
+			"effect" : " You can shift into squares the target leaves behind when you force move them.",
+			"powerroll" : "True",
+			"powerroll_char" : "Agility",
+			"powerroll_tier1" : "damage:,6|slide 2",
+			"powerroll_tier2" : "damage:,9|slide 3",
+			"powerroll_tier3" : "damage:,14|slide 5",
+			"other" : ""
+		},
+		"two_throats_at_once" : {
+			"name" : "Two Throats at Once (3 Insight)",
+			"script" : "",
+			"flavor" : "Striking two foes at once is second nature to you.",
+			"keywords" : "attack,melee,ranged,weapon",
+			"distance" : "reach,1|ranged,5",
+			"target" : "2 creatures or objects",
+			"free" : "False",
+			"trigger" : "",
+			"effect" : "",
+			"powerroll" : "True",
+			"powerroll_char" : "Agility",
+			"powerroll_tier1" : "damage:,4",
+			"powerroll_tier2" : "damage:,6",
+			"powerroll_tier3" : "damage:,9",
+			"other" : ""
+		},
+		"wounding_strike" : {
+			"name" : "Wounding Strike (3 Insight)",
+			"script" : "",
+			"flavor" : "You leave your foe bleeding out after a devastating attack.",
+			"keywords" : "attack,melee,ranged,weapon",
+			"distance" : "reach,1|ranged,3",
+			"target" : "1 creature",
+			"free" : "False",
+			"trigger" : "",
+			"effect" : "While bleeding, the target takes 4 damage at the start of each of your turns.",
+			"powerroll" : "True",
+			"powerroll_char" : "Agility",
+			"powerroll_tier1" : "damage:,6",
+			"powerroll_tier2" : "damage:,9|bleeding until a creature uses a maneuver to staunch the wound",
+			"powerroll_tier3" : "damage:,14|bleeding until a creature uses an action to staunch the wound",
+			"other" : ""
+		},
+		"assassinate" : {
+			"name" : "Assassinate (5 Insight)",
+			"script" : "",
+			"flavor" : "You seize the perfect moment and strike with fatal precision!",
+			"keywords" : "attack,melee,weapon",
+			"distance" : "reach,1",
+			"target" : "1 creature",
+			"free" : "False",
+			"trigger" : "",
+			"effect" : "",
+			"powerroll" : "True",
+			"powerroll_char" : "Agility",
+			"powerroll_tier1" : "damage:2d6+8",
+			"powerroll_tier2" : "damage:2d6+12",
+			"powerroll_tier3" : "damage:2d6+18",
+			"other" : ""
+		},
+		"get_in_get_out" : {
+			"name" : "Get In, Get Out (5 Insight)",
+			"script" : "",
+			"flavor" : "Move unexpectedly, strike fast, and be gone!",
+			"keywords" : "attack,melee,weapon",
+			"distance" : "reach,1",
+			"target" : "1 creature",
+			"free" : "False",
+			"trigger" : "",
+			"effect" : "You can move up to your speed, and that movement doesn't provoke opportunity attacks. You can move before or after your attack, or can split your movement before and after your attack.",
+			"powerroll" : "True",
+			"powerroll_char" : "Agility",
+			"powerroll_tier1" : "damage:,7",
+			"powerroll_tier2" : "damage:,11",
+			"powerroll_tier3" : "damage:,17",
+			"other" : ""
+		},
+		"impairing_shot" : {
+			"name" : "Impairing Shot (5 Insight)",
+			"script" : "",
+			"flavor" : "Your attack leaves a foe in the perfect position for your allies to finish them.",
+			"keywords" : "attack,ranged,weapon",
+			"distance" : "ranged,5",
+			"target" : "1 creature",
+			"free" : "False",
+			"trigger" : "",
+			"effect" : "",
+			"powerroll" : "True",
+			"powerroll_char" : "Agility",
+			"powerroll_tier1" : "damage:,7|attacks against the target gain an edge (EoT)",
+			"powerroll_tier2" : "damage:,11|attacks against the target gain an edge (EoT)",
+			"powerroll_tier3" : "damage:,17|attacks against the target have a double edge (EoT)",
+			"other" : ""
+		},
+		"quickness" : {
+			"name" : "Quickness (5 Insight)",
+			"script" : "",
+			"flavor" : "You put on a burst of magical speed to get the job done.",
+			"keywords" : "magic",
+			"distance" : "self",
+			"target" : "Self",
+			"free" : "False",
+			"trigger" : "",
+			"effect" : " You make two signature attacks that each deal extra damage equal to twice you Agility.",
+			"powerroll" : "False",
+			"powerroll_char" : "",
+			"powerroll_tier1" : "",
+			"powerroll_tier2" : "",
+			"powerroll_tier3" : "",
+			"other" : ""
+		}
+	}
+}

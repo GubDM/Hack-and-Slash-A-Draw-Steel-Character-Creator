@@ -1,0 +1,40 @@
+{
+	"name" : "Vanguard (Shock and Awe)",
+	"script" : "*,char_subclass,Vanguard|+,num_skill_picks,0:0:1:0:0|*,misc_features,imposing_attitude|*,triggers,tactician_parry",
+	"choices" : {},
+	"features" : {
+		"imposing_attitude" : {
+			"name" : "Imposing Attitude",
+			"script" : "",
+			"flavor" : "You command any room you walk into.",
+			"keywords" : "",
+			"distance" : "",
+			"target" : "",
+			"free" : "False",
+			"effect" : "While you are present, each hero with you is treated as having a Renown 2 higher than usual for the purpose of negotiations and influencing tests. Additionally, each hero with you has a double edge on tests made to stop combat and start a negotiation with the other side.",
+			"powerroll" : "False",
+			"powerroll_char" : "",
+			"powerroll_tier1" : "",
+			"powerroll_tier2" : "",
+			"powerroll_tier3" : "",
+			"other" : ""
+		},
+		"tactician_parry" : {
+			"name" : "Parry",
+			"script" : "",
+			"flavor" : "Your quick reflexes cost an enemy the precision they seek.",
+			"keywords" : "melee,weapon",
+			"distance" : "self|reach,1",
+			"target" : "Self or 1 ally",
+			"trigger" : "A creature makes a Weapon attack against the target.",
+			"free" : "False",
+			"effect" : "The attack’s damage against the target is halved.",
+			"powerroll" : "False",
+			"powerroll_char" : "",
+			"powerroll_tier1" : "",
+			"powerroll_tier2" : "",
+			"powerroll_tier3" : "",
+			"other" : "Spend 1 Focus: The result of the attack’s power roll is treated as one tier lower before the damage is halved. If the attack is a critical hit, the attacker can still take an additional action."
+		}
+	}
+}

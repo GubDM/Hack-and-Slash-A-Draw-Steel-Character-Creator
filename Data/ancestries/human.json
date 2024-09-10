@@ -1,0 +1,33 @@
+{
+	"name" : "Human",
+	"script" : "=,ancestry,Human|*,misc_features,resist_the_supernatural|*,misc_features,staying_power|*,maneuvers,detect_the_supernatural",
+	"choices" : {},
+	"features" : {
+		"resist_the_supernatural" : {
+			"name" : "Resist the Supernatural",
+			"script" : "*,immunities,magic:2|*,immunities,psionic:2",
+			"effect" : "Your connection to the natural world protects you from supernatural forces. You have Magic immunity 2 and Psionic immunity 2. Each of these immunities increases by 1 each time you level up."			
+		},
+		"staying_power" : {
+			"name" : "Staying Power",
+			"script" : "+,recoveries,2",
+			"effect" : "Your human anatomy allows you to fight, run, and stay awake longer than others. Increase your number of Recoveries by 2."
+		},
+		"detect_the_supernatural" : {
+			"name" : "Detect the Supernatural",
+			"script" : "",
+			"flavor" : "",
+			"keywords" : "",
+			"distance" : "",
+			"target" : "",
+			"free" : "False",
+			"effect" : "You open your awareness to detect supernatural creatures and phenomena. Until the end of your next turn, you know the location of any supernatural object, Undead, Construct, or creature from another plane of existence within 5 squares of you, even if you don't have line of effect to them. You know if you're detecting an item or a creature, and you know if a creature is Undead, a Construct, or from another plane of existence.",
+			"powerroll" : "False",
+			"powerroll_char" : "",
+			"powerroll_tier1" : "",
+			"powerroll_tier2" : "",
+			"powerroll_tier3" : "",
+			"other" : ""
+		}
+	}
+}

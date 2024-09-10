@@ -1,0 +1,18 @@
+{
+	"name" : "Primordial Sickness",
+	"script" : "=,complication,Primordial Sickness|*,misc_features,primordial_sickness_benefit|*,misc_features,primordial_sickness_drawback",
+	"description" : "You once contracted a terrible illness for which no one could find a cure. You sought out a primordial swamp said to be either incredibly poisonous or miraculously salubrious. It turned out to be both, keeping your illness at bay while corrupting your body with its unnatural energy.",
+	"choices" : {},
+	"features" : {
+		"primordial_sickness_benefit" : {
+			"name" : "Primordial Sickness: Unnatural Energy",
+			"script" : "*,immunities,poison:5|*,immunities,corruption:5",
+			"effect" : "You have poison immunity 5 and corruption immunity 5."
+		},
+		"primordial_sickness_drawback" : {
+			"name" : "Primordial Sickness: Permanently Ill",
+			"script" : "+,recoveries,-1",
+			"effect" : "The number of Recoveries you have is reduced by 1."
+		}
+	}
+}

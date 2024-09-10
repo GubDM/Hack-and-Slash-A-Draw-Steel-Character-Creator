@@ -1,0 +1,18 @@
+{
+	"name" : "Shipwrecked",
+	"script" : "=,complication,Shipwrecked|*,misc_features,shipwrecked_benefit|*,misc_features,shipwrecked_drawback",
+	"description" : "You are the sole survivor of a shipwreck that left you stranded on a remote and inhospitable island for years. Your struggle to survive there granted you insight into the natural world but distanced you from who you once were.",
+	"choices" : {},
+	"features" : {
+		"shipwrecked_benefit" : {
+			"name" : "Shipwrecked: Natural Insights",
+			"script" : "+,num_skill_picks,0:1:0:0:0",
+			"effect" : "You gained two skills from the exploration skill group."
+		},
+		"shipwrecked_drawback" : {
+			"name" : "Shipwrecked: Changed Person",
+			"script" : "+,num_languages,-1",
+			"effect" : "You have forgotten one language you knew."
+		}
+	}
+}

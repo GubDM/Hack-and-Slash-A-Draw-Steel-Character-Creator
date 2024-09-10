@@ -1,0 +1,45 @@
+{
+	"name" : "Void Mage",
+	"script" : "*,char_subclass,Void|*,misc_features,void_mage_void_sense|*,triggers,void_embrace|&=,VOIDCOST3,2|&=,VOIDCOST5,4",
+	"choices" : {},
+	"features" : {
+		"void_mage_void_sense" : {
+			"name" : "Void Sense",
+			"script" : "*,maneuvers,shared_void_sense",
+			"effect" : "You instantly recognize illusions for what they are, you can see invisible creatures, and supernatural effects can't conceal creatures and objects from you. You always know if an area or object you observe is magical or affected by magic, and the specifics of what that magic can do."
+		},
+		"shared_void_sense" : {
+			"name" : "Shared Void Sense (1+ Essence)",
+			"script" : "",
+			"flavor" : "You share your special senses with others.",
+			"keywords" : "void,magic,ranged",
+			"distance" : "ranged,5",
+			"target" : "Special",
+			"free" : "False",
+			"effect" : "For each essence you spend, you can target 1 creature. That creature gains the benefit of your Void Sense feature until the end of your next turn, but doesn't gain the use of Shared Void Sense.",
+			"powerroll" : "False",
+			"powerroll_char" : "",
+			"powerroll_tier1" : "",
+			"powerroll_tier2" : "",
+			"powerroll_tier3" : "",
+			"other" : ""
+		},
+		"void_embrace" : {
+			"name" : "Void Embrace",
+			"script" : "",
+			"flavor" : "You call on the void to swallow and spit out an ally.",
+			"keywords" : "void,magic,ranged",
+			"distance" : "self|ranged,5",
+			"target" : "Self or 1 ally",
+			"trigger" : "The target starts their turn or moves",
+			"free" : "False",
+			"effect" : "At any point during the move, you teleport the target a number of squares equal to your Reason.",
+			"powerroll" : "False",
+			"powerroll_char" : "",
+			"powerroll_tier1" : "",
+			"powerroll_tier2" : "",
+			"powerroll_tier3" : "",
+			"other" : "Spend 1 Essence: You teleport the target a number of squares equal to twice your Reason score instead."
+		}
+	}
+}

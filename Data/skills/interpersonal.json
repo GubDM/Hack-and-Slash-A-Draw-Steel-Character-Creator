@@ -1,0 +1,119 @@
+{
+	"name" : "Interpersonal Skills",
+	"script" : "",
+	"choices" : {
+		"Interpersonal Skills" : {
+			"description" : "Skills from the interpersonal skill group are used to socially interact with other creatures, and are particularly useful during negotiations.",
+			"choose" : {
+				"budget" : "query,num_skill_picks,2",
+				"ignore" : "interpersonal_skills",
+				"options" : [
+					{
+						"name" : "Brag",
+						"group" : "interpersonal_skills",
+						"cost" : "1",
+						"description" : "Impress others with stories of your deeds",
+						"script" : "*,interpersonal_skills,Brag",
+						"followups" : []
+					},
+					{
+						"name" : "Empathize",
+						"group" : "interpersonal_skills",
+						"cost" : "1",
+						"description" : "Relate to someone on a personal level",
+						"script" : "*,interpersonal_skills,Empathize",
+						"followups" : []
+					},
+					{
+						"name" : "Flirt",
+						"group" : "interpersonal_skills",
+						"cost" : "1",
+						"description" : "Attract romantic attention from someone",
+						"script" : "*,interpersonal_skills,Flirt",
+						"followups" : []
+					},
+					{
+						"name" : "Gamble",
+						"group" : "interpersonal_skills",
+						"cost" : "1",
+						"description" : "Make bets with others",
+						"script" : "*,interpersonal_skills,Gamble",
+						"followups" : []
+					},
+					{
+						"name" : "Handle Animals",
+						"group" : "interpersonal_skills",
+						"cost" : "1",
+						"description" : "Interact with animal wildlife that isn't sapient",
+						"script" : "*,interpersonal_skills,Handle Animals",
+						"followups" : []
+					},
+					{
+						"name" : "Interrogate",
+						"group" : "interpersonal_skills",
+						"cost" : "1",
+						"description" : "Obtain information from a creature withholding it",
+						"script" : "*,interpersonal_skills,Interrogate",
+						"followups" : []
+					},
+					{
+						"name" : "Intimidate",
+						"group" : "interpersonal_skills",
+						"cost" : "1",
+						"description" : "Awe or scare a creature",
+						"script" : "*,interpersonal_skills,Intimidate",
+						"followups" : []
+					},
+					{
+						"name" : "Lead",
+						"group" : "interpersonal_skills",
+						"cost" : "1",
+						"description" : "Inspire people to action",
+						"script" : "*,interpersonal_skills,Lead",
+						"followups" : []
+					},
+					{
+						"name" : "Lie",
+						"group" : "interpersonal_skills",
+						"cost" : "1",
+						"description" : "Convince someone that a falsehood is true",
+						"script" : "*,interpersonal_skills,Lie",
+						"followups" : []
+					},
+					{
+						"name" : "Music",
+						"group" : "interpersonal_skills",
+						"cost" : "1",
+						"description" : "Perform music vocally or with an instrument",
+						"script" : "*,interpersonal_skills,Music",
+						"followups" : []
+					},
+					{
+						"name" : "Perform",
+						"group" : "interpersonal_skills",
+						"cost" : "1",
+						"description" : "Engage in dance, oratory, acting, or some other physical performance",
+						"script" : "*,interpersonal_skills,Perform",
+						"followups" : []
+					},
+					{
+						"name" : "Persuade",
+						"group" : "interpersonal_skills",
+						"cost" : "1",
+						"description" : "Convince someone to agree with you through use of your charms and grace",
+						"script" : "*,interpersonal_skills,Persuade",
+						"followups" : []
+					},
+					{
+						"name" : "Read Person",
+						"group" : "interpersonal_skills",
+						"cost" : "1",
+						"description" : "Read the emotions and body language of other creatures",
+						"script" : "*,interpersonal_skills,Read Person",
+						"followups" : []
+					}
+				]
+			}
+		}
+	}
+}

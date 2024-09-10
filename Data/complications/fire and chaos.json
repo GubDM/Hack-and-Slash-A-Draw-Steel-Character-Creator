@@ -1,0 +1,18 @@
+{
+	"name" : "Fire and Chaos",
+	"script" : "=,complication,Fire and Chaos|*,misc_features,fire_and_chaos_benefit|*,misc_features,fire_and_chaos_drawback",
+	"description" : "A great monster who breathed fire burned your home to the ground. While everything around you was consumed, you somehow stood strong amid the inferno, your body adapting to ignore the effects of the flames.",
+	"choices" : {},
+	"features" : {
+		"fire_and_chaos_benefit" : {
+			"name" : "Fire and Chaos: Fire Immunity",
+			"script" : "*,immunities,fire:5",
+			"effect" : "You have fire immunity 5."
+		},
+		"fire_and_chaos_drawback" : {
+			"name" : "Fire and Chaos: Cold Weakness",
+			"script" : "*,immunities,cold:5",
+			"effect" : "You have cold weakness 5."
+		}
+	}
+}

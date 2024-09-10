@@ -1,0 +1,23 @@
+effect:
+You gain certain benefits in combat based on the amount of rage you have. 
+The benefits from your growing rage last until the end of your turn, 
+even if a benefit would become unavailable to you because of the amount of 
+rage you spend during your turn.{N}
+
+other:
+[Rage 2]:
+{N}*  You gain an edge on Might tests and resistance rolls.
+{N}*  You gain a bonus to weapon damage equal to your 
+Might score if you are at least 2 squares from where 
+you started your turn when you attack.
+{N}* Once per turn while in crow form, when you move 
+away from an enemy, that enemy takes damage 
+equal to your Agility score.
+{N}{N}[Rage 4]:
+{N}* You gain a bonus to weapon damage equal to twice 
+your Might score, instead of once your Might score, if 
+you are at least two squares from where you started 
+your turn when you attack.
+{N}{N}[Rage 6]:
+{N}* You have a double edge on Might tests and resistance 
+rolls.

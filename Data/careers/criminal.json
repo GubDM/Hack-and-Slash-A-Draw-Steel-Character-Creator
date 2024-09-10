@@ -1,0 +1,64 @@
+{
+	"name" : "Criminal",
+	"script" : "=,career,Criminal|*,lore_skills,Criminal Underworld|+,num_languages,1|+,projectpoints,50|*,misc_features,criminal_title",
+	"choices" : {
+		"Criminal Skills" : {
+			"description" : "As an artisan, you gained the Criminal Underworld skill and two skills from the intrigue skill group.",
+			"choose" : {
+				"budget" : "2",
+				"options_skills" : "groups:intrigue"
+			}
+		},
+		"Criminal Inciting Incident" : {
+			"description" : "Why did you stop being a criminal and turn to a life of heroic adventure?",
+			"choose" : {
+				"budget" : "1",
+				"options" : [
+					{
+						"name" : "Atonement",
+						"cost" : "1",
+						"description" : "The last criminal job you pulled led to the death of someone or the destruction of something you love. In order to make up for the loss you caused, you left your criminal ways behind and became a hero.",
+						"script" : "*,misc_features,criminal_atonement",
+						"followups" : []
+					},
+					{
+						"name" : "Friendly Priest",
+						"cost" : "1",
+						"description" : "You went to prison for your crimes and eventually escaped. An elderly priest took you in and shielded you from the law, convinced that your soul wasn’t corrupt. They never judged you for your past,speaking only of the future. Eventually, the priest died, imparting final words that inspired you to become a hero.",
+						"script" : "*,misc_features,criminal_friendly_priest",
+						"followups" : []
+					},
+					{
+						"name" : "Stand Against Tyranny",
+						"cost" : "1",
+						"description" : "When a tyrant rose to power in your homeland, they began cracking down on all criminals with deadly raids and public executions. The nature of the crime didn’t matter—pickpockets and beggars were made to kneel before the axe alongside murderers. After losing enough friends, you stood up and joined the resistance—not just against this tyrant, but against authoritarians anywhere.",
+						"script" : "*,misc_features,criminal_stand_against_tyranny",
+						"followups" : []
+					}
+				]
+			}
+		}
+	},
+	"features" : {
+		"criminal_title" : {
+			"name" : "Title - Lucky Dog",
+			"script" : "",
+			"effect" : "When you fail a test using any skill from the intrigue skill group, you can roll a d6. You lose Stamina equal to the roll and improve the result of your test by one tier. You can make this roll only once per test."
+		},
+		"criminal_atonement" : {
+			"name" : "Inciting Incident: Atonement",
+			"script" : "",
+			"effect" : "The last criminal job you pulled led to the death of someone or the destruction of something you love. In order to make up for the loss you caused, you left your criminal ways behind and became a hero."
+		},
+		"criminal_friendly_priest" : {
+			"name" : "Inciting Incident: Friendly Priest",
+			"script" : "",
+			"effect" : "You went to prison for your crimes and eventually escaped. An elderly priest took you in and shielded you from the law, convinced that your soul wasn’t corrupt. They never judged you for your past,speaking only of the future. Eventually, the priest died, imparting final words that inspired you to become a hero."
+		},
+		"criminal_stand_against_tyranny" : {
+			"name" : "Inciting Incident: Stand Against Tyranny",
+			"script" : "",
+			"effect" : "When a tyrant rose to power in your homeland, they began cracking down on all criminals with deadly raids and public executions. The nature of the crime didn’t matter—pickpockets and beggars were made to kneel before the axe alongside murderers. After losing enough friends, you stood up and joined the resistance—not just against this tyrant, but against authoritarians anywhere."
+		}
+	}
+}

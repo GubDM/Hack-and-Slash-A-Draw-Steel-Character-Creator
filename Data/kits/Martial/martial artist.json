@@ -1,0 +1,60 @@
+{
+	"name" : "Martial Artist",
+	"script" : "*,kits,Martial Artist|kit_bonus,stamina,martial_artist_bonus_stamina|kit_bonus,speed,martial_artist_bonus_speed|kit_bonus,mobility,martial_artist_mobility|kit_bonus,melee_bonus,martial_artist_bonus_melee|*,kit_equipment,martial_artist_equipment|*,signatures,battle_grace",
+	"choices" : {},
+	"features" : {
+		"martial_artist_bonus_stamina" : {
+			"name" : "Martial Artist Kit: Stamina Bonus",
+			"script" : "+,stamina,3",
+			"effect" : "Stamina +3"			
+		},
+		"martial_artist_bonus_speed" : {
+			"name" : "Martial Artist Kit: Speed Bonus",
+			"script" : "+,speed,3",
+			"effect" : "Speed +3"			
+		},
+		"martial_artist_bonus_melee" : {
+			"name" : "Martial Artist Kit: Melee Weapon Damage Bonus",
+			"script" : "+,melee_bonus,2:2:2",
+			"effect" : "Melee Damage Bonus +2/+2/+2"			
+		},
+		"martial_artist_mobility" : {
+			"name" : "Martial Artist Kit: Mobility",
+			"script" : "*,triggers,martial_artist_mobility",
+			"flavor" : "",
+			"keywords" : "",
+			"distance" : "",
+			"target" : "",
+			"free" : "True",
+			"trigger" : "Enemy ends their turn adjacent to you.",
+			"effect" : "Shift up to 2 squares as free triggered action.",
+			"powerroll" : "False",
+			"powerroll_char" : "",
+			"powerroll_tier1" : "",
+			"powerroll_tier2" : "",
+			"powerroll_tier3" : "",
+			"other" : ""
+		},
+		"martial_artist_equipment" : {
+			"name" : "Martial Artist Kit Equipment",
+			"script" : "*,kit_wear,no armor|*,kit_wield,only your unarmed strikes",
+			"effect" : ""
+		},
+		"battle_grace" : {
+			"name" : "Battle Grace",
+			"script" : "",
+			"flavor" : "You feint to move your enemies into perfect position.",
+			"keywords" : "attack,melee,weapon",
+			"distance" : "reach,1",
+			"target" : "1 creature",
+			"free" : "False",
+			"effect" : "If you roll a 12 or better and can’t swap places with the target because one or both of you is too big to fit into the swapped space, you both remain in your original spaces and the target takes 2 extra damage.",
+			"powerroll" : "True",
+			"powerroll_char" : "Might or Agility",
+			"powerroll_tier1" : "damage:5",
+			"powerroll_tier2" : "damage:9|effect:you swap places with the target",
+			"powerroll_tier3" : "damage:12|effect:you swap places with the target, then slide the target 2 squares",
+			"other" : ""
+		}
+	}
+}

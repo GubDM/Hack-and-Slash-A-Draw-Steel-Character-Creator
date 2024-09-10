@@ -1,0 +1,340 @@
+{
+	"name" : "Fury",
+	"script" : "=,char_class,Fury|&=,CHAR1,Might|&=,CHAR2,Agility|+,stamina,21|+,recoveries,12|=,hr_feature,rage|*,lore_skills,Nature|*,misc_features,mighty_leaps",
+	"subclass_name" : "Primordial Aspect",
+	"subclass_budget" : "1",
+	"subclass_prompt" : "Choose the primordial aspect your channelled rage shapes you into.",
+	"choices" : {
+		"Fury Skills" : {
+			"description" : "As a fury, you gain the Nature skill, plus choose two skills from the exploration or intrigue skill groups.",
+			"choose" : {
+				"budget" : "2",
+				"options_skills" : "groups:exploration,intrigue"
+			}
+		},
+		"Fury Signature Ability" : {
+			"description" : "Signature abilities can be used at will.",
+			"choose" : {
+				"budget" : "1",
+				"options" : [
+					{
+						"name" : "Brutal Slam",
+						"cost" : "1",
+						"description" : "The heavy impact of your weapon attacks drives your foes ever backward.",
+						"script" : "*,signatures,brutal_slam",
+						"followups" : []
+					},
+					{
+						"name" : "Hit and Run",
+						"cost" : "1",
+						"description" : "Keeping in constant motion helps you slip out of reach after a brutal assault.",
+						"script" : "*,signatures,hit_and_run",
+						"followups" : []
+					},
+					{
+						"name" : "Humiliating Strike",
+						"cost" : "1",
+						"description" : "You hit with a strength that's worth the risk of raising your opponent's ire.",
+						"script" : "*,signatures,humiliating_strike",
+						"followups" : []
+					},
+					{
+						"name" : "Impaling Strike",
+						"cost" : "1",
+						"description" : "The heavy impact of your weapon attacks drives your foes ever backward.",
+						"script" : "*,signatures,impaling_strike",
+						"followups" : []
+					}
+				]
+			}
+		},
+		"Fury 3-Rage Heroic Abilities" : {
+			"description" : "",
+			"choose" : {
+				"budget" : "1",
+				"options" : [
+					{
+						"name" : "Death Before Beauty (3 Rage)",
+						"cost" : "1",
+						"description" : "Your enemies will get out of your way - whether they want to or not.",
+						"script" : "*,heroic3actions,death_before_beauty",
+						"followups" : []
+					},
+					{
+						"name" : "Stab Me so I Can Pull Myself Closer to You (3 Rage)",
+						"cost" : "1",
+						"description" : "When you barrel through your foes, they feel your wrath.",
+						"script" : "*,heroic3actions,stab_me_so_i_can",
+						"followups" : []
+					},
+					{
+						"name" : "Whirlwind Strike (3 Rage)",
+						"cost" : "1",
+						"description" : "As your foes close in around you, why bother taking them on one by one?",
+						"script" : "*,heroic3actions,whirlwind_strike",
+						"followups" : []
+					},
+					{
+						"name" : "Your Entrails Are Your Extrails! (3 Rage)",
+						"cost" : "1",
+						"description" : "Unless they get some help, your foe is finished.",
+						"script" : "*,heroic3actions,your_entrails_are_extrails",
+						"followups" : []
+					}
+				]
+			}
+		},
+		"Fury 5-Rage Heroic Abilities" : {
+			"description" : "",
+			"choose" : {
+				"budget" : "1",
+				"options" : [
+					{
+						"name" : "Blood for Blood! (5 Rage)",
+						"cost" : "1",
+						"description" : "A mighty strike leaves your foe reeling.",
+						"script" : "*,heroic5maneuvers,blood_for_blood",
+						"followups" : []
+					},
+					{
+						"name" : "Brute Precision (5 Rage)",
+						"cost" : "1",
+						"description" : "You can always trust to your anger to get the job done.",
+						"script" : "*,heroic5maneuvers,brute_precision",
+						"followups" : []
+					},
+					{
+						"name" : "Dying Blow (5 Rage)",
+						"cost" : "1",
+						"description" : "You focus your rage into a single devastating strike.",
+						"script" : "*,heroic5actions,dying_blow",
+						"followups" : []
+					},
+					{
+						"name" : "Primordial Shockwave (5 Rage)",
+						"cost" : "1",
+						"description" : "The destructive power of nature cannot be contained.",
+						"script" : "*,heroic5actions,primordial_shockwave",
+						"followups" : []
+					}
+				]
+			}
+		}
+	},
+	"features" : {
+		"rage" : {
+			"name" : "Rage",
+			"script" : "",
+			"effect" : "As the battle intensifies around you, your determination and anger grow, fueling a Heroic Resource called rage.{N}Outside of combat and other dangerous situations tracked in turns and rounds, you have fury equal to your Victories. If you lose some or all of this rage outside of combat, it takes you 1 minute to regain it.{N}When a combat encounter begins, you keep any rage you had outside of combat. At the start of each of your turns during combat, you gain 1d3 rage. When combat ends, you once again have rage equal to your Victories."
+		},
+		"mighty_leaps" : {
+			"name" : "Mighty Leaps",
+			"script" : "",
+			"effect" : "You always succeed on Might tests made to jump. You can still roll to see if you get a reward result."
+		},
+		"brutal_slam" : {
+			"name" : "Brutal Slam",
+			"script" : "",
+			"flavor" : "The heavy impact of your weapon attacks drives your foes ever backward.",
+			"keywords" : "attack,melee,weapon",
+			"distance" : "reach,1",
+			"target" : "1 creature or object",
+			"free" : "False",
+			"trigger" : "",
+			"effect" : "",
+			"powerroll" : "True",
+			"powerroll_char" : "Might",
+			"powerroll_tier1" : "damage:,3|push 1",
+			"powerroll_tier2" : "damage:,8|push 2",
+			"powerroll_tier3" : "damage:,12|push 4",
+			"other" : ""
+		},
+		"hit_and_run" : {
+			"name" : "Hit and Run",
+			"script" : "",
+			"flavor" : "Keeping in constant motion helps you slip out of reach after a brutal assault.",
+			"keywords" : "attack,melee,weapon",
+			"distance" : "reach,1",
+			"target" : "1 creature or object",
+			"free" : "False",
+			"trigger" : "",
+			"effect" : "You can shift 1 square after the attack is resolved.",
+			"powerroll" : "True",
+			"powerroll_char" : "Might",
+			"powerroll_tier1" : "damage:,3",
+			"powerroll_tier2" : "damage:,8",
+			"powerroll_tier3" : "damage:,12|slowed (EoT)",
+			"other" : ""
+		},
+		"humiliating_strike" : {
+			"name" : "Humiliating Strike",
+			"script" : "",
+			"flavor" : "You hit with a strength that's worth the risk of raising your opponent's ire.",
+			"keywords" : "attack,melee,weapon",
+			"distance" : "reach,1",
+			"target" : "1 creature or object",
+			"free" : "False",
+			"trigger" : "",
+			"effect" : "You can choose to do an extra 1d6 damage to the target. If you do, the target gains an edge on their next attack against you.",
+			"powerroll" : "True",
+			"powerroll_char" : "Might",
+			"powerroll_tier1" : "damage:,3",
+			"powerroll_tier2" : "damage:,8",
+			"powerroll_tier3" : "damage:,12",
+			"other" : ""
+		},
+		"impaling_strike" : {
+			"name" : "Impaling Strike",
+			"script" : "",
+			"flavor" : "Fighting up close lets you keep your foe exactly where you want them.",
+			"keywords" : "attack,melee,weapon",
+			"distance" : "reach,1",
+			"target" : "1 creature or object",
+			"free" : "False",
+			"trigger" : "",
+			"effect" : "If the target is grabbed, they take a bane on attempts to escape the grab. If you move while you have the target grabbed, they take 1 damage for each square you move.",
+			"powerroll" : "True",
+			"powerroll_char" : "Might",
+			"powerroll_tier1" : "damage:,3|slowed (EoT)",
+			"powerroll_tier2" : "damage:,8|grabbed",
+			"powerroll_tier3" : "damage:,12|grabbed",
+			"other" : ""
+		},
+		"death_before_beauty" : {
+			"name" : "Death Before Beauty (3 Rage)",
+			"script" : "",
+			"flavor" : "Your enemies will get out of your way - whether they want to or not.",
+			"keywords" : "attack,melee,weapon",
+			"distance" : "reach,1",
+			"target" : "1 creature",
+			"free" : "False",
+			"trigger" : "",
+			"effect" : "When you force move the target, you can move into squares they leave. The target takes the damage from any free strikes you provoke with this movement.",
+			"powerroll" : "True",
+			"powerroll_char" : "Might",
+			"powerroll_tier1" : "damage:,3|slide 2",
+			"powerroll_tier2" : "damage:,5|slide 3",
+			"powerroll_tier3" : "damage:,8|slide 5",
+			"other" : ""
+		},
+		"stab_me_so_i_can" : {
+			"name" : "Stab Me so I Can Pull Myself Closer to You (3 Rage)",
+			"script" : "",
+			"flavor" : "When you barrel through your foes, they feel your wrath.",
+			"keywords" : "attack,melee,weapon",
+			"distance" : "self",
+			"target" : "self",
+			"free" : "False",
+			"trigger" : "",
+			"effect" : "Move up to your speed in a straight line toward a creature or object. You don't treat enemy creatures as difficult terrain for this move. If the target is a creature, you can end your movement in the target's square, moving them to an adjacent open square. Make a power roll against the target and every enemy you moved through.{N}The target takes an extra 1d6 damage for every free strike you triggered from your move.",
+			"powerroll" : "True",
+			"powerroll_char" : "Might",
+			"powerroll_tier1" : "damage:,5",
+			"powerroll_tier2" : "damage:,6",
+			"powerroll_tier3" : "damage:,9",
+			"other" : ""
+		},
+		"whirlwind_strike" : {
+			"name" : "Whirlwind Strike (3 Rage)",
+			"script" : "",
+			"flavor" : "As your foes close in around you, why bother taking them on one by one?",
+			"keywords" : "area,melee,weapon",
+			"distance" : "burst,1",
+			"target" : "All enemies",
+			"free" : "False",
+			"trigger" : "",
+			"effect" : "",
+			"powerroll" : "True",
+			"powerroll_char" : "Might",
+			"powerroll_tier1" : "damage:,3",
+			"powerroll_tier2" : "damage:,4|push 1",
+			"powerroll_tier3" : "damage:,7|push 3",
+			"other" : ""
+		},
+		"your_entrails_are_extrails" : {
+			"name" : "Your Entrails Are Your Extrails! (3 Rage)",
+			"script" : "",
+			"flavor" : "Unless they get some help, your foe is finished.",
+			"keywords" : "attack,melee,weapon",
+			"distance" : "reach,1",
+			"target" : "1 creature or object",
+			"free" : "False",
+			"trigger" : "",
+			"effect" : "While slowed in this way, the target takes an extra 3 damage at the start of each of your turns.",
+			"powerroll" : "True",
+			"powerroll_char" : "Might",
+			"powerroll_tier1" : "damage:,6|slowed (EoT)",
+			"powerroll_tier2" : "damage:,9|slowed (EoT)",
+			"powerroll_tier3" : "damage:,14|slowed (EoE)",
+			"other" : ""
+		},
+		"blood_for_blood" : {
+			"name" : "Blood for Blood! (5 Rage)",
+			"script" : "",
+			"description" : "A mighty strike leaves your foe reeling.",
+			"keywords" : "attack,melee,weapon",
+			"distance" : "reach,1",
+			"target" : "1 creature or object",
+			"free" : "False",
+			"trigger" : "",
+			"effect" : "You can choose to deal 1d6 damage to yourself to deal an extra 2d6 damage to the target.",
+			"powerroll" : "True",
+			"powerroll_char" : "Might",
+			"powerroll_tier1" : "damage:,7|weakened and bleeding (EoT)",
+			"powerroll_tier2" : "damage:,11|weakened and bleeding (EoT)",
+			"powerroll_tier3" : "damage:,17|weakened and bleeding (EoE)",
+			"other" : ""
+		},
+		"brute_precision" : {
+			"name" : "Brute Precision (5 Rage)",
+			"script" : "",
+			"description" : "You can always trust to your anger to get the job done.",
+			"keywords" : "",
+			"distance" : "self",
+			"target" : "self",
+			"free" : "True",
+			"trigger" : "",
+			"effect" : "The next attack you make this turn automatically achieves a tier 3 result and deals an extra 1d6 damage.",
+			"powerroll" : "False",
+			"powerroll_char" : "",
+			"powerroll_tier1" : "",
+			"powerroll_tier2" : "",
+			"powerroll_tier3" : "",
+			"other" : ""
+		},
+		"dying_blow" : {
+			"name" : "Dying Blow (5 Rage)",
+			"script" : "",
+			"description" : "You focus your rage into a single devastating strike.",
+			"keywords" : "attack,melee,weapon",
+			"distance" : "reach,1",
+			"target" : "1 creature",
+			"free" : "False",
+			"trigger" : "",
+			"effect" : "",
+			"powerroll" : "True",
+			"powerroll_char" : "Might",
+			"powerroll_tier1" : "damage:,9",
+			"powerroll_tier2" : "damage:,13",
+			"powerroll_tier3" : "damage:,21",
+			"other" : "Spend 1 or More Additional Rage: If you are winded, you can add 1d6 damage for each rage spent. If you are dying, you can add 1d10 damage for each rage spent. In either case, you then lose 1d6 Stamina."
+		},
+		"primordial_shockwave" : {
+			"name" : "Primordial Shockwave (5 Rage)",
+			"script" : "",
+			"description" : "The destructive power of nature cannot be contained.",
+			"keywords" : "area,melee,weapon",
+			"distance" : "line,1:1:1",
+			"target" : "1 creature or object",
+			"free" : "False",
+			"trigger" : "",
+			"effect" : "",
+			"powerroll" : "True",
+			"powerroll_char" : "Might",
+			"powerroll_tier1" : "damage:,3|slowed (EoT)",
+			"powerroll_tier2" : "damage:,8|grabbed",
+			"powerroll_tier3" : "damage:,12|grabbed",
+			"other" : ""
+		}
+	}
+}

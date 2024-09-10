@@ -1,0 +1,70 @@
+{
+	"name" : "Stormwight: Corven",
+	"script" : "*,kits,Stormwight: Corven|*,char_subclass,(Corven)|kit_bonus,stamina,corven_bonus_stamina|kit_bonus,speed,corven_bonus_speed|kit_bonus,mobility,corven_mobility|kit_bonus,melee_bonus,corven_bonus_melee|*,kit_equipment,corven_equipment|choose,animal_form,animal_form_crow|choose,stormwight_growing_rage,corven_growing_rage|*,signatures,corven_wing_buffet",
+	"choices" : {},
+	"features" : {
+		"corven_bonus_stamina" : {
+			"name" : "Corven Kit: Stamina Bonus",
+			"script" : "+,stamina,3",
+			"effect" : "Stamina +3"			
+		},
+		"corven_bonus_speed" : {
+			"name" : "Corven Kit: Speed Bonus",
+			"script" : "+,speed,3",
+			"effect" : "Speed +3"			
+		},
+		"corven_bonus_melee" : {
+			"name" : "Corven Kit: Melee Weapon Damage Bonus",
+			"script" : "+,melee_bonus,2:2:2",
+			"effect" : "Melee Damage Bonus +2/+2/+2"			
+		},
+		"corven_mobility" : {
+			"name" : "Corven Kit: Mobility",
+			"script" : "*,triggers,corven_mobility",
+			"flavor" : "",
+			"keywords" : "",
+			"distance" : "",
+			"target" : "",
+			"free" : "True",
+			"trigger" : "Enemy ends their turn adjacent to you.",
+			"effect" : "Shift up to 2 squares as free triggered action.",
+			"powerroll" : "False",
+			"powerroll_char" : "",
+			"powerroll_tier1" : "",
+			"powerroll_tier2" : "",
+			"powerroll_tier3" : "",
+			"other" : ""
+		},
+		"corven_equipment" : {
+			"name" : "Corven Kit Equipment",
+			"script" : "*,kit_wear,no armor|*,kit_wield,only your unarmed strikes - which become devastating natural weapons as your rage grows",
+			"effect" : ""
+		},
+		"animal_form_crow" : {
+			"name" : "Animal Form, Crow",
+			"script" : "",
+			"effect" : "When you are in your crow form, your movement gains the Fly keyword, and your size becomes 1T. You can use the Hide maneuver as a free maneuver, and you can use your allies as cover when you hide.{N}Whenever your rage is 4 or higher, you can shapeshift to become a hybrid bipedal crow of your true form’s size. You gain 10 temporary Stamina the first time you shapeshift into hybrid crow form during an encounter."
+		},
+		"corven_growing_rage" : {
+			"name" : "Crow Growing Rage{N}",
+			"script" : "",
+			"effect" : "[Rage 2]:{N}* You can shift 1 square as a free maneuver once per turn.{N}* While in crow form, your attacks deal extra damage equal to your Agility score.{N}* Once per turn while in crow form, when you move away from an enemy, that enemy takes damage equal to your Agility score.{N}{N}[Rage 4]:{N}* While in crow or hybrid crow form, you can use all your abilities, and your attacks deal extra damage equal to twice your Agility score, instead of once your Agility score.{N}* Once per turn while in crow or hybrid crow form, when you move away from an enemy, that enemy takes damage equal to twice your Agility score, instead of once your Agility score.{N}{N}[Rage 6]:{N}* You can shift up to 2 squares as a free maneuver once per turn."
+		},
+		"corven_wing_buffet" : {
+			"name" : "Wing Buffet",
+			"script" : "",
+			"flavor" : "Foes who try to close around you do so at their peril.",
+			"keywords" : "animal,attack,melee,weapon",
+			"distance" : "reach,1",
+			"target" : "3 creatures or objects",
+			"free" : "False",
+			"effect" : "Resolve each attack individually using one power roll. You can shift 1 square after resolving damage for each target, then choose your next target from your new location.",
+			"powerroll" : "True",
+			"powerroll_char" : "Agility",
+			"powerroll_tier1" : "damage:,2",
+			"powerroll_tier2" : "damage:,3",
+			"powerroll_tier3" : "damage:,5",
+			"other" : ""
+		}
+	}
+}

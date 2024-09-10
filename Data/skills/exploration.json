@@ -1,0 +1,95 @@
+{
+	"name" : "Exploration Skills",
+	"script" : "",
+	"choices" : {
+		"Exploration Skills" : {
+			"description" : "Skills from the exploration skill group are used to physically explore the environment around the characters, and to overcome physical obstacles.",
+			"choose" : {
+				"budget" : "query,num_skill_picks,1",
+				"ignore" : "exploration_skills",
+				"options" : [
+					{
+						"name" : "Climb",
+						"group" : "exploration_skills",
+						"cost" : "1",
+						"description" : "Move up vertical surfaces",
+						"script" : "*,exploration_skills,Climb",
+						"followups" : []
+					},
+					{
+						"name" : "Drive",
+						"group" : "exploration_skills",
+						"cost" : "1",
+						"description" : "Control vehicles",
+						"script" : "*,exploration_skills,Drive",
+						"followups" : []
+					},
+					{
+						"name" : "Endurance",
+						"group" : "exploration_skills",
+						"cost" : "1",
+						"description" : "Remain engaged in strenuous activity over a long period of time",
+						"script" : "*,exploration_skills,Endurance",
+						"followups" : []
+					},
+					{
+						"name" : "Gymnastics",
+						"group" : "exploration_skills",
+						"cost" : "1",
+						"description" : "Move across unsteady or narrow surfaces, and tumble",
+						"script" : "*,exploration_skills,Gymnastics",
+						"followups" : []
+					},
+					{
+						"name" : "Heal",
+						"group" : "exploration_skills",
+						"cost" : "1",
+						"description" : "Use mundane first aid",
+						"script" : "*,exploration_skills,Heal",
+						"followups" : []
+					},
+					{
+						"name" : "Jump",
+						"group" : "exploration_skills",
+						"cost" : "1",
+						"description" : "Leap vertical and horizontal distances",
+						"script" : "*,exploration_skills,Jump",
+						"followups" : []
+					},
+					{
+						"name" : "Lift",
+						"group" : "exploration_skills",
+						"cost" : "1",
+						"description" : "Pick up, carry, and throw heavy objects",
+						"script" : "*,exploration_skills,Lift",
+						"followups" : []
+					},
+					{
+						"name" : "Navigate",
+						"group" : "exploration_skills",
+						"cost" : "1",
+						"description" : "Read a map and travel without becoming lost",
+						"script" : "*,exploration_skills,Navigate",
+						"followups" : []
+					},
+					{
+						"name" : "Ride",
+						"group" : "exploration_skills",
+						"cost" : "1",
+						"description" : "Ride and control a mount who isn't sapient, such as a horse",
+						"script" : "*,exploration_skills,Ride",
+						"followups" : []
+					},
+					{
+						"name" : "Swim",
+						"group" : "exploration_skills",
+						"cost" : "1",
+						"description" : "Move through deep liquid",
+						"script" : "*,exploration_skills,Swim",
+						"followups" : []
+					}
+				]
+			}
+		}
+	}
+}

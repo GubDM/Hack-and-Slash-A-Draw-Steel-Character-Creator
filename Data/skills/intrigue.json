@@ -1,0 +1,111 @@
+{
+	"name" : "Intrigue Skills",
+	"script" : "",
+	"choices" : {
+		"Intrigue Skills" : {
+			"description" : "Skills from the intrigue skill group are used in tasks centered around investigation, thievery, and spycraft.",
+			"choose" : {
+				"budget" : "query,num_skill_picks,3",
+				"ignore" : "intrigue_skills",
+				"options" : [
+					{
+						"name" : "Alertness",
+						"group" : "intrigue_skills",
+						"cost" : "1",
+						"description" : "Intuitively sense the details of your surroundings",
+						"script" : "*,intrigue_skills,Alertness",
+						"followups" : []
+					},
+					{
+						"name" : "Conceal Object",
+						"group" : "intrigue_skills",
+						"cost" : "1",
+						"description" : "Hide an object on your person or in your environment",
+						"script" : "*,intrigue_skills,Conceal Object",
+						"followups" : []
+					},
+					{
+						"name" : "Disguise",
+						"group" : "intrigue_skills",
+						"cost" : "1",
+						"description" : "Change your appearance to look like a different person",
+						"script" : "*,intrigue_skills,Disguise",
+						"followups" : []
+					},
+					{
+						"name" : "Eavesdrop",
+						"group" : "intrigue_skills",
+						"cost" : "1",
+						"description" : "Actively listen to something that is hard to hear, such as a whispered conversation through a door",
+						"script" : "*,intrigue_skills,Eavesdrop",
+						"followups" : []
+					},
+					{
+						"name" : "Escape Artist",
+						"group" : "intrigue_skills",
+						"cost" : "1",
+						"description" : "Escape from bonds such as rope or manacles",
+						"script" : "*,intrigue_skills,Escape Artist",
+						"followups" : []
+					},
+					{
+						"name" : "Hide",
+						"group" : "intrigue_skills",
+						"cost" : "1",
+						"description" : "Conceal yourself from others' observation",
+						"script" : "*,intrigue_skills,Hide",
+						"followups" : []
+					},
+					{
+						"name" : "Pick Lock",
+						"group" : "intrigue_skills",
+						"cost" : "1",
+						"description" : "Open a lock without using the key",
+						"script" : "*,intrigue_skills,Pick Lock",
+						"followups" : []
+					},
+					{
+						"name" : "Pick Pocket",
+						"group" : "intrigue_skills",
+						"cost" : "1",
+						"description" : "Steal an item that another person wears or carries without them noticing",
+						"script" : "*,intrigue_skills,Pick Pocket",
+						"followups" : []
+					},
+					{
+						"name" : "Sabotage",
+						"group" : "intrigue_skills",
+						"cost" : "1",
+						"description" : "Disable a mechanical device such as a trap",
+						"script" : "*,intrigue_skills,Sabotage",
+						"followups" : []
+					},
+					{
+						"name" : "Search",
+						"group" : "intrigue_skills",
+						"cost" : "1",
+						"description" : "Actively search an environment for important details and items",
+						"script" : "*,intrigue_skills,Search",
+						"followups" : []
+					},
+					{
+						"name" : "Sneak",
+						"group" : "intrigue_skills",
+						"cost" : "1",
+						"description" : "Move silently",
+						"script" : "*,intrigue_skills,Sneak",
+						"followups" : []
+					},
+					{
+						"name" : "Track",
+						"group" : "intrigue_skills",
+						"cost" : "1",
+						"description" : "Follow a trail that another creature has left behind",
+						"script" : "*,intrigue_skills,Track",
+						"followups" : []
+					}
+				]
+			}
+		}
+	}
+}

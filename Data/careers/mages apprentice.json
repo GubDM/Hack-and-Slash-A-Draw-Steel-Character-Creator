@@ -1,0 +1,80 @@
+{
+	"name" : "Mage's Apprentice",
+	"script" : "=,career,Mage's Apprentice|*,lore_skills,Magic|+,num_languages,1|+,renown,1|*,misc_features,mages_apprentice_title",
+	"choices" : {
+		"Mage's Apprentice Skills" : {
+			"description" : "As an mage's apprentice, you gained the Magic skill and two skills from the lore skill group.",
+			"choose" : {
+				"budget" : "2",
+				"options_skills" : "groups:lore"
+			}
+		},
+		"Mage's Apprentice Inciting Incident" : {
+			"description" : "Why did you give up your apprenticeship and become an adventurer?",
+			"choose" : {
+				"budget" : "1",
+				"options" : [
+					{
+						"name" : "Oops",
+						"cost" : "1",
+						"description" : "While studying magic, you accidentally sent yourself from your original world to this one. Now you're stranded here, hoping to get back home by findingancient texts or powerful magical treasures that might transport you there. A life of adventure it is!",
+						"script" : "*,misc_features,mages_apprentice_oops",
+						"followups" : []
+					},
+					{
+						"name" : "Ultimate Power",
+						"cost" : "1",
+						"description" : "The mage you worked for was a kindly old soul, but the basic magic they taught you always seemed like a small part of something bigger. It wasn't until you met an adventuring elementalist that you realized hitting the road as a hero was the only way to truly improve and hone your skills. You resigned your apprenticeship and found yourself walking the path of a hero the next day.",
+						"script" : "*,misc_features,mages_apprentice_ultimate_power",
+						"followups" : []
+					},
+					{
+						"name" : "Missing Mage",
+						"cost" : "1",
+						"description" : "One day you woke up and the mage you worked for was just gone. They didn't take any of their belongings, and there was no sign of any foul play—just the scent of sulfur in their bedchamber. You set out on your heroic journey in the aftermath, and have been looking for them ever since.",
+						"script" : "*,misc_features,mages_apprentice_missing_mage",
+						"followups" : []
+					}
+				]
+			}
+		}
+	},
+	"features" : {
+		"mages_apprentice_title" : {
+			"name" : "Title - Hedge Mage",
+			"script" : "*,actions,arcane_trick",
+			"effect" : "You have the Arcane Trick ability."
+		},
+		"arcane_trick" : {
+			"name" : "Title - Arcane Trick",
+			"script" : "",
+			"flavor" : "You cast an entertaining spell that creates a minor but impressive magical effect.",
+			"keywords" : "magic",
+			"distance" : "self",
+			"target" : "self",
+			"free" : "False",
+			"effect" : "Choose one of the following effects:{N}* You teleport an unattended size 1T or 1S object within 1 square of you to an unoccupied space within 1 square of you.{N}* Until the start of your next turn, a part of your body shoots a shower of harmless noisy sparks that give off light within 1 square of you.{N}* You ignite or snuff out (your choice) every mundane light source within 1 square of you.{N}* You make up to 1 pound of edible food you can touchtaste delicious or disgusting.{N}* Until the start of your next turn, you make your body exude a particular odor you've smelled before. This smell can be sensed by creatures within 5 squares of you, but can't impose any condition or other drawback on creatures.{N}* You place a small magical inscription on the surface of a mundane object you can touch, or remove an inscription that was made by you or by another creature using Arcane Trick.{N}* You cover a size 1T object that you touch with an illusion that makes it look like another object. A creature who handles the object can see through the illusion. The illusion ends when you stop touching the object.",
+			"powerroll" : "False",
+			"powerroll_char" : "",
+			"powerroll_tier1" : "",
+			"powerroll_tier2" : "",
+			"powerroll_tier3" : "",
+			"other" : ""
+		},
+		"mages_apprentice_oops" : {
+			"name" : "Inciting Incident: Oops",
+			"script" : "",
+			"effect" : "While studying magic, you accidentally sent yourself from your original world to this one. Now you're stranded here, hoping to get back home by findingancient texts or powerful magical treasures that might transport you there. A life of adventure it is!"
+		},
+		"mages_apprentice_ultimate_power" : {
+			"name" : "Inciting Incident: Ultimate Power",
+			"script" : "",
+			"effect" : "The mage you worked for was a kindly old soul, but the basic magic they taught you always seemed like a small part of something bigger. It wasn't until you met an adventuring elementalist that you realized hitting the road as a hero was the only way to truly improve and hone your skills. You resigned your apprenticeship and found yourself walking the path of a hero the next day."
+		},
+		"mages_apprentice_missing_mage" : {
+			"name" : "Inciting Incident: Missing Mage",
+			"script" : "",
+			"effect" : "One day you woke up and the mage you worked for was just gone. They didn't take any of their belongings, and there was no sign of any foul play—just the scent of sulfur in their bedchamber. You set out on your heroic journey in the aftermath, and have been looking for them ever since."
+		}
+	}
+}

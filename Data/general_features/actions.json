@@ -1,0 +1,90 @@
+{
+	"melee_weapon_free_strike" : {
+		"name" : "Melee Weapon Free Strike",
+		"script" : "",
+		"flavor" : "",
+		"keywords" : "attack,melee,weapon",
+		"distance" : "reach,1",
+		"target" : "1 creature or object",
+		"free" : "False",
+		"trigger" : "",
+		"effect" : "",
+		"powerroll" : "True",
+		"powerroll_char" : "Might or Agility",
+		"powerroll_tier1" : "damage:,2",
+		"powerroll_tier2" : "damage:,6",
+		"powerroll_tier3" : "damage:,9",
+		"other" : ""
+	},
+	"ranged_weapon_free_strike" : {
+		"name" : "Ranged Weapon Free Strike",
+		"script" : "",
+		"flavor" : "",
+		"keywords" : "attack,ranged,weapon",
+		"distance" : "ranged,10",
+		"target" : "1 creature or object",
+		"free" : "False",
+		"trigger" : "",
+		"effect" : "",
+		"powerroll" : "True",
+		"powerroll_char" : "Might or Agility",
+		"powerroll_tier1" : "damage:,2",
+		"powerroll_tier2" : "damage:,5",
+		"powerroll_tier3" : "damage:,8",
+		"other" : ""
+	},
+	"catch_breath" : {
+		"name" : "Catch Breath",
+		"script" : "",
+		"effect" : "You spend 1 Recovery and heal an amount equal to your recovery value. In addition, you also gain the benefit of the Defend action."
+	},
+	"charge" : {
+		"name" : "Charge",
+		"script" : "",
+		"effect" : "When you take the Charge action, you move up to your speed in a straight line, then make a melee free strike against a creature when you end your move. You can’t shift when you charge."
+	},
+	"defend" : {
+		"name" : "Charge",
+		"script" : "",
+		"effect" : "When you take the Defend action, all attacks against you have a double bane until the end of your next turn. You gain no benefit from this action while another creature is taunted by you."
+	},
+	"heal" : {
+		"name" : "Heal",
+		"script" : "",
+		"effect" : "You use your action to employ medicine or inspiring words to make an adjacent creature feel better and stay in the fight. The creature can spend 1 Recovery to regain Stamina, or can make a resistance roll against a \"(resistance ends)\" effect they are suffering."
+	},
+	"test_attack_weapon_magic_area" : {
+		"name" : "Test Attack for Weapon Magic Area",
+		"script" : "",
+		"flavor" : "",
+		"keywords" : "area,ranged,weapon,magic",
+		"distance" : "cube,3:5",
+		"target" : "all enemies",
+		"free" : "False",
+		"trigger" : "",
+		"effect" : "Smell farts (EoE).",
+		"powerroll" : "False",
+		"powerroll_char" : "",
+		"powerroll_tier1" : "",
+		"powerroll_tier2" : "",
+		"powerroll_tier3" : "",
+		"other" : ""
+	},
+	"test_attack_weapon_magic_ranged" : {
+		"name" : "Test Attack for Weapon Magic Ranged",
+		"script" : "",
+		"flavor" : "",
+		"keywords" : "ranged,weapon,magic",
+		"distance" : "ranged,5",
+		"target" : "all enemies",
+		"free" : "False",
+		"trigger" : "",
+		"effect" : "Smell farts (EoE).",
+		"powerroll" : "False",
+		"powerroll_char" : "",
+		"powerroll_tier1" : "",
+		"powerroll_tier2" : "",
+		"powerroll_tier3" : "",
+		"other" : ""
+	}
+}

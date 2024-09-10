@@ -1,0 +1,141 @@
+{
+	"name" : "Devil",
+	"script" : "=,ancestry,Devil|*,misc_features,silver_tongue",
+	"choices" : {
+		"Fiendish Features" : {
+			"description" : "When you create a devil character, you have 3 fiend points, which you use to select a number of the following features.",
+			"choose" : {
+				"budget" : "3",
+				"options" : [
+					{
+						"name" : "Barbed Tail",
+						"cost" : "1",
+						"description" : "Your pointy tail allows you to punctuate all your actions. Once per round, you can deal 1 extra damage on a melee attack or free strike.",
+						"script" : "*,misc_features,fiendish_features_barbed_tail",
+						"followups" : []
+					},
+					{
+						"name" : "Beast Legs",
+						"cost" : "2",
+						"description" : "Your powerful legs improve your speed by 1.",
+						"script" : "*,misc_features,fiendish_features_beast_legs",
+						"followups" : []
+					},
+					{
+						"name" : "Exposed Skeleton",
+						"cost" : "2",
+						"description" : "Your bones are visible and hardened above your skin, granting you Weapon immunity 2.",
+						"script" : "*,misc_features,fiendish_features_exposed_skeleton",
+						"followups" : []
+					},
+					{
+						"name" : "Glowing Eyes",
+						"cost" : "1",
+						"description" : "Your eyes are a solid, vibrant color that flares to show your excitement or rage. Whenever you take damage from a creature, you can use a triggered action to curse that creature for daring to do you harm. The creature takes 1d10 psychic damage.",
+						"script" : "*,triggers,fiendish_features_glowing_eyes",
+						"followups" : []
+					},
+					{
+						"name" : "Hellsight",
+						"cost" : "1",
+						"description" : "Your eyes let you see through the dark, fog, and other types of concealment. You don't take a bane on attacks against concealed, unhidden creatures.",
+						"script" : "*,misc_features,fiendish_features_hellsight",
+						"followups" : []
+					},
+					{
+						"name" : "Horns",
+						"cost" : "1",
+						"description" : "Your cherished horns are a hardened representation of your force of will, granting you an edge on Presence resistance rolls.",
+						"script" : "*,misc_features,fiendish_features_horns",
+						"followups" : []
+					},
+					{
+						"name" : "Prehensile Tail",
+						"cost" : "2",
+						"description" : "Your prehensile tail allows you to challenge foes on all sides. You can't be flanked.",
+						"script" : "*,misc_features,fiendish_features_prehensile_tail",
+						"followups" : []
+					},
+					{
+						"name" : "Wings",
+						"cost" : "2",
+						"description" : "You possess wings powerful enough to take you airborne. As a maneuver, you can switch between walking and flying when you are touching the ground, or vice versa when you are within 1 square of the ground. While flying, your stability drops to 0 and you have damage weakness 5. While using your wings to fly, you can stay aloft for a number of rounds equal to your Might (minimum of 1round) before you fall prone.",
+						"script" : "*,misc_features,fiendish_features_wings",
+						"followups" : []
+					}
+				]
+			}
+		}
+	},
+	"features" : {
+		"silver_tongue" : {
+			"name" : "Silver Tongue",
+			"script" : "",
+			"effect" : "You can twist how your words are perceived to get a better read on people. You gain an edge when attempting to discover an NPC's motivations and pitfalls during negotiations (see Negotiation)."
+		},
+		"fiendish_features_barbed_tail" : {
+			"name" : "Fiendish Features: Barbed Tail",
+			"script" : "",
+			"flavor" : "",
+			"keywords" : "",
+			"distance" : "",
+			"target" : "",
+			"free" : "False",
+			"trigger" : "",
+			"effect" : "Your pointy tail allows you to punctuate all your actions. Once per round, you can deal 1 extra damage on a melee attack or free strike.",
+			"powerroll" : "False",
+			"powerroll_char" : "",
+			"powerroll_tier1" : "",
+			"powerroll_tier2" : "",
+			"powerroll_tier3" : "",
+			"other" : ""
+		},
+		"fiendish_features_beast_legs" : {
+			"name" : "Beast Legs",
+			"script" : "+,speed,1",
+			"effect" : "Your powerful legs improve your speed by 1."
+		},
+		"fiendish_features_exposed_skeleton" : {
+			"name" : "Exposed Skeleton",
+			"script" : "*,immunities,weapon:2",
+			"effect" : "Your bones are visible and hardened above your skin, granting you Weapon immunity 2."
+		},
+		"fiendish_features_glowing_eyes" : {
+			"name" : "Glowing Eyes",
+			"script" : "",
+			"flavor" : "Your eyes are a solid, vibrant color that flares to show your excitement or rage.",
+			"keywords" : "",
+			"distance" : "",
+			"target" : "",
+			"free" : "False",
+			"trigger" : "You take damage from a creature.",
+			"effect" : "Curse that creature for daring to do you harm. The creature takes 1d10 psychic damage.",
+			"powerroll" : "False",
+			"powerroll_char" : "",
+			"powerroll_tier1" : "",
+			"powerroll_tier2" : "",
+			"powerroll_tier3" : "",
+			"other" : ""
+		},
+		"fiendish_features_hellsight" : {
+			"name" : "Hellsight",
+			"script" : "",
+			"effect" : "Your eyes let you see through the dark, fog, and other types of concealment. You don't take a bane on attacks against concealed, unhidden creatures."				
+		},
+		"fiendish_features_horns" : {
+			"name" : "Horns",
+			"script" : "",
+			"effect" : "Your cherished horns are a hardened representation of your force of will, granting you an edge on Presence resistance rolls."
+		},
+		"fiendish_features_prehensile_tail" : {
+			"name" : "Prehensile Tail",
+			"script" : "",
+			"effect" : "Your prehensile tail allows you to challenge foes on all sides. You can't be flanked."
+		},
+		"fiendish_features_wings" : {
+			"name" : "Wings",
+			"script" : "",
+			"effect" : "You possess wings powerful enough to take you airborne. As a maneuver, you can switch between walking and flying when you are touching the ground, or vice versa when you are within 1 square of the ground. While flying, your stability drops to 0 and you have damage weakness 5. While using your wings to fly, you can stay aloft for a number of rounds equal to your Might (minimum of 1round) before you fall prone."
+		}
+	}
+}

@@ -1,0 +1,35 @@
+{
+	"name" : "Creation Domain",
+	"script" : "*,char_subclass,Creation|choose,prayer,prayer_creation|&*,DOMAINFEATURECHOICE,hands_of_the_maker",
+	"choices" : {},
+	"features" : {
+		"prayer_creation" : {
+			"name" : "Creation Domain Effect",
+			"script" : "choose,prayer,prayer_creation",
+			"effect" : "You create a 5 wall of stone within 10 squares of you."
+		},
+		"hands_of_the_maker" : {
+			"name" : "Hands of the Maker",
+			"script" : "+,num_skill_picks,1:0:0:0:0",
+			"option" : {
+				"name" : "Hands of the Maker",
+				"cost" : "1",
+				"description" : "Craft objects with the power of your mind!",
+				"script" : "*,maneuvers,hands_of_the_maker",
+				"followups" : []
+			},
+			"flavor" : "Craft objects with the power of your mind!",
+			"keywords" : "magic",
+			"distance" : "Self",
+			"target" : "Self",
+			"free" : "False",
+			"effect" : "You create a mundane object no larger than size 1S that you hold. If you use this feature again or stop holding the object, it disappears.",
+			"powerroll" : "False",
+			"powerroll_char" : "",
+			"powerroll_tier1" : "",
+			"powerroll_tier2" : "",
+			"powerroll_tier3" : "",
+			"other" : ""
+		}
+	}
+}

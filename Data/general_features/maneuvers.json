@@ -1,0 +1,83 @@
+{
+	"aid_attack" : {
+		"name" : "Aid Attack",
+		"script" : "",
+		"effect" : "Choose an enemy adjacent to you. The next attack an ally makes against that creature before the start of your next turn has an edge."
+	},
+	"drink_potion" : {
+		"name" : "Drink Potion",
+		"script" : "",
+		"effect" : "You can use this maneuver to drink a potion yourself or to administer a potion to an adjacent creature."
+	},
+	"escape_grab" : {
+		"name" : "Escape Grab",
+		"script" : "",
+		"flavor" : "",
+		"keywords" : "attack,ranged,weapon",
+		"distance" : "ranged,10",
+		"target" : "1 creature or object",
+		"free" : "False",
+		"trigger" : "",
+		"effect" : "While you are grabbed by another creature, you can attempt to escape by making a resistance roll. You take a bane on the roll if the creature's size is larger than yours.",
+		"powerroll" : "True",
+		"powerroll_char" : "Might or Agility",
+		"powerroll_tier1" : "|You fail to escape the grab.",
+		"powerroll_tier2" : "|You can escape the grab, but if you do, the creature grabbing you can make a melee free strike against you before you are no longer grabbed.",
+		"powerroll_tier3" : "|You are no longer grabbed.",
+		"other" : ""
+	},
+	"grab" : {
+		"name" : "Grab",
+		"script" : "",
+		"flavor" : "",
+		"keywords" : "melee",
+		"distance" : "reach,1",
+		"target" : "1 creature the same size or smaller than you",
+		"free" : "False",
+		"trigger" : "",
+		"effect" : "You gain an edge on the power roll if the creature's size is smaller than yours. You can grab only one creature at a time this way.",
+		"powerroll" : "True",
+		"powerroll_char" : "Might",
+		"powerroll_tier1" : "|No effect",
+		"powerroll_tier2" : "|You can grab the target, but if you do, they can make a melee free strike against you right before they become grabbed by you.",
+		"powerroll_tier3" : "|The target is grabbed by you.",
+		"other" : ""
+	},
+	"hide" : {
+		"name" : "Hide",
+		"script" : "",
+		"effect" : "Using the Hide maneuver, you attempt to hide from other creatures who aren't observing you while you have cover or concealment."
+	},
+	"knockback" : {
+		"name" : "Knockback",
+		"script" : "",
+		"flavor" : "",
+		"keywords" : "melee",
+		"distance" : "reach,1",
+		"target" : "1 creature the same size or smaller than you",
+		"free" : "False",
+		"trigger" : "",
+		"effect" : "You gain an edge on the power roll if the creature's size is smaller than yours.",
+		"powerroll" : "True",
+		"powerroll_char" : "Might",
+		"powerroll_tier1" : "|push 1",
+		"powerroll_tier2" : "|push 2",
+		"powerroll_tier3" : "|push 3",
+		"other" : ""
+	},
+	"make_assist_test" : {
+		"name" : "Make or Assist a Test",
+		"script" : "",
+		"effect" : "Many tests are maneuvers if made in combat. Searching a chest with a Reason test, picking a door’s lock with an Agility test, or lifting a portcullis with a Might test would all be maneuvers. Assisting a test is also a maneuver in combat.{N}Complex or time-consuming tests might require an action if made in combat—or could take so long that they can’t be made during combat at all. Other tests that take no time at all, such as a Reason test to recall lore about mummies, are usually free maneuvers in combat. The Director has the final say regarding which tests can be made as maneuvers."
+	},
+	"search_for_hidden_creatures" : {
+		"name" : "Search for Hidden Creatures",
+		"script" : "",
+		"effect" : "You can use this maneuver to attempt to search for creatures hidden from you."
+	},
+	"stand_up" : {
+		"name" : "Stand Up",
+		"script" : "",
+		"effect" : "You can use this maneuver to stand up if you are prone, ending that condition. Alternatively, you can use this maneuver to make an adjacent prone creature stand up."
+	}
+}

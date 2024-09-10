@@ -1,0 +1,103 @@
+{
+	"name" : "Lore Skills",
+	"script" : "",
+	"choices" : {
+		"Lore Skills" : {
+			"description" : "Skills from the lore skill group are used to research and recall specific information.",
+			"choose" : {
+				"budget" : "query,num_skill_picks,4",
+				"ignore" : "lore_skills",
+				"options" : [
+					{
+						"name" : "Culture",
+						"group" : "lore_skills",
+						"cost" : "1",
+						"description" : "Knowing about a culture's customs, folktales, and taboos",
+						"script" : "*,lore_skills,Culture",
+						"followups" : []
+					},
+					{
+						"name" : "Criminal Underworld",
+						"group" : "lore_skills",
+						"cost" : "1",
+						"description" : "Knowing about criminal organizations, their crimes, their relationships, and their leaders",
+						"script" : "*,lore_skills,Criminal Underworld",
+						"followups" : []
+					},
+					{
+						"name" : "History",
+						"group" : "lore_skills",
+						"cost" : "1",
+						"description" : "Knowing about significant past events",
+						"script" : "*,lore_skills,History",
+						"followups" : []
+					},
+					{
+						"name" : "Magic",
+						"group" : "lore_skills",
+						"cost" : "1",
+						"description" : "Knowing about magical places, spells, rituals, items, and phenomena",
+						"script" : "*,lore_skills,Magic",
+						"followups" : []
+					},
+					{
+						"name" : "Monsters",
+						"group" : "lore_skills",
+						"cost" : "1",
+						"description" : "Knowing monster ecology, strengths, and weaknesses",
+						"script" : "*,lore_skills,Monsters",
+						"followups" : []
+					},
+					{
+						"name" : "Nature",
+						"group" : "lore_skills",
+						"cost" : "1",
+						"description" : "Knowing about natural flora, fauna, and weather",
+						"script" : "*,lore_skills,Nature",
+						"followups" : []
+					},
+					{
+						"name" : "Psionics",
+						"group" : "lore_skills",
+						"cost" : "1",
+						"description" : "Knowing about psionic places, spells, rituals, items, and phenomena",
+						"script" : "*,lore_skills,Psionics",
+						"followups" : []
+					},
+					{
+						"name" : "Religion",
+						"group" : "lore_skills",
+						"cost" : "1",
+						"description" : "Knowing about religious mythology, practices, and rituals",
+						"script" : "*,lore_skills,Religion",
+						"followups" : []
+					},
+					{
+						"name" : "Rumors",
+						"group" : "lore_skills",
+						"cost" : "1",
+						"description" : "Knowing gossip, legends, and uncertain truths",
+						"script" : "*,lore_skills,Rumors",
+						"followups" : []
+					},
+					{
+						"name" : "Society",
+						"group" : "lore_skills",
+						"cost" : "1",
+						"description" : "Knowing noble etiquette and the leadership and power dynamics of noble families",
+						"script" : "*,lore_skills,Society",
+						"followups" : []
+					},
+					{
+						"name" : "Timescape",
+						"group" : "lore_skills",
+						"cost" : "1",
+						"description" : "Knowing about the various planets of the timescape",
+						"script" : "*,lore_skills,Timescape",
+						"followups" : []
+					}
+				]
+			}
+		}
+	}
+}

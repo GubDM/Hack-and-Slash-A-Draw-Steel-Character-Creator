@@ -1,0 +1,40 @@
+{
+	"name" : "College of Black Ash",
+	"script" : "*,char_subclass,Black Ash|*,lore_skills,Magic|*,maneuvers,black_ash_teleport|*,triggers,in_all_this_confusion",
+	"choices" : {},
+	"features" : {
+		"black_ash_teleport" : {
+			"name" : "Black Ash Teleport",
+			"script" : "",
+			"flavor" : "In a swirl of black ash, you step from one place to another.",
+			"keywords" : "magic",
+			"distance" : "self",
+			"target" : "self",
+			"free" : "False",
+			"effect" : "You teleport up to 5 squares. If you end this movement in concealment or cover, you can use the Hide maneuver even if you are observed.",
+			"powerroll" : "False",
+			"powerroll_char" : "",
+			"powerroll_tier1" : "",
+			"powerroll_tier2" : "",
+			"powerroll_tier3" : "",
+			"other" : "Spend Insight: You teleport 1 additional square for each insight spent."
+		},
+		"in_all_this_confusion" : {
+			"name" : "In All This Confusion",
+			"script" : "",
+			"flavor" : "You teleport away in a plume of black smoke to avoid danger.",
+			"keywords" : "magic",
+			"distance" : "self",
+			"target" : "self",
+			"trigger" : "You take damage.",
+			"free" : "False",
+			"effect" : "You teleport up to 4 squares, halve the triggering damage, and don't suffer any effect associated with the damage.",
+			"powerroll" : "False",
+			"powerroll_char" : "",
+			"powerroll_tier1" : "",
+			"powerroll_tier2" : "",
+			"powerroll_tier3" : "",
+			"other" : "Spend Insight: You teleport 1 additional square for each insight spent."
+		}
+	}
+}

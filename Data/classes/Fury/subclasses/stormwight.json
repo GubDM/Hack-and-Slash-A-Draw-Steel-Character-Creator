@@ -1,0 +1,56 @@
+{
+	"name" : "Stormwight",
+	"script" : "*,char_subclass,Stormwight|*,intrigue_skills,Track|*,misc_features,relentless_hunter|*,misc_features,primordial_shape|*,misc_features,stormwight_growing_rage|*,triggers,regeneration|*0,first_kit_options,Stormwight|*,maneuvers,animal_form",
+	"choices" : {},
+	"features" : {
+		"relentless_hunter" : {
+			"name" : "Relentless Hunter",
+			"script" : "",
+			"effect" : "You gain an edge on tests that use the Track skill."
+		},
+		"primordial_shape" : {
+			"name" : "Primordial Shape",
+			"script" : "",
+			"effect" : "When you select a martial kit, you can instead select a stormwight kit (see Stormwight Kits). Your stormwight kit grants you a number of benefits, including effects tied to your Growing Rage feature."
+		},
+		"stormwight_growing_rage" : {
+			"name" : "Growing Rage",
+			"script" : "",
+			"effect" : "You gain certain benefits in combat based on the amount of rage you have. The benefits from your growing rage last until the end of your turn, even if a benefit would become unavailable to you because of the amount of rage you spend during your turn. Your stormwight kit grants you effects tied to your Growing Rage feature."
+		},
+		"regeneration" : {
+			"name" : "Regeneration",
+			"script" : "",
+			"flavor" : "Your transformative abilities bring you back into the fight.",
+			"keywords" : "melee",
+			"distance" : "self",
+			"target" : "self",
+			"trigger" : "You lose Stamina and are not dying.",
+			"free" : "False",
+			"effect" : "After damage is resolved, if your rage is high enough, you can enter your animal or hybrid form as a free triggered action. If you can’t gain the temporary Stamina from that form because you have already done so this encounter, you gain temporary Stamina equal to your Might.",
+			"powerroll" : "False",
+			"powerroll_char" : "",
+			"powerroll_tier1" : "",
+			"powerroll_tier2" : "",
+			"powerroll_tier3" : "",
+			"other" : "Spend 1 Rage: If you are not dying, you can spend 1 Recovery."
+		},
+		"animal_form" : {
+			"name" : "Animal Form",
+			"script" : "",
+			"flavor" : "You take on the form of the animal who channels your rage.",
+			"keywords" : "",
+			"distance" : "self",
+			"target" : "self",
+			"trigger" : "You lose Stamina and are not dying.",
+			"free" : "False",
+			"effect" : "You can shapeshift into the animal defined by your stormwight kit or back into your true form. While in animal form, you can’t use signature abilities or heroic abilities unless they have the Animal keyword.{N}Additionally, you can both speak normally and speak to animals who share your form. If negotiation with an animal comes into play, you treat your Renown as 2 higher than usual while in your animal form.",
+			"powerroll" : "False",
+			"powerroll_char" : "",
+			"powerroll_tier1" : "",
+			"powerroll_tier2" : "",
+			"powerroll_tier3" : "",
+			"other" : "Spend 1 Rage: As a free maneuver on your turn, you can shapeshift a second time, either into another animal form or back into your true form."
+		}
+	}
+}

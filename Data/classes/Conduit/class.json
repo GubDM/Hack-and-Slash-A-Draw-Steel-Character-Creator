@@ -1,0 +1,449 @@
+{
+	"name" : "Conduit",
+	"script" : "=,char_class,Conduit|&=,CHAR1,Intuition|&=,CHAR2,Presence|+,stamina,18|+,recoveries,10|=,hr_feature,piety|*,maneuvers,prayer|*,maneuvers,healing_grace|*,free_strikes,pious_force",
+	"subclass_name" : "Conduit Domain",
+	"subclass_budget" : "2",
+	"subclass_prompt" : "Choose 2 domains for your conduit.",
+	"choices" : {
+		"Conduit Skills" : {
+			"description" : "As a conduit, you gain any two skills from the interpersonal or lore skill groups.",
+			"choose" : {
+				"budget" : "2",
+				"options_skills" : "groups:interpersonal,lore"
+			}
+		},
+		"Domain Feature" : {
+			"description" : "You gain a domain feature from one of your domains.",
+			"choose" : {
+				"budget" : "1"
+			},
+			"choose_dynamic" : "DOMAINFEATURECHOICE"
+		},
+		"Conduit Triggered Action" : {
+			"description" : "",
+			"choose" : {
+				"budget" : "1",
+				"options" : [
+					{
+						"name" : "Divine Disruption",
+						"cost" : "1",
+						"description" : "You sap the strength of an attacking enemy with divine energy.",
+						"script" : "*,triggers,divine_disruption",
+						"followups" : []
+					},
+					{
+						"name" : "Holy Infusion",
+						"cost" : "1",
+						"description" : "You invigorate an attacking ally with divine energy.",
+						"script" : "*,triggers,holy_infusion",
+						"followups" : []
+					}
+				]
+			}
+		},
+		"Conduit Signature Ability" : {
+			"description" : "Signature abilities can be used at will.",
+			"choose" : {
+				"budget" : "1",
+				"options" : [
+					{
+						"name" : "Holy Lance",
+						"cost" : "1",
+						"description" : "A tendril of divine energy shoots forth to draw in your foe.",
+						"script" : "*,signatures,holy_lance",
+						"followups" : []
+					},
+					{
+						"name" : "Lightfall",
+						"cost" : "1",
+						"description" : "Holy light scours your foes and sets your allies into perfect attack position.",
+						"script" : "*,signatures,lightfall",
+						"followups" : []
+					},
+					{
+						"name" : "Sacrificial Offer",
+						"cost" : "1",
+						"description" : "The divine energy of creation tears at your foe.",
+						"script" : "*,signatures,sacrifical_offer",
+						"followups" : []
+					},
+					{
+						"name" : "Wither",
+						"cost" : "1",
+						"description" : "A bolt of holy energy saps the life from a foe.",
+						"script" : "*,signatures,wither",
+						"followups" : []
+					}
+				]
+			}
+		},
+		"Conduit 3-Piety Heroic Abilities " : {
+			"description" : "",
+			"choose" : {
+				"budget" : "1",
+				"options" : [
+					{
+						"name" : "Angel of Wrath (3 Piety)",
+						"cost" : "1",
+						"description" : "You sap the strength of an attacking enemy with divine energy.",
+						"script" : "*,heroic3actions,angel_of_wrath",
+						"followups" : []
+					},
+					{
+						"name" : "Punishing Smite (3 Piety)",
+						"cost" : "1",
+						"description" : "You invigorate an attacking ally with divine energy.",
+						"script" : "*,heroic3actions,punishing_smite",
+						"followups" : []
+					},
+					{
+						"name" : "Righteous Rebuke (3 Piety)",
+						"cost" : "1",
+						"description" : "You sap the strength of an attacking enemy with divine energy.",
+						"script" : "*,heroic3actions,righteous_rebuke",
+						"followups" : []
+					},
+					{
+						"name" : "Thunder of the Divine (3 Piety)",
+						"cost" : "1",
+						"description" : "You invigorate an attacking ally with divine energy.",
+						"script" : "*,heroic3actions,thunder_of_the_divine",
+						"followups" : []
+					}
+				]
+			}
+		},
+		"Conduit 5 Piety Heroic Abilities " : {
+			"description" : "",
+			"choose" : {
+				"budget" : "1",
+				"options" : [
+					{
+						"name" : "Armor of the Faithful (5 Piety)",
+						"cost" : "1",
+						"description" : "The divine light of protection surrounds your allies.",
+						"script" : "*,heroic5maneuvers,armor_of_the_faithful",
+						"followups" : []
+					},
+					{
+						"name" : "Divine Weakness (5 Piety)",
+						"cost" : "1",
+						"description" : "Divine energy scours your target to make them more susceptible to harm.",
+						"script" : "*,heroic5actions,divine_weakness",
+						"followups" : []
+					},
+					{
+						"name" : "Terrifying Smite (5 Piety)",
+						"cost" : "1",
+						"description" : "A mote of holy light racks your foe with their greatest fear.",
+						"script" : "*,heroic5actions,terrifying_smite",
+						"followups" : []
+					},
+					{
+						"name" : "Wave of Virtue (5 Piety)",
+						"cost" : "1",
+						"description" : "A pulse of divine magic lets your comrades draw on their reserves of inner strength.",
+						"script" : "*,heroic5actions,wave_of_virtue",
+						"followups" : []
+					}
+				]
+			}
+		}
+	},
+	"features" : {
+		"piety" : {
+			"name" : "Piety",
+			"script" : "",
+			"effect" : "Your deity grants you a Heroic Resource called piety to fuel your abilities. You use piety to heal and empower your allies, and to unleash your deity's power upon your foes. {N}Outside of combat and other dangerous situations tracked in turns and rounds, you have piety equal to your Victories. If you lose some or all of this piety outside of combat, it takes you 1 minute to regain it.{N}When a combat encounter begins, you keep any piety you had outside of combat. At the start of each of your turns during combat, you gain 2 piety. You can also use the Prayer ability to gain additional piety. When combat ends, you once again have piety equal to your Victories."
+		},
+		"prayer" : {
+			"name" : "Prayer",
+			"script" : "",
+			"flavor" : "I beseech you!",
+			"keywords" : "magic",
+			"distance" : "self",
+			"target" : "self",
+			"free" : "False",
+			"trigger" : "",
+			"effect" : "The first time you use this ability during an encounter, it has a double edge. The second time you use it, it takes an edge. The third time you use it, it takes a bane. The fourth and each subsequent time you use this ability during an encounter, it has a double bane.",
+			"powerroll" : "True",
+			"powerroll_char" : "Intuition",
+			"powerroll_tier1" : "damage:,1d6|bleeding (EoT)",
+			"powerroll_tier2" : "Gain 1 piety",
+			"powerroll_tier3" : "Gain 2 piety and choose and use a domain effect",
+			"other" : ""
+		},
+		"healing_grace" : {
+			"name" : "Healing Grace",
+			"script" : "",
+			"flavor" : "Your divine energy restores the righteous",
+			"keywords" : "magic,ranged",
+			"distance" : "ranged,5",
+			"target" : "self or 1 ally",
+			"free" : "False",
+			"trigger" : "",
+			"effect" : "The target can spend 1 Recovery.",
+			"powerroll" : "False",
+			"powerroll_char" : "",
+			"powerroll_tier1" : "",
+			"powerroll_tier2" : "",
+			"powerroll_tier3" : "",
+			"other" : "Spend Piety: For each piety spent, you can choose one of the following enhancements: {N}(1) You can target one additional ally within distance. {N}(2) You can end one effect on a target that has a duration of EoT or is ended by a resistance roll. {N}(3) A prone target can stand up. {N}(4) A target can spend 1 additional Recovery."
+		},
+		"pious_force" : {
+			"name" : "Free Strike: Pious Force",
+			"script" : "",
+			"flavor" : "You unleash a blast of raw divine magic upon your foe.",
+			"keywords" : "attack,magic,ranged",
+			"distance" : "ranged,5",
+			"target" : "1 creature or object",
+			"free" : "False",
+			"trigger" : "",
+			"effect" : "You can choose to change the damage type to holy.",
+			"powerroll" : "True",
+			"powerroll_char" : "Intuition",
+			"powerroll_tier1" : "damage:,2",
+			"powerroll_tier2" : "damage:,6",
+			"powerroll_tier3" : "damage:,9",
+			"other" : ""
+		},
+		"divine_disruption" : {
+			"name" : "Divine Disruption",
+			"script" : "",
+			"flavor" : "You sap the strength of an attacking enemy with divine energy.",
+			"keywords" : "magic,ranged",
+			"distance" : "ranged,5",
+			"target" : "1 enemy",
+			"free" : "False",
+			"trigger" : "The target makes an attack. You can use this ability after seeing the result of the attack.",
+			"effect" : "The attack takes a bane and the damage to one creature targeted by the attack is reduced by an amount equal to your Intuition.",
+			"powerroll" : "False",
+			"powerroll_char" : "",
+			"powerroll_tier1" : "",
+			"powerroll_tier2" : "",
+			"powerroll_tier3" : "",
+			"other" : "Spend 1 Piety: The attack has a double bane and the damage to one creature targeted by the attack is reduced by an amount equal to twice your Intuition score."
+		},
+		"holy_infusion" : {
+			"name" : "Holy Infusion",
+			"script" : "",
+			"flavor" : "You invigorate an attacking ally with divine energy.",
+			"keywords" : "magic,ranged",
+			"distance" : "ranged,5",
+			"target" : "1 ally",
+			"free" : "False",
+			"trigger" : "The target makes an attack. You can use this ability after seeing the result of the attack.",
+			"effect" : " The attack gains an edge and deals holy damage equal to twice your Intuition score.",
+			"powerroll" : "True",
+			"powerroll_char" : "Intuition",
+			"powerroll_tier1" : "damage:,2",
+			"powerroll_tier2" : "damage:,6",
+			"powerroll_tier3" : "damage:,9",
+			"other" : "Spend 1 Piety: The attack has a double edge and deals holy damage equal to twice your Intuition score."
+		},
+		"holy_lance" : {
+			"name" : "Holy Lance",
+			"script" : "",
+			"flavor" : "A tendril of divine energy shoots forth to draw in your foe.",
+			"keywords" : "attack,magic,ranged",
+			"distance" : "ranged,5",
+			"target" : "1 creature or object",
+			"free" : "False",
+			"trigger" : "",
+			"effect" : "",
+			"powerroll" : "True",
+			"powerroll_char" : "Intuition",
+			"powerroll_tier1" : "damage:holy,2|pull 2",
+			"powerroll_tier2" : "damage:holy,6|pull 3",
+			"powerroll_tier3" : "damage:holy,9|pull 4",
+			"other" : ""
+		},
+		"lightfall" : {
+			"name" : "Lightfall",
+			"script" : "",
+			"flavor" : "Holy light scours your foes and sets your allies into perfect attack position.",
+			"keywords" : "area,magic,ranged",
+			"distance" : "cube,3:5",
+			"target" : "All enemies",
+			"free" : "False",
+			"trigger" : "",
+			"effect" : "You can teleport each ally in the area and yourself if you're in the area to an unoccupied space within the area.",
+			"powerroll" : "True",
+			"powerroll_char" : "Intuition",
+			"powerroll_tier1" : "damage:holy,2",
+			"powerroll_tier2" : "damage:holy,3",
+			"powerroll_tier3" : "damage:holy,4",
+			"other" : ""
+		},
+		"sacrificial_offer" : {
+			"name" : "Sacrificial Offer",
+			"script" : "",
+			"flavor" : "The divine energy of creation tears at your foe.",
+			"keywords" : "attack,magic,ranged",
+			"distance" : "ranged,5",
+			"target" : "1 creature",
+			"free" : "False",
+			"trigger" : "",
+			"effect" : "",
+			"powerroll" : "True",
+			"powerroll_char" : "Intuition",
+			"powerroll_tier1" : "damage:corruption,2",
+			"powerroll_tier2" : "damage:corruption,6|the next ally to damage the target before the start of your next turn deals an extra 1d6 corruption damage",
+			"powerroll_tier3" : "damage:corruption,9|the next ally to damage the target before the start of your next turn deals an extra 1d10 corruption damage",
+			"other" : ""
+		},
+		"wither" : {
+			"name" : "Wither",
+			"script" : "",
+			"flavor" : "A bolt of holy energy saps the life from a foe.",
+			"keywords" : "attack,magic,ranged",
+			"distance" : "ranged,5",
+			"target" : "1 creature or object",
+			"free" : "False",
+			"trigger" : "",
+			"effect" : "",
+			"powerroll" : "True",
+			"powerroll_char" : "Intuition",
+			"powerroll_tier1" : "damage:corruption,2",
+			"powerroll_tier2" : "damage:corruption,6|the target takes a bane on ability power rolls (EoT)",
+			"powerroll_tier3" : "damage:corruption,9|the target takes a bane on ability power rolls (EoT)",
+			"other" : ""
+		},
+		"angel_of_wrath" : {
+			"name" : "Angel of Wrath (3 Piety)",
+			"script" : "",
+			"flavor" : "You conjure an angelic spirit who lashes your foes with burning radiance.",
+			"keywords" : "magic,ranged",
+			"distance" : "ranged,5",
+			"target" : "Special",
+			"free" : "False",
+			"trigger" : "",
+			"effect" : "You summon an angelic spirit of size 1M who can't be harmed, and who appears in an unoccupied space within distance. The spirit lasts until the end of your next turn. You and your allies can move through the spirit's space, but enemies can't. The first time on a turn that an enemy moves within 1 square of the spirit or starts their turn there, they take holy damage equal to twice your Intuition score.",
+			"powerroll" : "False",
+			"powerroll_char" : "",
+			"powerroll_tier1" : "",
+			"powerroll_tier2" : "",
+			"powerroll_tier3" : "",
+			"other" : ""
+		},
+		"punishing_smite" : {
+			"name" : "Punishing Smite (3 Piety)",
+			"script" : "",
+			"flavor" : "Your divine fury is a hammer that crashes down upon the unrighteous.",
+			"keywords" : "attack,magic,ranged",
+			"distance" : "ranged,5",
+			"target" : "1 creature or object",
+			"free" : "False",
+			"trigger" : "",
+			"effect" : "",
+			"powerroll" : "True",
+			"powerroll_char" : "Intuition",
+			"powerroll_tier1" : "damage:holy,6",
+			"powerroll_tier2" : "damage:holy,8|prone",
+			"powerroll_tier3" : "damage:holy,13|prone and can't stand (EoT)",
+			"other" : ""
+		},
+		"righteous_rebuke" : {
+			"name" : "Righteous Rebuke (3 Piety)",
+			"script" : "",
+			"flavor" : "Divine wrath strikes your foe with lightning that follows them across the battlefield.",
+			"keywords" : "attack,magic,ranged",
+			"distance" : "ranged,5",
+			"target" : "1 creature",
+			"free" : "False",
+			"trigger" : "",
+			"effect" : "If the target deals damage to another creature before the end of their next turn, the target of this ability takes another 1d10 lightning damage.",
+			"powerroll" : "True",
+			"powerroll_char" : "Intuition",
+			"powerroll_tier1" : "damage:lightning,6",
+			"powerroll_tier2" : "damage:lightning,8",
+			"powerroll_tier3" : "damage:lightning,13",
+			"other" : ""
+		},
+		"thunder_of_the_divine" : {
+			"name" : "Thunder of the Divine (3 Piety)",
+			"script" : "",
+			"flavor" : "A resounding clap of thunder disrupts your foes.",
+			"keywords" : "area,magic,ranged",
+			"distance" : "cube,4:5",
+			"target" : "All enemies",
+			"free" : "False",
+			"trigger" : "",
+			"effect" : "You can also push each willing ally in the area, and their stability doesn't count against this forced movement.",
+			"powerroll" : "True",
+			"powerroll_char" : "Intuition",
+			"powerroll_tier1" : "damage:sonic,2|push 1",
+			"powerroll_tier2" : "damage:sonic,6|push 3",
+			"powerroll_tier3" : "damage:sonic,9|push 5",
+			"other" : ""
+		},
+		"armor_of_the_faithful" : {
+			"name" : "Armor of the Faithful (5 Piety)",
+			"script" : "",
+			"flavor" : "The divine light of protection surrounds your allies.",
+			"keywords" : "magic,ranged",
+			"distance" : "ranged,5",
+			"target" : "3 allies",
+			"free" : "False",
+			"trigger" : "",
+			"effect" : "",
+			"powerroll" : "True",
+			"powerroll_char" : "Intuition",
+			"powerroll_tier1" : "|Gain 10 temporary Stamina",
+			"powerroll_tier2" : "|Gain 15 temporary Stamina",
+			"powerroll_tier3" : "|Gain 20 temporary Stamina",
+			"other" : ""
+		},
+		"divine_weakness" : {
+			"name" : "Divine Weakness (5 Piety)",
+			"script" : "",
+			"flavor" : "Divine energy scours your target to make them more susceptible to harm.",
+			"keywords" : "attack,magic,ranged",
+			"distance" : "ranged,5",
+			"target" : "1 creature or object",
+			"free" : "False",
+			"trigger" : "",
+			"effect" : "",
+			"powerroll" : "True",
+			"powerroll_char" : "Intuition",
+			"powerroll_tier1" : "damage:corruption,7|whenever the target takes damage, they take an extra 3 corruption damage (EoT)",
+			"powerroll_tier2" : "damage:,10|whenever the target takes damage, they take an extra 5 corruption damage (EoT)",
+			"powerroll_tier3" : "damage:,16|whenever the target takes damage, they take an extra 5 corruption damage (EoE)",
+			"other" : ""
+		},
+		"terrifying_smite" : {
+			"name" : "Terrifying Smite (5 Piety)",
+			"script" : "",
+			"flavor" : "A mote of holy light racks your foe with their greatest fear.",
+			"keywords" : "attack,magic,ranged",
+			"distance" : "ranged,5",
+			"target" : "1 creature",
+			"free" : "False",
+			"trigger" : "",
+			"effect" : "",
+			"powerroll" : "True",
+			"powerroll_char" : "Intuition",
+			"powerroll_tier1" : "damage:,7",
+			"powerroll_tier2" : "damage:,10|frightened (EoT)",
+			"powerroll_tier3" : "damage:,16|frightened (EoE)",
+			"other" : ""
+		},
+		"wave_of_virtue" : {
+			"name" : "Wave of Virtue (5 Piety)",
+			"script" : "",
+			"flavor" : "A pulse of divine magic lets your comrades draw on their reserves of inner strength.",
+			"keywords" : "area,magic",
+			"distance" : "burst,5",
+			"target" : "All allies",
+			"free" : "False",
+			"trigger" : "",
+			"effect" : "Each target can spend one or two Recoveries, and end one effect that has a duration of EoT or is ended by a resistance roll.",
+			"powerroll" : "False",
+			"powerroll_char" : "",
+			"powerroll_tier1" : "",
+			"powerroll_tier2" : "",
+			"powerroll_tier3" : "",
+			"other" : ""
+		}
+	}
+}

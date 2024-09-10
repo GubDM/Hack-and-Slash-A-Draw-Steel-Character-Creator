@@ -1,0 +1,137 @@
+{
+	"name" : "Revenant",
+	"script" : "=,ancestry,Revenant|*,maneuvers,vengeance_mark|*,misc_features,tough_but_withered|*,misc_features,undead_influence",
+	"choices" : {
+		"Former Life" : {
+			"description" : "Choose the ancestry you were before you died.",
+			"choose" : {
+				"budget" : "1",
+				"options" : [
+					{
+						"name" : "Devil",
+						"description" : "",
+						"cost" : "1",
+						"script" : "",
+						"followups" : []
+					},
+					{
+						"name" : "Dragon Knight",
+						"description" : "",
+						"cost" : "1",
+						"script" : "",
+						"followups" : []
+					},
+					{
+						"name" : "Dwarf",
+						"description" : "",
+						"cost" : "1",
+						"script" : "",
+						"followups" : []
+					},
+					{
+						"name" : "Wode Elf",
+						"description" : "",
+						"cost" : "1",
+						"script" : "",
+						"followups" : []
+					},
+					{
+						"name" : "High Elf",
+						"description" : "",
+						"cost" : "1",
+						"script" : "",
+						"followups" : []
+					},
+					{
+						"name" : "Hakaan",
+						"description" : "",
+						"cost" : "1",
+						"script" : "=,size,1L",
+						"followups" : []
+					},
+					{
+						"name" : "Human",
+						"description" : "",
+						"cost" : "1",
+						"script" : "",
+						"followups" : []
+					},
+					{
+						"name" : "Memonek",
+						"description" : "",
+						"cost" : "1",
+						"script" : "",
+						"followups" : []
+					},
+					{
+						"name" : "Orc",
+						"description" : "",
+						"cost" : "1",
+						"script" : "",
+						"followups" : []
+					},
+					{
+						"name" : "Polder",
+						"description" : "",
+						"cost" : "1",
+						"script" : "=,size,1S",
+						"followups" : []
+					},
+					{
+						"name" : "Time Raider",
+						"description" : "",
+						"cost" : "1",
+						"script" : "",
+						"followups" : []
+					}
+				]
+			}
+		}
+	},
+	"features" : {
+		"vengeance_mark" : {
+			"name" : "Vengeance Mark",
+			"script" : "*,actions,detonate_sigil",
+			"flavor" : "",
+			"keywords" : "",
+			"distance" : "ranged,10",
+			"target" : "1 creature",
+			"free" : "False",
+			"trigger" : "",
+			"effect" : "You place a magic sigil on a target. When you place a sigil, you can decide where it appears on the target's body, and whether the sigil is visible to only you or to all creatures.{N}You always know the direction to the exact location of a creature who bears one of your sigils and is on the same plane of existence as you.",
+			"powerroll" : "False",
+			"powerroll_char" : "",
+			"powerroll_tier1" : "",
+			"powerroll_tier2" : "",
+			"powerroll_tier3" : "",
+			"other" : ""
+		},
+		"detonate_sigil" : {
+			"name" : "Detonate Sigil",
+			"script" : "",
+			"flavor" : "A magical sigil you placed on a creature explodes with energy.",
+			"keywords" : "attack,magic,ranged",
+			"distance" : "ranged,10",
+			"target" : "1 creature with your sigil",
+			"free" : "False",
+			"trigger" : "",
+			"effect" : "The sigil disappears from the creature.{N}You can have an active number of sigils equal to your level. You can remove a sigil from a creature harmlessly (no action required). If you are already using your maximum number of sigils and place a new one, your oldest sigil disappears with no other effect.",
+			"powerroll" : "True",
+			"powerroll_char" : "Reason, Intuition, or Presence",
+			"powerroll_tier1" : "damage:,3|slide 1",
+			"powerroll_tier2" : "damage:,7|slide 2",
+			"powerroll_tier3" : "damage:,10|slide 3",
+			"other" : ""
+		},
+		"tough_but_withered" : {
+			"name" : "Tough But Withered",
+			"script" : "*,immunities,cold:1|*,immunities,corruption:1|*,immunities,lightning:1|*,immunities,poison:1|*,weaknesses,fire:5",
+			"effect" : "Your undead body grants you cold, corruption, lightning immunity, and poison immunity equal to your level. You also have fire weakness 5. You can't suffocate, and you don't need to eat or drink to stay alive.{N}Additionally, when your Stamina equals the negative of your winded value, you become inert instead of dying. You can continue to observe your surroundings, but you can't speak, take actions, maneuvers, or triggered actions, or move and you fall prone. If you take any fire damage while in this state, your body is destroyed and you die. Otherwise, after 12 hours, you regain Stamina equal to your recovery value."
+		},
+		"undead_influence" : {
+			"name" : "Undead Influence",
+			"script" : "",
+			"effect" : "Your supernatural gifts allow you to influence other undead. You gain an edge on Reason, Intuition, and Presence tests made to interact with undead creatures."
+		}
+	}
+}

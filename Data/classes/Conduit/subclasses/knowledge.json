@@ -1,0 +1,35 @@
+{
+	"name" : "Knowledge Domain",
+	"script" : "*,char_subclass,Knowledge|choose,prayer,prayer_knowledge|&*,DOMAINFEATURECHOICE,cypher_mind",
+	"choices" : {},
+	"features" : {
+		"prayer_knowledge" : {
+			"name" : "Knowledge Domain Effect",
+			"script" : "choose,prayer,prayer_knowledge",
+			"effect" : "Choose up to three allies within 10 squares of you. Each ally has a double edge on the next power roll they make."
+		},
+		"cypher_mind" : {
+			"name" : "Cypher Mind",
+			"script" : "+,num_skill_picks,0:0:0:0:1",
+			"option" : {
+				"name" : "Cypher Mind",
+				"cost" : "1",
+				"description" : "You can translate almost any text into a language you know.",
+				"script" : "*,misc_features,cypher_mind",
+				"followups" : []
+			},
+			"flavor" : "",
+			"keywords" : "",
+			"distance" : "",
+			"target" : "",
+			"free" : "False",
+			"effect" : "Given a little time, you can translate almost any text into a language you know, even if you don't know the text's original language. For the purpose of making project rolls, you are considered fluent in all languages.",
+			"powerroll" : "False",
+			"powerroll_char" : "",
+			"powerroll_tier1" : "",
+			"powerroll_tier2" : "",
+			"powerroll_tier3" : "",
+			"other" : ""
+		}
+	}
+}

@@ -1,0 +1,34 @@
+========================================
+==== KNOWN THINGS UNIMPLEMENTED ========
+========================================
+
+* "Special" distance abilities with Area keyword do not include kit bonuses to the area/distance (e.g. from Frigid)
+	(because I have no idea how that would work in a robust way, and I see no relevant examples in the rules right now)
+
+* Don't know how psionic kit bonuses work yet, whether Magic Area/Distance applies also to Psionic, or if they	
+	have their own keyword. So right now, I'm not printing psionic-keyworded ability distances at all
+
+* All of the "X wall" instances in the backer kit are in the Effect of abilities, not the Distance, and the
+	abilities that do have it don't have the Area keyword. So, for example, taking the Frigid kit does not increase your
+	5 wall of stone as part of the Creation effect of Prayer to a 6 wall.
+	
+	Similarly, Alertness Ward and Compassionate Aura both have "aura" in their effect, but only Alertness Ward
+	has a distance associated with it (within 2), but neither has any Keyword at all, or Distance header for the ability.
+	I'm not implementing the magic area bonus from the frigid kit onto these effects.
+
+* In the current implementation, if an ability does *not* have the Area keyword, then Distances that are associated with
+	the Area keyword (i.e. 'cube', 'burst', 'aura', 'wall', 'line') will not print.
+	"Distance: burst 5" with no Area keyword will just print as "Distance: -"
+
+* Would like to one day implement more robust data checking on load. Want users making their own json files to
+	have detailed reports when there's an issue in their data. Not have to guess and check, and certainly not
+	have to look into the code and put print statements all over the place.
+	In fact, would like to print errors to a debug log so even users who just have the .exe can see the errors.
+
+========================================
+==== BUILD INSTRUCTIONS ================
+========================================
+
+>> pyinstaller main.py -F
+
+then copy the main.exe from ./dist

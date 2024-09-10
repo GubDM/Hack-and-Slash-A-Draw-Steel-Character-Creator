@@ -1,0 +1,270 @@
+{
+	"name" : "Tactician",
+	"script" : "=,char_class,Tactician|&=,CHAR1,Might|&=,CHAR2,Reason|+,stamina,21|+,recoveries,12|=,hr_feature,focus|*,maneuvers,tactician_mark|*,actions,seize_the_opening|*,misc_features,field_arsenal|*,interpersonal_skills,Lead",
+	"subclass_name" : "Tactical Doctrine",
+	"subclass_budget" : "1",
+	"subclass_prompt" : "Choose the doctrine from which you developed your mastery of tactics.",
+	"choices" : {
+		"Tactician Skills" : {
+			"description" : "As a tactician, you gain the Lead skill and two other skills from...",
+			"choose" : {
+				"budget" : "2",
+				"options_skills" : "groups:exploration|skills:Alertness,Architecture,Blacksmithing,Brag,Culture,Empathize,Fletching,History,Mechanics,Monsters,Search"
+			}
+		},
+		"Tactician 3 Focus Heroic Abilities " : {
+			"description" : "",
+			"choose" : {
+				"budget" : "1",
+				"options" : [
+					{
+						"name" : "Battle Cry (3 Focus)",
+						"cost" : "1",
+						"description" : "Hearing your shout of triumph fills your allies with combat fervor.",
+						"script" : "*,heroic3maneuvers,battle_cry",
+						"followups" : []
+					},
+					{
+						"name" : "Dazing Blow (3 Focus)",
+						"cost" : "1",
+						"description" : "Your precise strike leaves your foe struggling to respond.",
+						"script" : "*,heroic3actions,dazing_blow",
+						"followups" : []
+					},
+					{
+						"name" : "Inspiring Strike (3 Focus)",
+						"cost" : "1",
+						"description" : "You hit a foe so hard that it gets your allies back in the fight.",
+						"script" : "*,heroic3actions,inspiring_strike",
+						"followups" : []
+					},
+					{
+						"name" : "Phalanx Forward! (3 Focus)",
+						"cost" : "1",
+						"description" : "On your command, you and your allies force back the enemy line.",
+						"script" : "*,heroic3maneuvers,phalanx_forward",
+						"followups" : []
+					}
+				]
+			}
+		},
+		"Tactician 5 Focus Heroic Abilities " : {
+			"description" : "",
+			"choose" : {
+				"budget" : "1",
+				"options" : [
+					{
+						"name" : "Hammer and Anvil (5 Focus)",
+						"cost" : "1",
+						"description" : "Your attack is your allies' signal to strike!",
+						"script" : "*,heroic5actions,hammer_and_anvil",
+						"followups" : []
+					},
+					{
+						"name" : "Now! (5 Focus)",
+						"cost" : "1",
+						"description" : "Your allies wait for your command—then unleash death!",
+						"script" : "*,heroic5maneuvers,tactician_now",
+						"followups" : []
+					},
+					{
+						"name" : "Their Weakness is Our Strength (5 Focus)",
+						"cost" : "1",
+						"description" : "Leaving your foe struggling gives your allies a strategic opening.",
+						"script" : "*,heroic5actions,their_weakness_is_our_strength",
+						"followups" : []
+					},
+					{
+						"name" : "This is What We Planned For (5 Focus)",
+						"cost" : "1",
+						"description" : "A quick signal from you gives your allies a chance to turn the tide of battle.",
+						"script" : "*,heroic5maneuvers,this_is_what_we_planned_for",
+						"followups" : []
+					}
+				]
+			}
+		}
+	},
+	"features" : {
+		"focus" : {
+			"name" : "Focus",
+			"script" : "",
+			"effect" : "The ring of steel panics others but brings order to your mind, granting you a Heroic Resource called focus.{N}Outside of combat and other dangerous situations tracked in turns and rounds, you have focus equal to your Victories. If you lose some or all of this focus outside of combat, it takes you 1 minute to regain it.{N}When a combat encounter begins, you keep any focus you had outside of combat. At the start of each of your turns during combat, you gain 2 focus. If an ally gets a tier 3 result on an attack against a target you have marked, you gain 1 focus. When combat ends, you once again have focus equal to your Victories."
+		},
+		"tactician_mark" : {
+			"name" : "Mark",
+			"script" : "",
+			"flavor" : "You draw your allies' attention to a specific foe - with devastating effect.",
+			"keywords" : "ranged",
+			"distance" : "ranged,10",
+			"target" : "1 creature",
+			"free" : "False",
+			"trigger" : "",
+			"effect" : "The target is marked by you until the start of your next turn. When attacking a marked target, you and each of your allies gains an edge on power rolls and deals extra damage equal to your Reason score.",
+			"powerroll" : "False",
+			"powerroll_char" : "",
+			"powerroll_tier1" : "",
+			"powerroll_tier2" : "",
+			"powerroll_tier3" : "",
+			"other" : "Spend 1 Focus: You mark 1 additional creature within distance."
+		},
+		"seize_the_opening" : {
+			"name" : "Seize the Opening",
+			"script" : "",
+			"flavor" : "As the battle unfolds, you tell your allies exactly when to strike!",
+			"keywords" : "ranged",
+			"distance" : "ranged,10",
+			"target" : "1 ally",
+			"free" : "False",
+			"trigger" : "",
+			"effect" : "The target makes a signature attack as a free triggered action, and deals extra damage equal to your Reason score.",
+			"powerroll" : "False",
+			"powerroll_char" : "",
+			"powerroll_tier1" : "",
+			"powerroll_tier2" : "",
+			"powerroll_tier3" : "",
+			"other" : "Spend 5 Focus: You target two allies instead of one."
+		},
+		"field_arsenal" : {
+			"name" : "Field Arsenal",
+			"script" : "*,second_kit_options,Martial",
+			"effect" : "You have drilled with a broad array of weapons and have developed techniques to optimize their use. Whenever you select or change your kit, you can select an additional martial kit and gain the benefits of both kits."
+		},
+		"battle_cry" : {
+			"name" : "Battle Cry (3 Focus)",
+			"script" : "",
+			"flavor" : "Hearing your shout of triumph fills your allies with combat fervor.",
+			"keywords" : "ranged",
+			"distance" : "ranged,10",
+			"target" : "Up to three allies",
+			"free" : "False",
+			"trigger" : "",
+			"effect" : "Each target gains an edge on the next attack or resistance roll they make before the end of the encounter.",
+			"powerroll" : "False",
+			"powerroll_char" : "",
+			"powerroll_tier1" : "",
+			"powerroll_tier2" : "",
+			"powerroll_tier3" : "",
+			"other" : ""
+		},
+		"dazing_blow" : {
+			"name" : "Dazing Blow (3 Focus)",
+			"script" : "",
+			"flavor" : "Your precise strike leaves your foe struggling to respond.",
+			"keywords" : "attack,melee,ranged,weapon",
+			"distance" : "reach,1|ranged,5",
+			"target" : "1 creature or object",
+			"free" : "False",
+			"trigger" : "",
+			"effect" : "",
+			"powerroll" : "True",
+			"powerroll_char" : "Might",
+			"powerroll_tier1" : "damage:,6|slowed (EoT)",
+			"powerroll_tier2" : "damage:,8|dazed (EoT)",
+			"powerroll_tier3" : "damage:,13|dazed (EoE)",
+			"other" : ""
+		},
+		"inspiring_strike" : {
+			"name" : "Inspiring Strike (3 Focus)",
+			"script" : "",
+			"flavor" : "You hit a foe so hard that it gets your allies back in the fight.",
+			"keywords" : "attack,melee,ranged,weapon",
+			"distance" : "reach,1|ranged,5",
+			"target" : "1 creature or object",
+			"free" : "False",
+			"trigger" : "",
+			"effect" : "",
+			"powerroll" : "True",
+			"powerroll_char" : "Might",
+			"powerroll_tier1" : "damage:,6|you or an ally within 10 can spend 1 Recovery",
+			"powerroll_tier2" : "damage:,8|you or an ally within 10 can spend 1 Recovery",
+			"powerroll_tier3" : "damage:,13|you or an ally within 10 can spend 1 Recovery, and each of you gains an edge on the next attack they make this encounter",
+			"other" : ""
+		},
+		"phalanx_forward" : {
+			"name" : "Phalanx Forward! (3 Focus)",
+			"script" : "",
+			"flavor" : "On your command, you and your allies force back the enemy line.",
+			"keywords" : "ranged,weapon",
+			"distance" : "ranged,10",
+			"target" : "Self and all allies",
+			"free" : "False",
+			"trigger" : "",
+			"effect" : "Each target can move their speed, push an adjacent enemy 1 square at the end of that move, and shift 1 square into the square the enemy left.",
+			"powerroll" : "False",
+			"powerroll_char" : "",
+			"powerroll_tier1" : "",
+			"powerroll_tier2" : "",
+			"powerroll_tier3" : "",
+			"other" : ""
+		},
+		"hammer_and_anvil" : {
+			"name" : "Hammer and Anvil (5 Focus)",
+			"script" : "",
+			"flavor" : "Your attack is your allies' signal to strike!",
+			"keywords" : "attack,melee,ranged,weapon",
+			"distance" : "reach,1|ranged,5",
+			"target" : "1 creature or object",
+			"free" : "False",
+			"trigger" : "",
+			"effect" : "If an attack is left to be resolved and the target was reduce to 0 Stamina, the attacker can pick a different target.",
+			"powerroll" : "True",
+			"powerroll_char" : "Might",
+			"powerroll_tier1" : "damage:,7|an ally within 10 can make a signature attack against the target as a free triggered action",
+			"powerroll_tier2" : "damage:,10|an ally within 10 can make a signature attack with an edge against the target as a free triggered action",
+			"powerroll_tier3" : "damage:,16|two allies within 10 can each make a signature attack against the target as a free triggered action",
+			"other" : ""
+		},
+		"tactician_now" : {
+			"name" : "Now! (5 Focus)",
+			"script" : "",
+			"flavor" : "Your allies wait for your command - then unleash death!",
+			"keywords" : "ranged",
+			"distance" : "ranged,5",
+			"target" : "All allies",
+			"free" : "False",
+			"trigger" : "",
+			"effect" : "Each target can make a free strike.",
+			"powerroll" : "False",
+			"powerroll_char" : "",
+			"powerroll_tier1" : "",
+			"powerroll_tier2" : "",
+			"powerroll_tier3" : "",
+			"other" : ""
+		},
+		"their_weakness_is_our_strength" : {
+			"name" : "Their Weakness is Our Strength (5 Focus)",
+			"script" : "",
+			"flavor" : "Leaving your foe struggling gives your allies a strategic opening.",
+			"keywords" : "attack,melee,ranged,weapon",
+			"distance" : "reach,1|ranged,5",
+			"target" : "1 ally",
+			"free" : "False",
+			"trigger" : "",
+			"effect" : " The target is marked (EoE). Each of your allies can spend 1 Recovery the first time they attack any target you've marked before the start of your next turn.",
+			"powerroll" : "True",
+			"powerroll_char" : "Might",
+			"powerroll_tier1" : "damage:,7|weakened (EoT)",
+			"powerroll_tier2" : "damage:,10|weakened (EoT)",
+			"powerroll_tier3" : "damage:,16|weakened (EoE)",
+			"other" : ""
+		},
+		"this_is_what_we_planned_for" : {
+			"name" : "This is What We Planned For (5 Focus)",
+			"script" : "",
+			"flavor" : "A quick signal from you gives your allies a chance to turn the tide of battle.",
+			"keywords" : "ranged",
+			"distance" : "ranged,10",
+			"target" : "2 allies",
+			"free" : "False",
+			"trigger" : "",
+			"effect" : "Each target who hasn't acted yet this round can take their turn in any order immediately after yours.",
+			"powerroll" : "False",
+			"powerroll_char" : "",
+			"powerroll_tier1" : "",
+			"powerroll_tier2" : "",
+			"powerroll_tier3" : "",
+			"other" : ""
+		}
+	}
+}

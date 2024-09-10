@@ -1,0 +1,35 @@
+{
+	"name" : "Death Domain",
+	"script" : "*,char_subclass,Death|choose,prayer,prayer_death|&*,DOMAINFEATURECHOICE,grave_speech",
+	"choices" : {},
+	"features" : {
+		"prayer_death" : {
+			"name" : "Death Domain Effect",
+			"script" : "choose,prayer,prayer_death",
+			"effect" : "Two enemies of your choice within 10 squares of you take corruption damage equal to 5 + your conduit level."
+		},
+		"grave_speech" : {
+			"name" : "Grave Speech",
+			"script" : "+,num_skill_picks,0:0:0:0:1",
+			"option" : {
+				"name" : "Grave Speech",
+				"cost" : "1",
+				"description" : "The power of death lets you speak with those who have passed from the world.",
+				"script" : "*,maneuvers,grave_speech",
+				"followups" : []
+			},
+			"flavor" : "The power of death lets you speak with those who have passed from the world.",
+			"keywords" : "magic",
+			"distance" : "reach,1",
+			"target" : "Special",
+			"free" : "False",
+			"effect" : "You can speak to the corpse or head of a creature who has died within the last 24 hours and who can speak a language you know. The target regards you as they would have in life, and you might need to make tests to influence them and convince them to speak with you. After 1 minute, the effect ends. You can’t use this ability on the same creature twice.",
+			"powerroll" : "False",
+			"powerroll_char" : "",
+			"powerroll_tier1" : "",
+			"powerroll_tier2" : "",
+			"powerroll_tier3" : "",
+			"other" : ""
+		}
+	}
+}
