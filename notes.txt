@@ -28,6 +28,9 @@
 	have to look into the code and put print statements all over the place.
 	In fact, would like to print errors to a debug log so even users who just have the .exe can see the errors.
 
+* Conduit's Divine Weakness is in the Backer Packet only listed as having corruption damage at Tier 1. Tiers 2 and 3 only
+	do untyped damage. This might be a typo, but I've implemented it as it's written.
+
 ========================================
 ==== BUILD INSTRUCTIONS ================
 ========================================

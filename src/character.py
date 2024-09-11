@@ -79,7 +79,7 @@ class CharacterData:
 		self.stamina = 0
 		self.winded = 0
 		self.recoveries = 0
-		self.recover_value = 0
+		self.recover_value_bonus = 0
 
 		self.size = '1M'
 		self.speed = 5
@@ -718,12 +718,12 @@ class CharacterData:
 
 		# NOTE: I'm not aware of any features that grant bonuses to either of these,
 		#		but I can imagine one that increases your recover value
-		self.winded = self.stamina // 2
-		self.recover_value += self.stamina // 3
+		calc_winded = self.stamina // 2
+		calc_recover_value = self.stamina // 3 + self.recover_value_bonus
 
 		# print stamina and recoveries
 		mydata.append('Max Stamina %d\t\t\tMax Recoveries %d' % (self.stamina, self.recoveries))
-		mydata.append('Winded @ %d\t\t\tRecover Value %d' % (self.winded, self.recover_value))
+		mydata.append('Winded @ %d\t\t\tRecover Value %d' % (calc_winded, calc_recover_value))
 		mydata.append(' ')
 
 		# size, reach (add base 1 reach to reach bonus from kits), speed, stability
