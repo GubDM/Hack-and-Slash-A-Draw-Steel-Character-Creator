@@ -199,6 +199,9 @@ class CharacterData:
 		# if value is an integer, add ints, otherwise add Vecs
 		if isinstance(value, int):
 			result = int(result) + value
+			# clip to minimum if there is one
+			if minimum != None:
+				result = max(minimum, result)
 		else:
 			value[0] # test that value is subscriptable
 			result = Vec(result) + value
@@ -724,10 +727,10 @@ class CharacterData:
 		mydata.append(' ')
 
 		# size, reach (add base 1 reach to reach bonus from kits), speed, stability
-		reachline = (self.size, self.reach_bonus+1, self.renown)
-		speedline = (self.speed, self.stability, self.projectpoints)
-		mydata.append('Size %s    Reach %d\t\tRenown %d' % reachline)
-		mydata.append('Speed %d    Stability %d\t\tProject Points %d' % speedline)
+		reachline = (self.reach_bonus+1, self.renown)
+		speedline = (self.stability, self.projectpoints)
+		mydata.append(('Size %s' % self.size).ljust(12) + 'Reach %d\t\tRenown %d' % reachline)
+		mydata.append(('Speed %d' % self.speed).ljust(12) + 'Stability %d\t\tProject Points %d' % speedline)
 		mydata.append(' ')
 
 		# immunities & weaknesses

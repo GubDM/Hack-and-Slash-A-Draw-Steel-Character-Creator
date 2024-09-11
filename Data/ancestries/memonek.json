@@ -1,0 +1,29 @@
+{
+	"name" : "Memonek",
+	"script" : "=,ancestry,Memonek|*,misc_features,lightweight|*,triggers,keeper_of_order",
+	"choices" : {},
+	"features" : {
+		"lightweight" : {
+			"name" : "Lightweight",
+			"script" : "+,speed,2|+,stability,-2m0",
+			"effect" : "Your silicone body is aerodynamic and low in density. Your speed is 7 and whenever you fall, you reduce the distance of the fall by 2 squares. Additionally, your stability decreases by 2 to a minimum of 0. When you are force moved, you are force moved an additional 2 squares."			
+		},
+		"keeper_of_order" : {
+			"name" : "Keeper of Order",
+			"script" : "",
+			"flavor" : "",
+			"keywords" : "",
+			"distance" : "",
+			"target" : "",
+			"trigger" : "You or a creature adjacent to you makes a power roll.",
+			"free" : "True",
+			"effect" : "Remove an edge or a bane on the roll. You can only use this benefit once per round.",
+			"powerroll" : "False",
+			"powerroll_char" : "",
+			"powerroll_tier1" : "",
+			"powerroll_tier2" : "",
+			"powerroll_tier3" : "",
+			"other" : ""
+		}
+	}
+}

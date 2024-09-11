@@ -1,0 +1,174 @@
+======================================================================================
+============ Gav, the Fate Knowledge Conduit Wode Elf ================================
+======================================================================================
+ 
+Career: Artisan                 	Culture: Nomadic, Anarchic, Academic
+Complication: -                 	Languages: Caelian, Uvalic, Higaran
+---------------------------------------------------------------
+/   MGT:2   /   AGL:-1   /   REA:-1   /   INU:2   /   PRS:2   /
+---------------------------------------------------------------
+ 
+Max Stamina 21			Max Recoveries 10
+Winded @ 10			Recover Value 14
+ 
+Size 1M     Reach 1		Renown 0
+Speed 9     Stability 0		Project Points 100
+ 
+Immunity: -                     Crafting Skills:	-
+Weakness: -                     Exploration Skills:	Climb, Drive
+                                Interpersonal Skills:	Brag, Empathize, Gamble
+                                Intrigue Skills:	Alertness
+                                Lore Skills:		Magic, Monsters, Nature
+
+Kit: Martial Artist
+      > You wear no armor and wield only your unarmed strikes.
+ 
+Heroic Resource: Piety
+      > Your deity grants you a Heroic Resource called piety to fuel your abilities. You
+	use piety to heal and empower your allies, and to unleash your deity's power
+	upon your foes.
+	  Outside of combat and other dangerous situations tracked in turns and rounds,
+	you have piety equal to your Victories. If you lose some or all of this piety
+	outside of combat, it takes you 1 minute to regain it.
+	  When a combat encounter begins, you keep any piety you had outside of combat. At
+	the start of each of your turns during combat, you gain 2 piety. You can also
+	use the Prayer ability to gain additional piety. When combat ends, you once
+	again have piety equal to your Victories.
+ 
+============ Abilities ===============================================================
+ 
+
+[Action (FS)] Melee Weapon Free Strike
+        Keywords: attack, melee,              [Power Roll + Might or Agility]
+                  weapon                         11: 4 damage
+        Target:   1 creature or object        12-16: 8 damage
+        Distance: reach 1                        17: 11 damage
+
+[Action (FS)] Ranged Weapon Free Strike
+        Keywords: attack, ranged,             [Power Roll + Might or Agility]
+                  weapon                         11: 2 damage
+        Target:   1 creature or object        12-16: 5 damage
+        Distance: ranged 10                      17: 8 damage
+
+[Action (FS)] Free Strike: Pious Force
+        Keywords: attack, magic,              [Power Roll + Intuition]
+                  ranged                         11: 2 damage
+        Target:   1 creature or object        12-16: 6 damage
+        Distance: ranged 5                       17: 9 damage
+      > You can choose to change the damage type to holy.
+ 
+
+[Triggered] Opportunity Attacks
+     >> Trigger: A creature within the reach of your melee free strike moves
+	out of it without shifting.
+      > You can take advantage of their movement to quickly make a melee free strike
+	against them as a free triggered action. This is called an opportunity attack.
+	  If you have a bane or double bane on the power roll against the creature, you
+	can't make the free strike.
+
+[Triggered] Divine Disruption
+     >> Trigger: The target makes an attack. You can use this ability after
+	seeing the result of the attack.
+        Keywords: magic, ranged       
+        Target:   1 enemy             
+        Distance: ranged 5            
+      > The attack takes a bane and the damage to one creature targeted by the attack is
+	reduced by an amount equal to your Intuition.
+      > Spend 1 Piety: The attack has a double bane and the damage to one creature
+	targeted by the attack is reduced by an amount equal to twice your Intuition
+	score.  
+
+[Triggered, Free] Martial Artist Kit: Mobility
+     >> Trigger: Enemy ends their turn adjacent to you.
+      > Shift up to 2 squares as free triggered action.
+ 
+
+[Maneuver] Prayer
+        Keywords: magic                       [Power Roll + Intuition]
+        Target:   self                           11: 1d6+0 damage; bleeding (EoT)
+        Distance: self                        12-16: Gain 1 piety
+                                                 17: Gain 2 piety and choose and use a domain effect
+      > The first time you use this ability during an encounter, it has a double edge.
+	The second time you use it, it takes an edge. The third time you use it, it
+	takes a bane. The fourth and each subsequent time you use this ability during
+	an encounter, it has a double bane.
+	v
+	[Choice] Knowledge Domain Effect: 
+      > Choose up to three allies within 10 squares of you. Each ally has a double edge
+	  on the next power roll they make.  
+
+[Maneuver] Healing Grace
+        Keywords: magic, ranged       
+        Target:   self or 1 ally      
+        Distance: ranged 5            
+      > The target can spend 1 Recovery.
+      > Spend Piety: For each piety spent, you can choose one of the following
+	enhancements:
+	(1) You can target one additional ally within distance.
+	(2) You can end one effect on a target that has a duration of EoT or is ended by
+	a resistance roll.
+	(3) A prone target can stand up.
+	(4) A target can spend 1 additional Recovery.  
+ 
+
+[Action, Signature] Holy Lance
+        Keywords: attack, magic,              [Power Roll + Intuition]
+                  ranged                         11: 2 holy damage; pull 2
+        Target:   1 creature or object        12-16: 6 holy damage; pull 3
+        Distance: ranged 5                       17: 9 holy damage; pull 4
+
+[Action, Signature] Battle Grace
+        Keywords: attack, melee,              [Power Roll + Might or Agility]
+                  weapon                         11: 7 damage
+        Target:   1 creature                  12-16: 11 damage; you swap places with the target
+        Distance: reach 1                        17: 14 damage; you swap places with the target, then
+                                      		     slide the target 2 squares
+      > If you roll a 12 or better and can’t swap places with the target because one
+	or both of you is too big to fit into the swapped space, you both remain in
+	your original spaces and the target takes 2 extra damage.
+ 
+
+[Action, Heroic] Angel of Wrath (3 Piety)
+        Keywords: magic, ranged       
+        Target:   special             
+        Distance: ranged 5            
+      > You summon an angelic spirit of size 1M who can't be harmed, and who appears in
+	an unoccupied space within distance. The spirit lasts until the end of your
+	next turn. You and your allies can move through the spirit's space, but enemies
+	can't. The first time on a turn that an enemy moves within 1 square of the
+	spirit or starts their turn there, they take holy damage equal to twice your
+	Intuition score.
+ 
+
+[Maneuver, Heroic] Armor of the Faithful (5 Piety)
+        Keywords: magic, ranged               [Power Roll + Intuition]
+        Target:   3 allies                       11: Gain 10 temporary Stamina
+        Distance: ranged 5                    12-16: Gain 15 temporary Stamina
+                                                 17: Gain 20 temporary Stamina
+ 
+
+[Feature] Otherworldly Grace
+      > Your elven body and mind can't be contained for long, and accessing memories is
+	as easy as living in the present for you. You gain an edge on resistance rolls,
+	and on tests that use any skills you have from the lore skill group.
+
+[Feature] Swift
+      > Your speed is 6.
+
+[Feature] Wode Elf Glamour
+      > You can magically alter your appearance to better blend in with your
+	surroundings. You gain an edge on Agility tests made to hide and sneak, and
+	tests made to find you while you are hidden take a bane.
+
+[Feature] Title - Expert Artisan
+      > Whenever you make a test as part of a research or crafting project that uses a
+	skill you have from the crafting skill group, you can roll the test twice and
+	use either roll.
+
+[Feature] Fate Trance
+      > If you spend 10 minutes in an uninterrupted meditative state without moving, you
+	get a glimpse of any significant events that will happen in the area around you
+	in the next 24 hours unless you or your allies intercede in those events. As
+	described by the Director, these glimpses of the future might be clear and
+	concise, or might be vague and hard to understand.
+ 

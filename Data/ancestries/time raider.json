@@ -1,0 +1,39 @@
+{
+	"name" : "Time Raider",
+	"script" : "=,ancestry,Time Raider|*,misc_features,foresight|*,misc_features,four_arms|*,misc_features,psionic_gift",
+	"choices" : {},
+	"features" : {
+		"foresight" : {
+			"name" : "Foresight: Vision",
+			"script" : "*,triggers,foresight_trigger",
+			"effect" : "Your senses extend past mundane obscuration and the veil of the future alike. You instinctively know the location of any concealed creatures who aren't hidden from you, negating the usual bane on attacks against them."			
+		},
+		"foresight_trigger" : {
+			"name" : "Foresight: Reaction",
+			"script" : "",
+			"flavor" : "",
+			"keywords" : "",
+			"distance" : "",
+			"target" : "",
+			"trigger" : "You are attacked.",
+			"free" : "False",
+			"effect" : "Impose a bane on the power roll.",
+			"powerroll" : "False",
+			"powerroll_char" : "",
+			"powerroll_tier1" : "",
+			"powerroll_tier2" : "",
+			"powerroll_tier3" : "",
+			"other" : ""
+		},
+		"four_arms" : {
+			"name" : "Four Arms",
+			"script" : "",
+			"effect" : "Your multiple arms let you take on multiple tasks at the same time. Whenever you use the Grab or Knockback maneuver against an adjacent creature, you can target an additional adjacent creature, using the same power roll for both targets. You can grab up to two creatures at a time."
+		},
+		"psionic_gift" : {
+			"name" : "Psionic Gift",
+			"script" : "*,immunities,psionic:5",
+			"effect" : "Your mind is a formidable layer of defense, granting you psionic immunity 5."
+		}
+	}
+}

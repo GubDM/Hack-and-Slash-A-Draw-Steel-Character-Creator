@@ -2,6 +2,19 @@
 	"opportunity_attacks" : {
 		"name" : "Opportunity Attacks",
 		"script" : "",
-		"effect" : "Whenever a creature within the reach of your melee free strike moves out of it without shifting, you can take advantage of their movement to quickly make a melee free strike against them as a free triggered action. This is called an opportunity attack.{N}If you have a bane or double bane on the power roll against the creature, you can't make the free strike."
+		"script" : "",
+		"flavor" : "",
+		"keywords" : "",
+		"distance" : "",
+		"target" : "",
+		"free" : "False",
+		"trigger" : "A creature within the reach of your melee free strike moves out of it without shifting.",
+		"effect" : "You can take advantage of their movement to quickly make a melee free strike against them as a free triggered action. This is called an opportunity attack.{N}If you have a bane or double bane on the power roll against the creature, you can't make the free strike.",
+		"powerroll" : "False",
+		"powerroll_char" : "",
+		"powerroll_tier1" : "",
+		"powerroll_tier2" : "",
+		"powerroll_tier3" : "",
+		"other" : ""
 	}
 }

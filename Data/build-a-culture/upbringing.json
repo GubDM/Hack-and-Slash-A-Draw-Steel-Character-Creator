@@ -26,7 +26,7 @@
 					{
 						"name" : "Illegal",
 						"cost" : "1",
-						"description" : "Heroes with an illegal upbringing had caregivers who performed activities that other folk—whether within or outside their culture—considered unlawful. A band of pirates, a guild of assassins, or an organization of spies all commit unlawful acts for money.",
+						"description" : "Heroes with an illegal upbringing had caregivers who performed activities that other folk - whether within or outside their culture - considered unlawful. A band of pirates, a guild of assassins, or an organization of spies all commit unlawful acts for money.",
 						"script" : "=,upbringing,Illegal|+,num_skill_picks,0:0:0:1:0",
 						"followups" : []
 					},

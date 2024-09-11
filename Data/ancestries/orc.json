@@ -1,0 +1,29 @@
+{
+	"name" : "Orc",
+	"script" : "=,ancestry,Orc|*,misc_features,bloodfire_rush|*,triggers,relentless",
+	"choices" : {},
+	"features" : {
+		"bloodfire_rush" : {
+			"name" : "Bloodfire Rush",
+			"script" : "",
+			"effect" : "When you take damage, whether you want it to or not, your speed increases by 2 until the end of your next turn. This can only occur once per round."
+		},
+		"relentless" : {
+			"name" : "Relentless",
+			"script" : "",
+			"flavor" : "",
+			"keywords" : "",
+			"distance" : "",
+			"target" : "",
+			"trigger" : "A creature deals damage to you that leaves you dying.",
+			"free" : "True",
+			"effect" : "You make a free strike against any creature. If the creature is reduced to 0 Stamina by your attack, you can spend 1 Recovery.",
+			"powerroll" : "False",
+			"powerroll_char" : "",
+			"powerroll_tier1" : "",
+			"powerroll_tier2" : "",
+			"powerroll_tier3" : "",
+			"other" : ""
+		}
+	}
+}

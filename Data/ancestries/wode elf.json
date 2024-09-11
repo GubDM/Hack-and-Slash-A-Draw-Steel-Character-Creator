@@ -1,0 +1,22 @@
+{
+	"name" : "Wode Elf",
+	"script" : "=,ancestry,Wode Elf|*,misc_features,otherworldly_grace|*,misc_features,swift|*,misc_features,wode_elf_glamour",
+	"choices" : {},
+	"features" : {
+		"otherworldly_grace" : {
+			"name" : "Otherworldly Grace",
+			"script" : "",
+			"effect" : "Your elven body and mind can't be contained for long, and accessing memories is as easy as living in the present for you. You gain an edge on resistance rolls, and on tests that use any skills you have from the lore skill group."			
+		},
+		"swift" : {
+			"name" : "Swift",
+			"script" : "+,speed,1",
+			"effect" : "Your speed is 6."
+		},
+		"wode_elf_glamour" : {
+			"name" : "Wode Elf Glamour",
+			"script" : "",
+			"effect" : "You can magically alter your appearance to better blend in with your surroundings. You gain an edge on Agility tests made to hide and sneak, and tests made to find you while you are hidden take a bane."
+		}
+	}
+}

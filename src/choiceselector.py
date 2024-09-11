@@ -284,7 +284,7 @@ def implement_script(simstate, feature_script, option_index=-1, implement_child=
 					result = int(result)
 
 			if minval != None:
-				simstate.my_char.add_value(keyword, spval[0], otherdata, minimum=int(spval[1]))
+				simstate.my_char.add_value(keyword, int(spval[0]), otherdata, minimum=int(spval[1]))
 			else:
 				simstate.my_char.add_value(keyword, result, otherdata)
 

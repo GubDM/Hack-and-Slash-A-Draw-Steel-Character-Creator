@@ -1,0 +1,28 @@
+{
+	"name" : "Polder",
+	"script" : "=,ancestry,Polder|=,size,1S|*,misc_features,polder_geist|*,maneuvers,shadowmeld",
+	"choices" : {},
+	"features" : {
+		"polder_geist" : {
+			"name" : "Polder Geist",
+			"script" : "",
+			"effect" : "When you start your turn while no creatures have line of effect to you, or while you are hidden from or have concealment from all creatures with line of effect to you, your speed is increased by 3 until the end of your turn."			
+		},
+		"shadowmeld" : {
+			"name" : "Shadowmeld",
+			"script" : "",
+			"flavor" : "",
+			"keywords" : "magic",
+			"distance" : "self",
+			"target" : "self",
+			"free" : "False",
+			"effect" : "You flatten yourself into a shadow against a wall or floor you are touching, and become hidden from any creature you have cover or concealment from or who isn’t observing you. While in shadow form, you have full awareness of your surroundings, attacks against you and tests made to find you take a bane, and you can’t move or take actions or maneuvers except to exit this form. Any ability or effect that targets more than 1 square affects you in this form only if it explicitly affects the surface you are flattened against. You can exit this form as a maneuver.",
+			"powerroll" : "False",
+			"powerroll_char" : "",
+			"powerroll_tier1" : "",
+			"powerroll_tier2" : "",
+			"powerroll_tier3" : "",
+			"other" : ""
+		}
+	}
+}

@@ -1,0 +1,184 @@
+====================================================================================
+============ Gub, the Death Knowledge Conduit Dwarf ================================
+====================================================================================
+ 
+Career: Criminal                	Culture: Nomadic, Communal, Labor
+Complication: Shipwrecked       	Languages: Caelian, Zaliac
+--------------------------------------------------------------
+/   MGT:1   /   AGL:-1   /   REA:1   /   INU:2   /   PRS:2   /
+--------------------------------------------------------------
+ 
+Max Stamina 30			Max Recoveries 10
+Winded @ 15			Recover Value 20
+ 
+Size 1M    Reach 1		Renown 0
+Speed 5    Stability 1		Project Points 50
+ 
+Immunity: -                     Crafting Skills:	-
+Weakness: -                     Exploration Skills:	Heal, Navigate
+                                Interpersonal Skills:	Handle Animals, Read Person, Lie
+                                Intrigue Skills:	-
+                                Lore Skills:		Criminal Underworld, Religion, History
+
+Kit: Bloodpact
+      > You wear no armor and wield an implement of crystal such as a
+        staff or a wand.
+ 
+Heroic Resource: Piety
+      > Your deity grants you a Heroic Resource called piety to fuel your abilities. You
+	use piety to heal and empower your allies, and to unleash your deity's power
+	upon your foes.
+	  Outside of combat and other dangerous situations tracked in turns and rounds,
+	you have piety equal to your Victories. If you lose some or all of this piety
+	outside of combat, it takes you 1 minute to regain it.
+	  When a combat encounter begins, you keep any piety you had outside of combat. At
+	the start of each of your turns during combat, you gain 2 piety. You can also
+	use the Prayer ability to gain additional piety. When combat ends, you once
+	again have piety equal to your Victories.
+ 
+============ Abilities =============================================================
+ 
+
+[Action (FS)] Melee Weapon Free Strike
+        Keywords: attack, melee,              [Power Roll + Might or Agility]
+                  weapon                         11: 2 damage
+        Target:   1 creature or object        12-16: 6 damage
+        Distance: reach 1                        17: 9 damage
+
+[Action (FS)] Ranged Weapon Free Strike
+        Keywords: attack, ranged,             [Power Roll + Might or Agility]
+                  weapon                         11: 2 damage
+        Target:   1 creature or object        12-16: 5 damage
+        Distance: ranged 10                      17: 8 damage
+
+[Action (FS)] Free Strike: Pious Force
+        Keywords: attack, magic,              [Power Roll + Intuition]
+                  ranged                         11: 4 damage
+        Target:   1 creature or object        12-16: 8 damage
+        Distance: ranged 10                      17: 11 damage
+      > You can choose to change the damage type to holy.
+ 
+
+[Triggered] Opportunity Attacks
+      > Whenever a creature within the reach of your melee free strike moves out of it
+	without shifting, you can take advantage of their movement to quickly make a
+	melee free strike against them as a free triggered action. This is called an
+	opportunity attack.
+	  If you have a bane or double bane on the power roll against the creature, you
+	can't make the free strike.
+
+[Triggered] Holy Infusion
+     >> Trigger: The target makes an attack. You can use this ability after
+	seeing the result of the attack.
+        Keywords: magic, ranged               [Power Roll + Intuition]
+        Target:   1 ally                         11: 4 damage
+        Distance: ranged 10                   12-16: 8 damage
+                                                 17: 11 damage
+      >  The attack gains an edge and deals holy damage equal to twice your Intuition
+	score.
+      > Spend 1 Piety: The attack has a double edge and deals holy damage equal to twice
+	your Intuition score.  
+
+[Triggered] Kit Ward: Blood Ward
+     >> Trigger: An ability lets you spend a Recovery.
+      > Forgo regaining Stamina to instead increase your speed by 2 and have your
+	abilities deal 2 extra corruption damage until the end of the encounter
+	instead.
+ 
+
+[Maneuver] Runic Carving: Voice
+      > You communicate telepathically with another willing creature you have met before
+	whose name you name, who can speak and understand a language you know, and is
+	within 1 mile of you. You and the creature can respond to one another as if
+	having a normal conversation. You can change the person you communicate with by
+	changing the rune.
+
+[Maneuver] Prayer
+        Keywords: magic                       [Power Roll + Intuition]
+        Target:   self                           11: 1d6+2 damage; bleeding (EoT)
+        Distance: self                        12-16: Gain 1 piety
+                                                 17: Gain 2 piety and choose and use a domain effect
+      > The first time you use this ability during an encounter, it has a double edge.
+	The second time you use it, it takes an edge. The third time you use it, it
+	takes a bane. The fourth and each subsequent time you use this ability during
+	an encounter, it has a double bane.
+	v
+	[Choice] Knowledge Domain Effect: 
+      > Choose up to three allies within 10 squares of you. Each ally has a double edge
+	  on the next power roll they make.  
+
+[Maneuver] Healing Grace
+        Keywords: magic, ranged       
+        Target:   self or 1 ally      
+        Distance: ranged 10           
+      > The target can spend 1 Recovery.
+      > Spend Piety: For each piety spent, you can choose one of the following
+	enhancements:
+	(1) You can target one additional ally within distance.
+	(2) You can end one effect on a target that has a duration of EoT or is ended by
+	a resistance roll.
+	(3) A prone target can stand up.
+	(4) A target can spend 1 additional Recovery.  
+
+[Maneuver] Grave Speech
+        Keywords: magic               
+        Target:   special             
+        Distance: unrecognized distance
+      > You can speak to the corpse or head of a creature who has died within the last
+	24 hours and who can speak a language you know. The target regards you as they
+	would have in life, and you might need to make tests to influence them and
+	convince them to speak with you. After 1 minute, the effect ends. You can’t
+	use this ability on the same creature twice.
+ 
+
+[Action, Signature] Lightfall
+        Keywords: area, magic,                [Power Roll + Intuition]
+                  ranged                         11: 4 holy damage
+        Target:   all enemies                 12-16: 5 holy damage
+        Distance: 3 cube in 10 (magic)           17: 6 holy damage
+      > You can teleport each ally in the area and yourself if you're in the area to an
+	unoccupied space within the area.
+
+[Action, Signature] Drain
+        Keywords: attack, magic,              [Power Roll + Reason, Intuition, or Presence]
+                  melee                          11: 5 corruption damage
+        Target:   1 creature                  12-16: 10 corruption damage
+        Distance: unrecognized distance           17: 14 corruption damage; you can spend 1 Recovery to
+                                      		     regain Stamina
+ 
+
+[Action, Heroic] Thunder of the Divine (3 Piety)
+        Keywords: area, magic,                [Power Roll + Intuition]
+                  ranged                         11: 4 sonic damage; push 1
+        Target:   all enemies                 12-16: 8 sonic damage; push 3
+        Distance: 4 cube in 10 (magic)           17: 11 sonic damage; push 5
+      > You can also push each willing ally in the area, and their stability doesn't
+	count against this forced movement.
+ 
+
+[Maneuver, Heroic] Armor of the Faithful (5 Piety)
+        Keywords: magic, ranged               [Power Roll + Intuition]
+        Target:   3 allies                       11: Gain 10 temporary Stamina
+        Distance: ranged 10                   12-16: Gain 15 temporary Stamina
+                                                 17: Gain 20 temporary Stamina
+ 
+
+[Feature] Grounded
+      > Your heavy stone body and connection to the earth makes it difficult for others
+	to move you. Your stability increases by 1.
+
+[Feature] Spark Off Your Skin
+      > Your stone skin affords you potent protection. Your Stamina increases by 6 at
+	1st level, then increases by an additional 1 each time you gain a new level.
+
+[Feature] Title - Lucky Dog
+      > When you fail a test using any skill from the intrigue skill group, you can roll
+	a d6. You lose Stamina equal to the roll and improve the result of your test by
+	one tier. You can make this roll only once per test.
+
+[Feature] Shipwrecked: Natural Insights
+      > You gained two skills from the exploration skill group.
+
+[Feature] Shipwrecked: Changed Person
+      > You have forgotten one language you knew.
+ 
