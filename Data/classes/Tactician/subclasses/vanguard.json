@@ -28,13 +28,13 @@
 			"target" : "Self or 1 ally",
 			"trigger" : "A creature makes a Weapon attack against the target.",
 			"free" : "False",
-			"effect" : "The attack’s damage against the target is halved.",
+			"effect" : "The attacks damage against the target is halved.",
 			"powerroll" : "False",
 			"powerroll_char" : "",
 			"powerroll_tier1" : "",
 			"powerroll_tier2" : "",
 			"powerroll_tier3" : "",
-			"other" : "Spend 1 Focus: The result of the attack’s power roll is treated as one tier lower before the damage is halved. If the attack is a critical hit, the attacker can still take an additional action."
+			"other" : "Spend 1 Focus: The result of the attacks power roll is treated as one tier lower before the damage is halved. If the attack is a critical hit, the attacker can still take an additional action."
 		}
 	}
 }

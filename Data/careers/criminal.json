@@ -24,14 +24,14 @@
 					{
 						"name" : "Friendly Priest",
 						"cost" : "1",
-						"description" : "You went to prison for your crimes and eventually escaped. An elderly priest took you in and shielded you from the law, convinced that your soul wasn’t corrupt. They never judged you for your past,speaking only of the future. Eventually, the priest died, imparting final words that inspired you to become a hero.",
+						"description" : "You went to prison for your crimes and eventually escaped. An elderly priest took you in and shielded you from the law, convinced that your soul wasnt corrupt. They never judged you for your past,speaking only of the future. Eventually, the priest died, imparting final words that inspired you to become a hero.",
 						"script" : "*,misc_features,criminal_friendly_priest",
 						"followups" : []
 					},
 					{
 						"name" : "Stand Against Tyranny",
 						"cost" : "1",
-						"description" : "When a tyrant rose to power in your homeland, they began cracking down on all criminals with deadly raids and public executions. The nature of the crime didn’t matter—pickpockets and beggars were made to kneel before the axe alongside murderers. After losing enough friends, you stood up and joined the resistance—not just against this tyrant, but against authoritarians anywhere.",
+						"description" : "When a tyrant rose to power in your homeland, they began cracking down on all criminals with deadly raids and public executions. The nature of the crime didnt matter—pickpockets and beggars were made to kneel before the axe alongside murderers. After losing enough friends, you stood up and joined the resistance—not just against this tyrant, but against authoritarians anywhere.",
 						"script" : "*,misc_features,criminal_stand_against_tyranny",
 						"followups" : []
 					}
@@ -53,12 +53,12 @@
 		"criminal_friendly_priest" : {
 			"name" : "Inciting Incident: Friendly Priest",
 			"script" : "",
-			"effect" : "You went to prison for your crimes and eventually escaped. An elderly priest took you in and shielded you from the law, convinced that your soul wasn’t corrupt. They never judged you for your past,speaking only of the future. Eventually, the priest died, imparting final words that inspired you to become a hero."
+			"effect" : "You went to prison for your crimes and eventually escaped. An elderly priest took you in and shielded you from the law, convinced that your soul wasnt corrupt. They never judged you for your past,speaking only of the future. Eventually, the priest died, imparting final words that inspired you to become a hero."
 		},
 		"criminal_stand_against_tyranny" : {
 			"name" : "Inciting Incident: Stand Against Tyranny",
 			"script" : "",
-			"effect" : "When a tyrant rose to power in your homeland, they began cracking down on all criminals with deadly raids and public executions. The nature of the crime didn’t matter—pickpockets and beggars were made to kneel before the axe alongside murderers. After losing enough friends, you stood up and joined the resistance—not just against this tyrant, but against authoritarians anywhere."
+			"effect" : "When a tyrant rose to power in your homeland, they began cracking down on all criminals with deadly raids and public executions. The nature of the crime didnt matter—pickpockets and beggars were made to kneel before the axe alongside murderers. After losing enough friends, you stood up and joined the resistance—not just against this tyrant, but against authoritarians anywhere."
 		}
 	}
 }

@@ -22,7 +22,7 @@
 		"explosive_assistance" : {
 			"name" : "Explosive Assistance",
 			"script" : "",
-			"flavor" : "You add a little magic to an ally’s aggression at just the right time.",
+			"flavor" : "You add a little magic to an allys aggression at just the right time.",
 			"keywords" : "fire,magic,ranged",
 			"distance" : "ranged,5",
 			"target" : "Self or 1 ally",

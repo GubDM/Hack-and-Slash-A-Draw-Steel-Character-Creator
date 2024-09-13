@@ -291,6 +291,19 @@ def load_data_and_setup_choices(verbose=True):
 		ALL_CHOICES[choice_name] = ChoiceSelector(choice_name, choice_data['choose'])
 		ALL_CHOICES[choice_name].set_description(choice_data['description'])
 
+	# setup career choices (skills if applicable and inciting incident)
+	index_counter = 0
+	for key in ALL_DATA['careers']:
+		ALL_CHOICES['career'].followup_choices.append([])
+		choices_dict = ALL_DATA['careers'][key]['choices']
+		for choice_name in choices_dict:
+			choice_data = choices_dict[choice_name]
+			choice_key = '%s_%s' % (key, choice_name)
+			ALL_CHOICES[choice_key] = ChoiceSelector(choice_name, choice_data['choose'])
+			ALL_CHOICES[choice_key].has_description = True
+			ALL_CHOICES['career'].followup_choices[index_counter].append(choice_key)
+		index_counter += 1
+
 	# setup culture choices
 	for key in ALL_DATA['culture']:
 		choices_dict = ALL_DATA['culture'][key]['choices']

@@ -41,7 +41,7 @@
 	"charge" : {
 		"name" : "Charge",
 		"script" : "",
-		"effect" : "When you take the Charge action, you move up to your speed in a straight line, then make a melee free strike against a creature when you end your move. You can’t shift when you charge."
+		"effect" : "When you take the Charge action, you move up to your speed in a straight line, then make a melee free strike against a creature when you end your move. You cant shift when you charge."
 	},
 	"defend" : {
 		"name" : "Charge",
