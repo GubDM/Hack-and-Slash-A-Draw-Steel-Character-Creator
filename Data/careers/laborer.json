@@ -1,0 +1,64 @@
+{
+	"name" : "Laborer",
+	"script" : "=,career,Laborer|*,exploration_skills,Endurance|+,num_languages,1|+,projectpoints,50|*,misc_features,laborer_title",
+	"choices" : {
+		"Laborer Skills" : {
+			"description" : "As a laborer, you gained two skills from either Blacksmithing or the exploration skill group.",
+			"choose" : {
+				"budget" : "2",
+				"options_skills" : "groups:exploration|skill:Blacksmithing"
+			}
+		},
+		"Laborer Inciting Incident" : {
+			"description" : "Why did you give up your career as an laborer and become an adventurer?",
+			"choose" : {
+				"budget" : "1",
+				"options" : [
+					{
+						"name" : "Disaster",
+						"cost" : "1",
+						"description" : "A disaster, such as a cave-in, wildfire, or tidal wave, hit your crew while you were working. You saved as many folks as you could, but the ones you couldn't save weigh heavily on your mind. You took up the life of a hero to save as many people as possible, vowing that what happened to you won't happen again.",
+						"script" : "*,misc_features,laborer_disaster",
+						"followups" : []
+					},
+					{
+						"name" : "Embarrassment",
+						"cost" : "1",
+						"description" : "A noble you worked for admonished you publicly for work done poorly—more than once. Finally, you had enough. You vowed to take up a new path and show this noble that you are far more than what they make you out to be.",
+						"script" : "*,misc_features,laborer_embarrassment",
+						"followups" : []
+					},
+					{
+						"name" : "Live the Dream",
+						"cost" : "1",
+						"description" : "You worked with a good friend, and on the job you'd always fantasize about what it'd be like to hit the road as adventuring heroes—someday. You didn't count on your friend falling ill and passing away. Now it's time to live out that dream for both of you.",
+						"script" : "*,misc_features,laborer_live_the_dream",
+						"followups" : []
+					}
+				]
+			}
+		}
+	},
+	"features" : {
+		"laborer_title" : {
+			"name" : "Title - Team Backbone",
+			"script" : "",
+			"effect" : "When you take your first turn during a montage test, you can both make a test and assist another hero's test."
+		},
+		"laborer_disaster" : {
+			"name" : "Inciting Incident: Disaster",
+			"script" : "",
+			"effect" : "A great hero was a fan of the things you created, and gave you a generous commission to create your best work for them. While working on this commission, you and the hero became close friends. The day you finished the work was the same day they disappeared. To honor their legacy, you took up the mantle of a hero with the intent of finishing your friend's work."
+		},
+		"laborer_embarrassment" : {
+			"name" : "Inciting Incident: Embarrassment",
+			"script" : "",
+			"effect" : "A noble you worked for admonished you publicly for work done poorly—more than once. Finally, you had enough. You vowed to take up a new path and show this noble that you are far more than what they make you out to be."
+		},
+		"laborer_live_the_dream" : {
+			"name" : "Inciting Incident: Live the Dream",
+			"script" : "",
+			"effect" : "You worked with a good friend, and on the job you'd always fantasize about what it'd be like to hit the road as adventuring heroes—someday. You didn't count on your friend falling ill and passing away. Now it's time to live out that dream for both of you."
+		}
+	}
+}

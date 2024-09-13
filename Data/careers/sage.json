@@ -1,0 +1,64 @@
+{
+	"name" : "Sage",
+	"script" : "=,career,Sage|+,num_languages,1|+,projectpoints,100|*,misc_features,sage_title",
+	"choices" : {
+		"Sage Skills" : {
+			"description" : "As a sage, you gained two skills from the lore skill group.",
+			"choose" : {
+				"budget" : "2",
+				"options_skills" : "groups:lore"
+			}
+		},
+		"Sage Inciting Incident" : {
+			"description" : "Why did you give up your career as a sage and become an adventurer?",
+			"choose" : {
+				"budget" : "1",
+				"options" : [
+					{
+						"name" : "Bookish Ideas",
+						"cost" : "1",
+						"description" : "You were always content to live a peaceful life in your library, until you found that one book—the one that told the tale of heroes who had saved the timescape. They didn’t spend their days behind a desk. They made a real difference. It was time for you to do the same.",
+						"script" : "*,misc_features,sage_bookish_ideas",
+						"followups" : []
+					},
+					{
+						"name" : "Cure the Curse",
+						"cost" : "1",
+						"description" : "You used to think knowledge could fix everything. You were wrong. When someone you loved fell under a curse, the means to cure them couldn’t be found in any of the books you owned. But that wasn’t going to stop you. The answers are out there, and you’ll find them even if you need to face down death to do so.",
+						"script" : "*,misc_features,sage_cure_the_curse",
+						"followups" : []
+					},
+					{
+						"name" : "Lost Library",
+						"cost" : "1",
+						"description" : "An evil mage took all your books for themself, cackling at your impotence as they raided your shelves. Now you’re off to search through ancient ruins and secret libraries to rebuild your collection of rare tomes—and to find the mage who stole from you.",
+						"script" : "*,misc_features,sage_lost_library",
+						"followups" : []
+					}
+				]
+			}
+		}
+	},
+	"features" : {
+		"sage_title" : {
+			"name" : "Title - Expert Sage",
+			"script" : "",
+			"effect" : "Whenever you make a test as part of a research or crafting project that uses a skill you have from the lore skill group, you can roll the test twice and use either roll."
+		},
+		"sage_bookish_ideas" : {
+			"name" : "Inciting Incident: Bookish Ideas",
+			"script" : "",
+			"effect" : "You were always content to live a peaceful life in your library, until you found that one book—the one that told the tale of heroes who had saved the timescape. They didn’t spend their days behind a desk. They made a real difference. It was time for you to do the same."
+		},
+		"sage_cure_the_curse" : {
+			"name" : "Inciting Incident: Cure the Curse",
+			"script" : "",
+			"effect" : "You used to think knowledge could fix everything. You were wrong. When someone you loved fell under a curse, the means to cure them couldn’t be found in any of the books you owned. But that wasn’t going to stop you. The answers are out there, and you’ll find them even if you need to face down death to do so."
+		},
+		"sage_lost_library" : {
+			"name" : "Inciting Incident: Lost Library",
+			"script" : "",
+			"effect" : "An evil mage took all your books for themself, cackling at your impotence as they raided your shelves. Now you’re off to search through ancient ruins and secret libraries to rebuild your collection of rare tomes—and to find the mage who stole from you."
+		}
+	}
+}
