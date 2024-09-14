@@ -1,0 +1,48 @@
+{
+	"name" : "Guisarmier",
+	"script" : "*,kits,Guisarmier|kit_bonus,stamina,guisarmier_bonus_stamina|kit_bonus,stability,guisarmier_bonus_stability|kit_bonus,melee_bonus,guisarmier_bonus_melee|kit_bonus,reach_bonus,guisarmier_bonus_reach|*,kit_equipment,guisarmier_equipment|*,signatures,forward_thrust_backward_smash",
+	"choices" : {},
+	"features" : {
+		"guisarmier_bonus_stamina" : {
+			"name" : "Guisarmier Kit: Stamina Bonus",
+			"script" : "+,stamina,6",
+			"effect" : "Stamina +6"			
+		},
+		"guisarmier_bonus_stability" : {
+			"name" : "Guisarmier Kit: Stability Bonus",
+			"script" : "+,stability,1",
+			"effect" : "Stability +1"			
+		},
+		"guisarmier_bonus_melee" : {
+			"name" : "Guisarmier Kit: Melee Weapon Damage Bonus",
+			"script" : "+,melee_bonus,2:2:2",
+			"effect" : "Melee Damage Bonus +2/+2/+2"			
+		},
+		"guisarmier_bonus_reach" : {
+			"name" : "Guisarmier Kit: Reach Bonus",
+			"script" : "+,reach_bonus,1",
+			"effect" : "Reach Bonus +1"			
+		},
+		"guisarmier_equipment" : {
+			"name" : "Guisarmier Kit Equipment",
+			"script" : "*,kit_wear,medium armor|*,kit_wield,a polearm",
+			"effect" : ""
+		},
+		"forward_thrust_backward_smash" : {
+			"name" : "Forward Thrust, Backward Smash",
+			"script" : "",
+			"flavor" : "In your hands, the haft is as good as the head.",
+			"keywords" : "attack,melee,weapon",
+			"distance" : "reach,2",
+			"target" : "2 creatures or objects",
+			"free" : "False",
+			"effect" : "",
+			"powerroll" : "True",
+			"powerroll_char" : "Might or Agility",
+			"powerroll_tier1" : "damage:,4",
+			"powerroll_tier2" : "damage:,6",
+			"powerroll_tier3" : "damage:,8",
+			"other" : ""
+		}
+	}
+}
