@@ -1,0 +1,40 @@
+{
+	"name" : "College of the Harlequin Mask",
+	"script" : "*,char_subclass,Harlequin Mask|*,interpersonal_skills,Lie|*,maneuvers,im_on_your_side|*,triggers,misdirection",
+	"choices" : {},
+	"features" : {
+		"im_on_your_side" : {
+			"name" : "I'm On Your Side",
+			"script" : "",
+			"flavor" : "Taking on the illusory countenance of another creature gives you an advantage on subterfuge.",
+			"keywords" : "magic",
+			"distance" : "self",
+			"target" : "self",
+			"free" : "False",
+			"effect" : "Choose a creature of your size, whose size is no more than 1 greater than yours, and who is within 10 squares of you. Your body is covered in an illusion that makes you appear to be that creature. This illusion covers your entire body, including clothing and armor, and changes your voice to sound like the creature. While this illusion lasts, you gain an edge on attacks against and Presence tests made to interact with the creature’s allies, and you don’t provoke opportunity attacks from those allies. These benefits don’t apply against the creature whose appearance you’ve taken on. The illusion ends when you harm another creature, when you and another creature physically interact, when you use this ability again, or when you end the illusion (no action required).",
+			"powerroll" : "False",
+			"powerroll_char" : "",
+			"powerroll_tier1" : "",
+			"powerroll_tier2" : "",
+			"powerroll_tier3" : "",
+			"other" : ""
+		},
+		"misdirection" : {
+			"name" : "Misdirection (1 Insight)",
+			"script" : "",
+			"flavor" : "You sow a moment of confusion in combat, to your enemy’s peril.",
+			"keywords" : "magic",
+			"distance" : "self",
+			"target" : "self",
+			"trigger" : "An enemy attacks you.",
+			"free" : "False",
+			"effect" : "Choose an enemy within distance of the attack. The attack targets that enemy instead.",
+			"powerroll" : "False",
+			"powerroll_char" : "",
+			"powerroll_tier1" : "",
+			"powerroll_tier2" : "",
+			"powerroll_tier3" : "",
+			"other" : ""
+		}
+	}
+}
