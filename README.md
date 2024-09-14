@@ -16,3 +16,4 @@ MCDM Productions, LLC. DRAW STEEL © 2024 MCDM Productions, LLC.
 ## Credit
 
 various data files and help debugging from: kasrith37
+various data files and technical work: blalasaadri
