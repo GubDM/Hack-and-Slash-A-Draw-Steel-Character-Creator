@@ -1,0 +1,14 @@
+When you implement a kit data file, make sure you remove
+the kit bonuses from the signature action.
+
+For example: in the rules, Guisarmier's signature action has:
+	* reach 2
+	* damage 4/6/8
+
+But the kit provides bonuses:
+	* reach +1
+	* melee damage +2/+2/+2
+
+So in the data file, the signature action should be written with:
+	* reach 1
+	* damage 2/4/6
