@@ -104,6 +104,8 @@ def load_data_and_setup_choices(verbose=True):
 	directory = os.fsencode('./Data/kits')
 	for folder in os.listdir(directory):
 		kit_type = os.fsdecode(folder)
+		if kit_type.endswith('txt'):
+			continue
 		if verbose: print('   %s' % kit_type)
 		ALL_DATA['kits'][kit_type] = {}
 		kit_dir_path = './Data/kits/%s' % kit_type
@@ -300,6 +302,7 @@ def load_data_and_setup_choices(verbose=True):
 			choice_data = choices_dict[choice_name]
 			choice_key = '%s_%s' % (key, choice_name)
 			ALL_CHOICES[choice_key] = ChoiceSelector(choice_name, choice_data['choose'])
+			ALL_CHOICES[choice_key].set_description(choice_data['description'])
 			ALL_CHOICES[choice_key].has_description = True
 			ALL_CHOICES['career'].followup_choices[index_counter].append(choice_key)
 		index_counter += 1
