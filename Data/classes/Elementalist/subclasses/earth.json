@@ -1,0 +1,40 @@
+{
+	"name" : "Earth Mage",
+	"script" : "*,char_subclass,Earth|*,actions,manipulate_earth|*,triggers,earthen_force|&=,EARTHCOST3,2|&=,EARTHCOST5,4",
+	"choices" : {},
+	"features" : {
+		"manipulate_earth" : {
+			"name" : "Manipulate Earth (2 Essence)",
+			"script" : "",
+			"flavor" : "The earth rises, falls, or opens at your command.",
+			"keywords" : "earth,magic,melee",
+			"distance" : "reach,1",
+			"target" : "Special",
+			"free" : "False",
+			"effect" : "You touch a square containing mundane dirt, stone, or metal and create a 5 wall of the same material, which rises up out of the ground and must include the square you touched.{N}Alternative Effect: You touch a structure of mundane dirt, stone, or metal that takes up at least 2 squares. You can open a 1-square opening in the structure where you touched it.{N}Alternative Effect: You touch a doorway or other opening in a mundane dirt, stone, or metal surface that is no larger than 1 square. The opening is sealed by the same material that makes up the surface.",
+			"powerroll" : "False",
+			"powerroll_char" : "",
+			"powerroll_tier1" : "",
+			"powerroll_tier2" : "",
+			"powerroll_tier3" : "",
+			"other" : "Spend No Essence: You can use this ability without spending essence. If you do, you must spend 1 uninterrupted minute using the ability while within reach of the target before its effect occurs."
+		},
+		"earthen_force" : {
+			"name" : "Earthen Force",
+			"script" : "",
+			"flavor" : "You imbue an attack with the strength of stone.",
+			"keywords" : "earth,magic,ranged",
+			"distance" : "ranged,5",
+			"target" : "Self or 1 ally",
+			"trigger" : "The target makes a melee attack.",
+			"free" : "False",
+			"effect" : "The attack deals extra damage equal to 3 times your Reason score.",
+			"powerroll" : "False",
+			"powerroll_char" : "",
+			"powerroll_tier1" : "",
+			"powerroll_tier2" : "",
+			"powerroll_tier3" : "",
+			"other" : "Spend 1 Essence: The attack deals extra damage equal to 4 times your Reason score instead, and pushes the target a number of squares equal to your Reason score."
+		}
+	}
+}

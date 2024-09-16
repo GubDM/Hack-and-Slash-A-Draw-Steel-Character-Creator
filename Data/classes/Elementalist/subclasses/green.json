@@ -1,0 +1,29 @@
+{
+	"name" : "Green Mage",
+	"script" : "*,char_subclass,Green|*,misc_features,speech_of_the_wild|*,triggers,mend_the_soul|&=,GREENCOST3,2|&=,GREENCOST5,4",
+	"choices" : {},
+	"features" : {
+		"speech_of_the_wild" : {
+			"name" : "Speech of the Wild",
+			"script" : "",
+			"effect" : "You can speak with and understand Animals, Plant Creatures, and Monstrosities, even if they don’t share a language with you. Your ability to communicate with such creatures doesn’t make them inherently more intelligent or less hostile toward you.{N}Additionally, when you touch a living plant object, you can communicate with it telepathically. You can use words to communicate with the plant, but it communicates with you only by transmitting feelings and sensations that can’t be overly specific."
+		},
+		"mend_the_soul" : {
+			"name" : "Mend the Soul",
+			"script" : "",
+			"flavor" : "The power you channel grants the ability to get back in the fight.",
+			"keywords" : "green,magic,ranged",
+			"distance" : "ranged,5",
+			"target" : "Self or 1 ally",
+			"trigger" : "The target starts their turn.",
+			"free" : "False",
+			"effect" : "The target can spend a Recovery.",
+			"powerroll" : "False",
+			"powerroll_char" : "",
+			"powerroll_tier1" : "",
+			"powerroll_tier2" : "",
+			"powerroll_tier3" : "",
+			"other" : ""
+		}
+	}
+}

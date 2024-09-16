@@ -1,0 +1,71 @@
+{
+	"name" : "Performer",
+	"script" : "=,career,Performer|+,renown,2|*,misc_features,performer_title",
+	"choices" : {
+		"Performer Skills 1" : {
+			"description" : "As a performer, you gained either the Music or Perform skill.",
+			"choose" : {
+				"budget" : "1",
+				"options_skills" : "skills:Music,Perform"
+			}
+		},
+		"Performer Skills 2" : {
+			"description" : "As a performer, you additionally gained two skills from the interpersonal skill group.",
+			"choose" : {
+				"budget" : "2",
+				"options_skills" : "groups:interpersonal"
+			}
+		},
+		"Performer Inciting Incident" : {
+			"description" : "Why did you give up your career as a performer and become an adventurer?",
+			"choose" : {
+				"budget" : "1",
+				"options" : [
+					{
+						"name" : "Cursed Audience",
+						"cost" : "1",
+						"description" : "During a performance, you watched in horror as the audience was suddenly overcome by a curse that caused them to disintegrate before your eyes. You're not sure what happened, but seeking that answer quickly led you to places where only heroes dare to go.",
+						"script" : "*,misc_features,performer_cursed_audience",
+						"followups" : []
+					},
+					{
+						"name" : "Fame and Fortune",
+						"cost" : "1",
+						"description" : "You thought you were famous - then that hero came to your show. Suddenly, all eyes were on the dragon-slaying brute instead of the stage where they belonged. The audience even gave them a standing ovation when they entered the room. All you got was polite applause. Fine. If people want a hero, then a hero you shall be.",
+						"script" : "*,misc_features,performer_fame_and_fortune",
+						"followups" : []
+					},
+					{
+						"name" : "Tragic Lesson",
+						"cost" : "1",
+						"description" : "When a producer who once shortchanged you shouted out on the street for you to stop a thief who had picked their pocket, your spite toward the producer inspired you to let the thief run right on by. But that decision led to tragedy when the thief later harmed someone you loved. From that moment on, you decided to make it your responsibility to protect others.",
+						"script" : "*,misc_features,performer_tragic_lesson",
+						"followups" : []
+					}
+				]
+			}
+		}
+	},
+	"features" : {
+		"performer_title" : {
+			"name" : "Title - Dazzler",
+			"script" : "",
+			"effect" : "When a creature watches you perform a song, dance, or role (as an actor, not in disguise) for at least 1 minute, you gain an edge on tests made to influence that creature for 1 hour after the performance ends."
+		},
+		"performer_cursed_audience" : {
+			"name" : "Inciting Incident: Cursed Audience",
+			"script" : "",
+			"effect" : "During a performance, you watched in horror as the audience was suddenly overcome by a curse that caused them to disintegrate before your eyes. You're not sure what happened, but seeking that answer quickly led you to places where only heroes dare to go."
+		},
+		"performer_fame_and_fortune" : {
+			"name" : "Inciting Incident: Fame and Fortune",
+			"script" : "",
+			"effect" : "You thought you were famous - then that hero came to your show. Suddenly, all eyes were on the dragon-slaying brute instead of the stage where they belonged. The audience even gave them a standing ovation when they entered the room. All you got was polite applause. Fine. If people want a hero, then a hero you shall be."
+		},
+		"performer_tragic_lesson" : {
+			"name" : "Inciting Incident: Tragic Lesson",
+			"script" : "",
+			"effect" : "When a producer who once shortchanged you shouted out on the street for you to stop a thief who had picked their pocket, your spite toward the producer inspired you to let the thief run right on by. But that decision led to tragedy when the thief later harmed someone you loved. From that moment on, you decided to make it your responsibility to protect others."
+		}
+	}
+}
